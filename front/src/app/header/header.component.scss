@@ -1,4 +1,5 @@
 @import "../../styles/variables";
+@import "../../styles/card";
 
 /**
  Use :host to apply some style to your entire component #24c6dc, #514a9d
@@ -17,7 +18,11 @@
 .image {
   display: flex;
   margin-left: 60em;
-  margin-top: 0em;
+  margin-top: -2em;
   width: 50px;
   height: 40px;
+}
+
+.button-card {
+  background-color: $blue;
 }
