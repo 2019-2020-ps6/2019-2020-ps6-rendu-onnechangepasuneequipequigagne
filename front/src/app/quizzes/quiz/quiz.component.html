@@ -1,5 +1,8 @@
 <div class="card">
     <h2>
+        <i *ngIf ="quiz.imageURL">
+          <img [src]="quiz.imageURL" style="width: 150px ; height: 100px">
+        </i>
         <i *ngIf ="quiz.name === 'Les Sports'" class="fab fa-accessible-icon"></i>
         <i *ngIf ="quiz.name === 'Les Acteurs'" class="far fa-angry"></i>
         Nom : {{quiz.name}} <br/>

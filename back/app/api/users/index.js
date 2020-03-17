@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
   try {
     res.status(200).json(User.get())
   } catch (err) {
-    res.status(500).json(err)
+    res.status(404).json(err)
   }
 })
 
@@ -18,9 +18,9 @@ router.post('/', (req, res) => {
     res.status(201).json(user)
   } catch (err) {
     if (err.name === 'ValidationError') {
-      res.status(400).json(err.extra)
+      res.status(500).json(err.extra)
     } else {
-      res.status(500).json(err)
+      res.status(404).json(err)
     }
   }
 })
@@ -37,7 +37,7 @@ router.delete('/:id', (req, res) => {
   try {
     res.status(200).json(User.delete(req.params.id))
   } catch (err) {
-    res.status(500).json(err)
+    res.status(404).json(err)
   }
 })
 
@@ -45,7 +45,7 @@ router.put('/:id', (req, res) => {
   try {
     res.status(200).json(User.update(req.params.quizId, req.body))
   } catch (err) {
-    res.status(500).json(err)
+    res.status(404).json(err)
   }
 })
 

@@ -1,51 +1,64 @@
 const { Router } = require('express')
 
-const { Quiz, Question, Answer } = require('../../models')
-const QuestionRouter = require('./questions')
+const { Quiz } = require('../../models')
+const { Question } = require('../../models')
+const { Answer } = require('../../models')
+
+const QuestionsRouter = require('./questions')
 
 const router = new Router()
 
 router.get('/', (req, res) => {
   try {
-    var ok = []
-    Quiz.get().forEach(quiz => {
-      var questionsQuiz = []
-      Question.get().forEach(question => {
-        if (question.quizId == quiz.id){
-          var answersQuestion = []
-          Answer.get().forEach( answer =>{
-            if (answer.questionId == question.id){
-              answersQuestion.push(answer)
-            }
-          })
-          questionsQuiz.push({...question, answer: answersQuestion})
-        }
-      });
-      ok.push({...quiz, questions: questionsQuiz})
+    let quizzes = Quiz.get()
+    quizzes.forEach(function (quiz) {
+      let questions = Question.get().filter((question) => question.quizId === quiz.id)
+      questions.forEach(function (question) {
+        question.answers = Answer.get().filter((answer) => answer.questionId === question.id)
+      })
+      quiz.questions = questions
     })
-    res.status(200).json(ok)
+    res.status(200).json(quizzes)
   } catch (err) {
     res.status(500).json(err)
   }
 })
 
-router.get('/:id', (req, res) => {
+router.get('/:quizId', (req, res) => {
   try {
-    var questionsQuiz = []
-    Question.get().forEach(question => {
-      if (question.quizId == req.params.id){
-        var answersQuestion = []
-        Answer.get().forEach( answer =>{
-          if (answer.questionId == question.id){
-            answersQuestion.push(answer)
-          }
-        })
-        questionsQuiz.push({...question, answer: answersQuestion})
-      }
-    });
-    res.status(200).json({...Quiz.getById(req.params.id), questions: questionsQuiz})
+      let quiz = Quiz.getById(req.params.quizId)
+      let questions = Question.get().filter((question) => question.quizId === quiz.id)
+      questions.forEach(function (question) {
+      question.answers = Answer.get().filter((answer) => answer.questionId === question.id)
+    })
+      quiz.questions = questions
+      res.status(200).json(quiz)
   } catch (err) {
-    res.status(500).json(err)
+    res.status(400).json(err)
+  }
+})
+
+router.delete('/:quizId', (req, res) => {
+  try {
+    let questions  = Question.get().filter((question) => question.quizId === parseInt(req.params.quizId))
+    questions.forEach(function (question) {
+       let answers = Answer.get().filter((answer) => answer.questionId === question.id)
+       answers.forEach(function (answer) {
+        Answer.delete(answer.id)
+      })
+       Question.delete(question.id)
+    })
+    res.status(200).json(Quiz.delete(req.params.quizId))
+  } catch (err) {
+    res.status(400).json(err)
+  }
+})
+
+router.put('/:quizId', (req, res) => {
+  try {
+    res.status(200).json(Quiz.update(req.params.quizId,req.body))
+  } catch (err) {
+    res.status(400).json(err)
   }
 })
 
@@ -62,23 +75,6 @@ router.post('/', (req, res) => {
   }
 })
 
-router.delete('/:quizId', (req, res) => {
-  try {
-    res.status(200).json(Quiz.delete(req.params.quizId))
-  } catch (err) {
-    res.status(500).json(err)
-  }
-})
-
-router.put('/:quizId', (req, res) => {
-  try {
-    res.status(200).json(Quiz.update(req.params.quizId, req.body))
-  } catch (err) {
-    res.status(500).json(err)
-  }
-})
-
-router.use('/:quizId/questions', QuestionRouter)
-
+router.use('/:quizId/questions',QuestionsRouter)
 
 module.exports = router
