@@ -9,20 +9,9 @@
     "lint": "./node_modules/.bin/eslint -c .eslintrc.js app/",
     "lint:fix": "./node_modules/.bin/eslint -c .eslintrc.js app/ --fix"
   },
-  "precommit": [
-    "lint"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/windu02/2019-2020-ps6-backend"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/windu02/2019-2020-ps6-backend/issues"
-  },
-  "homepage": "https://github.com/windu02/2019-2020-ps6-backend#readme",
   "dependencies": {
     "body-parser": "1.19.0",
     "cors": "2.8.5",
