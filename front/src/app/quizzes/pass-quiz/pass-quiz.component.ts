@@ -24,18 +24,11 @@ export class PassQuizComponent implements OnInit {
   constructor(private route: ActivatedRoute,
     private quizService: QuizService,
     private location: Location) {
-      /*
-      this.quiz = {
-        name:"default",
-        theme:"default",
-        id:"default",
-        questions: []
-      }
-      this.question = {
-        label:"default",
-        answers: []
-      }*/
       const id = +this.route.snapshot.paramMap.get('id');
+      this.question = {
+        "label":"default",
+        answers:[]
+      }
       if (id != null){
         this.quizService.getQuiz(id.toString()).subscribe((q) => {
           this.quiz = q;

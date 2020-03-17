@@ -15,16 +15,17 @@ export class PassQuestionComponent implements OnInit {
   @Output()
   nextQuestion: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-  constructor() { }
+  constructor() { 
+  }
 
   ngOnInit() {
   }
 
   answerSelected(answer: Answer){
     if (!answer.isCorrect){
-      var index = this.question.answer.indexOf(answer);
+      var index = this.question.answers.indexOf(answer);
       if (index > -1){
-        this.question.answer.splice(index,1);
+        this.question.answers.splice(index,1);
       }
     } else {
       this.nextQuestion.emit(true);

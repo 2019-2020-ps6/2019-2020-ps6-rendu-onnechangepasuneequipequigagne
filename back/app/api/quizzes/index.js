@@ -18,7 +18,7 @@ router.get('/', (req, res) => {
               answersQuestion.push(answer)
             }
           })
-          questionsQuiz.push({...question, answer: answersQuestion})
+          questionsQuiz.push({...question, answers: answersQuestion})
         }
       });
       ok.push({...quiz, questions: questionsQuiz})
@@ -40,7 +40,7 @@ router.get('/:id', (req, res) => {
             answersQuestion.push(answer)
           }
         })
-        questionsQuiz.push({...question, answer: answersQuestion})
+        questionsQuiz.push({...question, answers: answersQuestion})
       }
     });
     res.status(200).json({...Quiz.getById(req.params.id), questions: questionsQuiz})
