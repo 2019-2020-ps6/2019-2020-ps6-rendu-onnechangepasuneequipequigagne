@@ -9,8 +9,8 @@ import {HomeComponent} from "./home/home.component";
 const routes: Routes = [
   {path: '', redirectTo: 'Home', pathMatch: 'full'},
   {path: 'Home', component: HomeComponent},
-  {path: 'Home/pass-quiz', component: QuizListComponent},
-  {path: 'Home/edit-quiz/quizzes/:id', component: EditQuizComponent},
+  {path: 'Home/pass-quiz/quizzes', component: QuizListComponent},
+  {path: 'Home/edit/edit-quiz/quizzes/:id', component: EditQuizComponent},
   {path: 'Home/pass-quiz/quizzes/:id', component: PassQuizComponent}
 ];
 
