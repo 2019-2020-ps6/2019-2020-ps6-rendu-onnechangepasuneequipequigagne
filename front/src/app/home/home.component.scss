@@ -1,0 +1,48 @@
+@import '../../styles/card.scss';
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+#gauche{
+  width: 40%;
+  height: 100%;
+  float: left;
+}
+
+#droite {
+  margin-top: 3%;
+  margin-bottom: 10%;
+  width: 60%;
+  height: 100%;
+  float: left;
+}
+
+#text1 {
+  color: $blue;
+  font-size: xx-large;
+}
+
+#text2 {
+  margin-left: 20%;
+}
+
+.logo {
+  margin-top: 20%;
+  margin-left: 20%;
+  width: 120px;
+  height: 90px;
+}
+
+.image {
+  width: 250px;
+  height: 250px;
+}
+p {
+  text-align: center;
+  font-size: larger;
+}

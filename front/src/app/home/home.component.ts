@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HomeComponent implements OnInit {
 
   private logoUrl: string = 'assets/quizzy.png';
 
@@ -15,8 +15,12 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
-  goToHomePage() {
-    const link = ['/Home'];
+  goToPassQuizz() {
+    const link = ['/Home/pass-quiz/quizzes'];
     this.router.navigate(link);
+  }
+
+  goToMenuEdition() {
+
   }
 }

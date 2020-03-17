@@ -19,6 +19,7 @@ import { UserFormComponent } from './users/user-form/user-form.component';
 import { PassQuizComponent } from './quizzes/pass-quiz/pass-quiz.component';
 import { PassQuestionComponent } from './questions/pass-question/pass-question.component';
 import { PassReponseComponent } from './reponses/pass-reponse/pass-reponse.component';
+import {HomeComponent} from "./home/home.component";
 
 
 
@@ -38,7 +39,8 @@ import { PassReponseComponent } from './reponses/pass-reponse/pass-reponse.compo
     UserFormComponent,
     PassQuizComponent,
     PassQuestionComponent,
-    PassReponseComponent
+    PassReponseComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
