@@ -1,0 +1,7 @@
+<div class="question-list">
+    <div class="question" *ngFor="let question of questionList">
+        <!--Inputs & Output allow communication between parent & child components.-->
+        <!--More information: https://angular.io/guide/component-interaction-->
+        <app-question [question]="question"></app-question>
+    </div>
+</div>

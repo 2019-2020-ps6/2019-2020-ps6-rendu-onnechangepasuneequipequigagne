@@ -1,0 +1,11 @@
+<div class="card">
+    <h2>
+        Question : {{question.label}} <br/>
+    </h2>
+    <div class="reponse" *ngFor="let answer of question.answers">
+        <i *ngIf ="answer.isCorrect" class="fa fa-check" aria-hidden="true"></i>
+        <i *ngIf ="!answer.isCorrect" class="fa fa-ban"></i>
+        {{answer.value}} 
+
+    </div>
+</div>

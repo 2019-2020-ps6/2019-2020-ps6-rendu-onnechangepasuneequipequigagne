@@ -1,0 +1,7 @@
+<div class="card">
+    <h2>
+        {{user.userName}} <br>
+    </h2>
+    <button class="button-card"><a routerLink="{{user.userName}}/quiz-list">Go !</a></button>
+    <button class="button-card" (click)="deleteUser()">Kill</button>
+</div>
