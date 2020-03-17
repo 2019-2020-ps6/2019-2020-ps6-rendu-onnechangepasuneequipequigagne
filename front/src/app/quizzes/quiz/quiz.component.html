@@ -1,15 +1,7 @@
-<div class="card">
-    <h2>
-        <i *ngIf ="quiz.name === 'Les Sports'" class="fab fa-accessible-icon"></i>
-        <i *ngIf ="quiz.name === 'Les Acteurs'" class="far fa-angry"></i>
-        Nom : {{quiz.name}} <br/>
-        Thème : {{quiz.theme}} <br>
-        Date de création : {{quiz.creationDate | date}}
-    </h2>
-    <div>
-        Questions : {{quiz.questions.length}}
+<a routerLink="pass-quiz/{{quiz.id}}">
+    <div class="card">
+        <h2>
+            Nom : {{quiz.name}} <br/>
+        </h2>
     </div>
-    <button class="button-card"><a routerLink="pass-quiz/{{quiz.id}}">Select</a></button>
-    <button class="button-card" (click)="deleteQuiz()">Kill</button>
-    <button class="button-card"><a routerLink="edit-quiz/{{quiz.id}}">Edit</a></button>
-</div>
+</a>
