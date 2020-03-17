@@ -9,10 +9,9 @@ import { PassQuizComponent } from './quizzes/pass-quiz/pass-quiz.component';
 
 
 const routes: Routes = [
-    {path: '', component: UserFormComponent},
-    {path: ':userid/quiz-list/edit-quiz/:id', component: EditQuizComponent},
-    {path: ':userid/quiz-list', component: QuizListComponent},
-    {path: ':userid/quiz-list/pass-quiz/:id', component: PassQuizComponent}
+    {path: '', component: QuizListComponent},
+    {path: 'edit-quiz/:id', component: EditQuizComponent},
+    {path: 'pass-quiz/:id', component: PassQuizComponent}
 ];
 
 @NgModule({
