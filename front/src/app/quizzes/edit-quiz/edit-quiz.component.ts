@@ -18,9 +18,9 @@ export class EditQuizComponent implements OnInit {
     private quizService: QuizService,
     private location: Location) {
       this.quiz = {
-        name:"not undefined",
-        theme:"none",
-        id:"1",
+        name:"default",
+        theme:"default",
+        id:"default",
         questions: []
       }
   }

@@ -16,6 +16,9 @@ import { QuestionListComponent } from './questions/question-list/question-list.c
 import { UserComponent } from './users/user/user.component';
 import { UserListComponent } from './users/user-list/user-list.component';
 import { UserFormComponent } from './users/user-form/user-form.component';
+import { PassQuizComponent } from './quizzes/pass-quiz/pass-quiz.component';
+import { PassQuestionComponent } from './questions/pass-question/pass-question.component';
+import { PassReponseComponent } from './reponses/pass-reponse/pass-reponse.component';
 
 
 
@@ -32,7 +35,10 @@ import { UserFormComponent } from './users/user-form/user-form.component';
     QuestionListComponent,
     UserComponent,
     UserListComponent,
-    UserFormComponent
+    UserFormComponent,
+    PassQuizComponent,
+    PassQuestionComponent,
+    PassReponseComponent
   ],
   imports: [
     BrowserModule,
