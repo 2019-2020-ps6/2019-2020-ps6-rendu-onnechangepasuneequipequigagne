@@ -1,20 +1,19 @@
 <div id="gauche">
-  <span id="text1">
-     <img class="logo" [src]="logoUrl"><b>Quizzy</b>
-  </span>
-  <br>
-  <span id="text2">
-    Créez et partagez vos
-  </span>
+  <div>
+    <img class="logo" [src]="logoUrl">
+  </div>
+  <div id="text">
+    Créez et partagez vos <span style="font-size: xx-large;">Quizzy</span>
+  </div>
 </div>
 <div id="droite">
   <div class="button-card" (click)="goToMenuEdition()">
-    <p>Menu edition</p>
-    <img class="image" src="assets/crayon.jpg">
+    <div style="text-align: center;"><img class="image" src="assets/menu.png"></div>
+    <p>Menu d'édition</p>
   </div>
   <br>
   <div class="button-card" (click)="goToPassQuizz()">
+    <div style="text-align: center;"><img class="image" src="assets/ampoule.png"></div>
     <p>Passer des quizz</p>
-    <img class="image" src="assets/ampoule.jpg">
   </div>
 </div>

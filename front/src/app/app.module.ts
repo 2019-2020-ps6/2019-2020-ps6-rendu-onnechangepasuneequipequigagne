@@ -20,6 +20,7 @@ import { PassQuizComponent } from './quizzes/pass-quiz/pass-quiz.component';
 import { PassQuestionComponent } from './questions/pass-question/pass-question.component';
 import { PassReponseComponent } from './reponses/pass-reponse/pass-reponse.component';
 import {HomeComponent} from "./home/home.component";
+import {EditMenuComponent} from "./edit-menu/edit-menu.component";
 
 
 
@@ -40,7 +41,8 @@ import {HomeComponent} from "./home/home.component";
     PassQuizComponent,
     PassQuestionComponent,
     PassReponseComponent,
-    HomeComponent
+    HomeComponent,
+    EditMenuComponent
   ],
   imports: [
     BrowserModule,

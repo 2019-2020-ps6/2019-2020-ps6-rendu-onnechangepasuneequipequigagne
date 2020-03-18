@@ -26,10 +26,10 @@ tslib_1.__decorate([
 ], EditQuizComponent.prototype, "quiz", void 0);
 EditQuizComponent = tslib_1.__decorate([
     Component({
-        selector: 'app-edit-quiz',
-        templateUrl: './edit-quiz.component.html',
-        styleUrls: ['./edit-quiz.component.scss']
+        selector: 'app-edit-menu-quiz',
+        templateUrl: './edit-menu-quiz.component.html',
+        styleUrls: ['./edit-menu-quiz.component.scss']
     })
 ], EditQuizComponent);
 export { EditQuizComponent };
-//# sourceMappingURL=edit-quiz.component.js.map
+//# sourceMappingURL=edit-menu-quiz.component.js.map

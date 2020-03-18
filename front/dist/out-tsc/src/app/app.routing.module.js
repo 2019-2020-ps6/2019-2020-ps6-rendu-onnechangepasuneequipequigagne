@@ -6,7 +6,7 @@ import { EditQuizComponent } from './quizzes/edit-quiz/edit-quiz.component';
 import { UserFormComponent } from './users/user-form/user-form.component';
 const routes = [
     { path: '', component: UserFormComponent },
-    { path: ':userid/quiz-list/edit-quiz/:id', component: EditQuizComponent },
+    { path: ':userid/quiz-list/edit-menu-quiz/:id', component: EditQuizComponent },
     { path: ':userid/quiz-list', component: QuizListComponent }
 ];
 let AppRoutingModule = class AppRoutingModule {

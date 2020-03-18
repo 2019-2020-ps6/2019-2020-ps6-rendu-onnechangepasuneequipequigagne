@@ -9,30 +9,25 @@ html, body {
 }
 
 #gauche{
-  width: 40%;
+  margin-top: 5%;
+  margin-bottom: 10%;
+  width: 50%;
   height: 100%;
   float: left;
 }
 
 #droite {
-  margin-top: 3%;
+  margin-top: 5%;
   margin-bottom: 10%;
-  width: 60%;
+  width: 50%;
   height: 100%;
   float: left;
-}
-
-#text {
-  color: $blue;
-  font-weight: bold;
-  font-size: medium;
-  margin-left: 20%;
 }
 
 .logo {
   margin-top: 20%;
   margin-left: 20%;
-  width: 100px;
+  width: 120px;
   height: 90px;
 }
 
@@ -52,4 +47,17 @@ p {
 
 .button-card:hover {
   background-color: lightblue;
+}
+
+.card {
+  color: $blue;
+  text-align: center;
+  font-size: larger;
+  font-weight: bold;
+  padding-bottom: 1%;
+  margin-top: 1%;
+  margin-right: 30%;
+  margin-left: 40%;
+  border: solid 2px $blue;
+  float: none;
 }

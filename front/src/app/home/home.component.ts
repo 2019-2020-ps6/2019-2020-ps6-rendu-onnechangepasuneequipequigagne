@@ -8,7 +8,7 @@ import {Router} from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  private logoUrl: string = 'assets/quizzy.png';
+  private logoUrl: string = 'https://lh3.googleusercontent.com/g4f3JWzT9_qwHKsz63ntrz8T17vYCLkXzSlFy4EZx0WuGAyXIkDLgihJzH0HunJdYw';
 
   constructor(private router: Router) { }
 
@@ -21,6 +21,7 @@ export class HomeComponent implements OnInit {
   }
 
   goToMenuEdition() {
-
+    const link = ['/Home/edit-menu'];
+    this.router.navigate(link);
   }
 }

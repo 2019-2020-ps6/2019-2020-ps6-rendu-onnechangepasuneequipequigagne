@@ -18,4 +18,4 @@ describe('EditQuizComponent', () => {
         expect(component).toBeTruthy();
     });
 });
-//# sourceMappingURL=edit-quiz.component.spec.js.map
+//# sourceMappingURL=edit-menu-quiz.component.spec.js.map
