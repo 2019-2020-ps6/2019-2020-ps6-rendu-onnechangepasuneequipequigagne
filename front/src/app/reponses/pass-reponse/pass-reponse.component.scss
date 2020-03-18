@@ -1,1 +1,15 @@
 @import '../../../styles/card.scss';
+
+.button-card {
+  text-align: center;
+  margin: 10px 400px 40px;
+}
+
+.button-card:hover {
+  background-color: lightblue;
+}
+
+.image {
+  width: 250px;
+  height: 250px;
+}

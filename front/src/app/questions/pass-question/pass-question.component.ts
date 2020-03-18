@@ -28,7 +28,9 @@ export class PassQuestionComponent implements OnInit {
         this.question.answers.splice(index,1);
       }
     } else {
-      
+      this.question.answers.forEach((a) => {
+        
+      })
     }
   }
 
