@@ -16,12 +16,12 @@ export class HomeComponent implements OnInit {
   }
 
   goToPassQuizz() {
-    const link = ['/Home/pass-quiz/quizzes'];
+    const link = ['/home/pass-quiz/quizzes'];
     this.router.navigate(link);
   }
 
   goToMenuEdition() {
-    const link = ['/Home/edit-menu'];
+    const link = ['/home/edit-menu'];
     this.router.navigate(link);
   }
 }

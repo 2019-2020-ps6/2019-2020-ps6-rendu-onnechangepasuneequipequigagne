@@ -28,8 +28,12 @@ export class PassQuestionComponent implements OnInit {
         this.question.answers.splice(index,1);
       }
     } else {
-      this.nextQuestion.emit(true);
+      
     }
+  }
+
+  next(){
+    this.nextQuestion.emit(true);
   }
 
 }

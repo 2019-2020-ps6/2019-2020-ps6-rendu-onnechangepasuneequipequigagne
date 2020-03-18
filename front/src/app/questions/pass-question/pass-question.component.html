@@ -1,4 +1,7 @@
 <div class="answers" *ngFor="let answer of question.answers; let i = index">
     <app-pass-reponse [answer]="answer" (answerSelected)="answerSelected($event)"></app-pass-reponse>
-    <!--<i *ngIf ="i==2">{{question.image}}</i>-->
+    <i *ngIf ="i==2">{{question.image}}</i>
+</div>
+<div id="nextButton" class="button-card" (click) = "next()">
+    Bonne réponse !<br>
 </div>

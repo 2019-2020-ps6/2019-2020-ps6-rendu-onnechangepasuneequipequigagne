@@ -16,7 +16,7 @@ export class HeaderComponent implements OnInit {
   }
 
   goToHomePage() {
-    const link = ['/Home'];
+    const link = ['/home'];
     this.router.navigate(link);
   }
 }
