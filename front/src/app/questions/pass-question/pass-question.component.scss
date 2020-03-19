@@ -1,13 +1,16 @@
-@import '../../../styles/card.scss';
-
-#nextButton{
-    background: black;
-}
-
 .isKill{
     display: none;
 }
 
-#oui{
-    background: yellowgreen;
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: 150px;
+    margin-left: 150px;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
 }

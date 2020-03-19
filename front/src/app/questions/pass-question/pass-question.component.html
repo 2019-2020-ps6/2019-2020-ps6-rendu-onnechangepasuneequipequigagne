@@ -1,15 +1,25 @@
-<div class="answers" *ngFor="let answer of question.answers; let i = index">
-   <div [id]="answer.value">
-        <app-pass-reponse [answer]="answer" (answerSelected)="answerSelected($event)"></app-pass-reponse>
-        <i *ngIf="i==1">IMAGE !!</i>
-    </div>
-</div>
-<div id="nextButton" class="isKill button-card" (click) = "next()">
-    Bonne réponse !<br>
-    <div *ngIf="!lastQuestion">
-        Passer à la question suivante >
-    </div>
-    <div *ngIf="lastQuestion">
-        Terminer le quiz >
+<div class="album py-5 bg-light align-items-center">
+    <div class="row">
+        <div class="answers" *ngFor="let answer of question.answers; let i = index">
+            <div class="card-body">
+                <div [id]="answer.value">
+                    <app-pass-reponse [answer]="answer" (answerSelected)="answerSelected($event)"></app-pass-reponse>
+                </div>
+            </div>
+            <div *ngIf="i==1">
+                <div *ngIf="foundAnswer" class="btn btn-outline-success" (click)="next()">
+                    Bonne réponse !<br>
+                    <div *ngIf="!lastQuestion">
+                        Passer à la question suivante >
+                    </div>
+                    <div *ngIf="lastQuestion">
+                        Terminer le quiz >
+                    </div>
+                </div>
+                <div *ngIf="!foundAnswer">
+                    Image
+                </div>
+            </div>
+        </div>
     </div>
 </div>

@@ -18,8 +18,11 @@ export class PassQuestionComponent implements OnInit {
   @Output()
   nextQuestion: EventEmitter<boolean> = new EventEmitter<boolean>();
 
+  private foundAnswer: boolean;
+
 
   constructor() {
+    this.foundAnswer=false;
   }
 
   ngOnInit() {
@@ -30,17 +33,17 @@ export class PassQuestionComponent implements OnInit {
     if (!answer.isCorrect){
      elem.classList.add("isKill");
     } else {
+      this.foundAnswer=true;
       this.question.answers.forEach((a) => {
         document.getElementById(a.value).classList.add("isKill");
       })
       elem.classList.remove("isKill");
-      document.getElementById("nextButton").classList.remove("isKill");
     }
   }
 
   next(){
     this.nextQuestion.emit(true);
-    document.getElementById("nextButton").classList.add("isKill");
+    this.foundAnswer = false;
   }
 
 }

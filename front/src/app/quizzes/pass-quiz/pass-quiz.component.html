@@ -1,9 +1,8 @@
 <div *ngIf="!quizDone">
-    <div class="card">Question n°{{numQuestion}}: {{question.label}}</div>
+    <div class="jumbotron text-center">Question n°{{numQuestion}}: {{question.label}}</div>
     <br>
     <app-pass-question [question]="question" [lastQuestion]="lastQuestion" (nextQuestion)="nextQuestion($event)"></app-pass-question>
 </div>
-
 <div *ngIf="quizDone">
     Bravo vous avez réussi le quiz !<br>
     <div class="button-card" routerLink="..">
