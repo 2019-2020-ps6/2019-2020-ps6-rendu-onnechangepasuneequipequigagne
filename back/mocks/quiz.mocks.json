@@ -18,6 +18,20 @@
           },
           {
             "type": "Vraiment difficile",
+            "value": "Pas du tout shrek",
+            "isCorrect": false,
+            "questionId": 1583226445021,
+            "id": 1583226943194
+          },
+          {
+            "type": "Vraiment difficile",
+            "value": "Pas du tout du tout shrek",
+            "isCorrect": false,
+            "questionId": 1583226445021,
+            "id": 15894723843194
+          },
+          {
+            "type": "Vraiment difficile",
             "value": "Shrek",
             "isCorrect": true,
             "questionId": 1583226445021,
@@ -101,6 +115,29 @@
     "theme": "animés",
     "name": "actors",
     "imageURL": "https://i.pinimg.com/originals/76/92/79/76927939ad6134c1b5b0fa472803ca4b.png",
-    "id": 1584446384648
+    "id": 1584446384648,
+    "questions": [
+      {
+        "label": "Qui a fait la voix de shrek dans shrek ?",
+        "quizId": 1584446384648,
+        "id": 1584569941504,
+        "answers": [
+          {
+            "value": "Mike Myers",
+            "isCorrect": true,
+            "imageURL": "https://www.cine974.com/images/personnes/mike-myers-ENYqdcgv.jpg",
+            "questionId": 1584569941504,
+            "id": 1584570151196
+          },
+          {
+            "value": "Eddie Murphy",
+            "isCorrect": false,
+            "imageURL": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Eddie_Murphy_by_David_Shankbone.jpg",
+            "questionId": 1584569941504,
+            "id": 1584570212557
+          }
+        ]
+      }
+    ]
   }
 ]
