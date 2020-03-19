@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { QuizService} from '../../../services/quiz.service'
@@ -19,6 +19,8 @@ export class PassQuizComponent implements OnInit {
   @Input()
   question: Question;
 
+  private lastQuestion: boolean;
+
   private numQuestion;
 
   private quizDone;
@@ -37,6 +39,7 @@ export class PassQuizComponent implements OnInit {
           this.quiz = q;
           this.numQuestion = 1;
           this.question = this.quiz.questions[this.numQuestion-1];
+          this.lastQuestion = this.quiz.questions.length<2;
         });
       }
   }
@@ -45,8 +48,9 @@ export class PassQuizComponent implements OnInit {
   }
 
   nextQuestion(next: boolean){
-    if (this.numQuestion<this.quiz.questions.length){
-      this.question = this.quiz.questions[++this.numQuestion - 1];
+    if (!this.lastQuestion){
+      this.question = this.quiz.questions[this.numQuestion++];
+      this.lastQuestion = this.numQuestion==this.quiz.questions.length
     } else {
       this.quizDone=true;
     }

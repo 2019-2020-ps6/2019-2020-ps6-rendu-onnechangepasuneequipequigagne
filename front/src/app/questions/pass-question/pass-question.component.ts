@@ -12,10 +12,14 @@ export class PassQuestionComponent implements OnInit {
   @Input()
   question: Question;
 
+  @Input()
+  lastQuestion: boolean;
+
   @Output()
   nextQuestion: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-  constructor() { 
+
+  constructor() {
   }
 
   ngOnInit() {

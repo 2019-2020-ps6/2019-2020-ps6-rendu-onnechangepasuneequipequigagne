@@ -1,7 +1,7 @@
 <div *ngIf="!quizDone">
-    <div class="card">{{question.label}}</div>
+    <div class="card">Question n°{{numQuestion}}: {{question.label}}</div>
     <br>
-    <app-pass-question [question]="question" (nextQuestion)="nextQuestion($event)"></app-pass-question>
+    <app-pass-question [question]="question" [lastQuestion]="lastQuestion" (nextQuestion)="nextQuestion($event)"></app-pass-question>
 </div>
 
 <div *ngIf="quizDone">

@@ -6,6 +6,10 @@
 </div>
 <div id="nextButton" class="isKill button-card" (click) = "next()">
     Bonne réponse !<br>
-    Passer à la question suivante >
+    <div *ngIf="!lastQuestion">
+        Passer à la question suivante >
+    </div>
+    <div *ngIf="lastQuestion">
+        Terminer le quiz >
+    </div>
 </div>
-<div id="1"></div>
