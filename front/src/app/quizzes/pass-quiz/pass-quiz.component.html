@@ -1,3 +1,12 @@
-<div class="card">Question: {{question.label}}</div>
-<br>
-<app-pass-question [question]="question" (nextQuestion)="nextQuestion($event)"></app-pass-question>
+<div *ngIf="!quizDone">
+    <div class="card">{{question.label}}</div>
+    <br>
+    <app-pass-question [question]="question" (nextQuestion)="nextQuestion($event)"></app-pass-question>
+</div>
+
+<div *ngIf="quizDone">
+    Bravo vous avez réussi le quiz !<br>
+    <div class="button-card" routerLink="..">
+        Retourner au menu des quizz >
+    </div>
+</div>

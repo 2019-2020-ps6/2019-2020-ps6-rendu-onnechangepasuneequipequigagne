@@ -22,20 +22,21 @@ export class PassQuestionComponent implements OnInit {
   }
 
   answerSelected(answer: Answer){
+    var elem =  document.getElementById(answer.value);
     if (!answer.isCorrect){
-      var index = this.question.answers.indexOf(answer);
-      if (index > -1){
-        this.question.answers.splice(index,1);
-      }
+     elem.classList.add("isKill");
     } else {
       this.question.answers.forEach((a) => {
-        
+        document.getElementById(a.value).classList.add("isKill");
       })
+      elem.classList.remove("isKill");
+      document.getElementById("nextButton").classList.remove("isKill");
     }
   }
 
   next(){
     this.nextQuestion.emit(true);
+    document.getElementById("nextButton").classList.add("isKill");
   }
 
 }

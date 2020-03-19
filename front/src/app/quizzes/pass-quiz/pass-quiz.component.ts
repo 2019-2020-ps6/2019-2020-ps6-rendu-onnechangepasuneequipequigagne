@@ -21,9 +21,12 @@ export class PassQuizComponent implements OnInit {
 
   private numQuestion;
 
+  private quizDone;
+
   constructor(private route: ActivatedRoute,
     private quizService: QuizService,
     private location: Location) {
+      this.quizDone = false;
       const id = +this.route.snapshot.paramMap.get('id');
       this.question = {
         "label":"default",
@@ -42,7 +45,10 @@ export class PassQuizComponent implements OnInit {
   }
 
   nextQuestion(next: boolean){
-    this.question = this.quiz.questions[++this.numQuestion - 1];
+    if (this.numQuestion<this.quiz.questions.length){
+      this.question = this.quiz.questions[++this.numQuestion - 1];
+    } else {
+      this.quizDone=true;
+    }
   }
-
 }
