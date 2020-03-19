@@ -1,8 +1,8 @@
 <div class="album py-5 bg-light align-items-center">
     <div class="row">
         <div class="answers" *ngFor="let answer of question.answers; let i = index">
-            <div class="card-body">
-                <div [id]="answer.value">
+            <div class="card-body" [id]="answer.value">
+                <div>
                     <app-pass-reponse [answer]="answer" (answerSelected)="answerSelected($event)"></app-pass-reponse>
                 </div>
             </div>
@@ -17,7 +17,7 @@
                     </div>
                 </div>
                 <div *ngIf="!foundAnswer">
-                    Image
+
                 </div>
             </div>
         </div>

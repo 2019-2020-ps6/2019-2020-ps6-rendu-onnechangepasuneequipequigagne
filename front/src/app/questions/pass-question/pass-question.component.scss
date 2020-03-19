@@ -1,5 +1,5 @@
 .isKill{
-    display: none;
+    visibility: hidden
 }
 
 .row {
@@ -11,6 +11,6 @@
     margin-left: 150px;
 }
 
-*, ::after, ::before {
-    box-sizing: border-box;
+.answer0{
+    visibility: hidden;
 }

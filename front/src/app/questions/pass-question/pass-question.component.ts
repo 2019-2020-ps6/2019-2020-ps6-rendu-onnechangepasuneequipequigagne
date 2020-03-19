@@ -23,6 +23,12 @@ export class PassQuestionComponent implements OnInit {
 
   constructor() {
     this.foundAnswer=false;
+    /*
+    let answers = this.question.answers;
+    for (let i=0; i<2; i++){
+      document.getElementById(answers[i].value).classList.add("isKill");
+    }
+    */
   }
 
   ngOnInit() {
