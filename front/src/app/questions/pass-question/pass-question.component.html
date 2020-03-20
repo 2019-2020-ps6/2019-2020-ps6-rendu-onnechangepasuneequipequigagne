@@ -12,12 +12,12 @@
                     <div *ngIf="!lastQuestion">
                         Passer à la question suivante >
                     </div>
-                    <div *ngIf="lastQuestion">
+                    <div class="border" *ngIf="lastQuestion">
                         Terminer le quiz >
                     </div>
                 </div>
                 <div *ngIf="!foundAnswer">
-
+                    <img [src]="question.imageURL" class="img-thumbnail img-fluid" alt="Responsive image">
                 </div>
             </div>
         </div>

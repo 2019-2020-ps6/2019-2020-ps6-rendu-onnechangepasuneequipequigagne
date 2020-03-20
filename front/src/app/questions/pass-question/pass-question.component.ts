@@ -1,6 +1,7 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, OnChanges } from '@angular/core';
 import { Question, Answer } from 'src/models/question.model';
 import { Quiz } from 'src/models/quiz.model';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-pass-question',
@@ -9,26 +10,20 @@ import { Quiz } from 'src/models/quiz.model';
 })
 export class PassQuestionComponent implements OnInit {
 
-  @Input()
-  question: Question;
+  private foundAnswer = false;
+
 
   @Input()
-  lastQuestion: boolean;
+  question: Question
+
+  @Input()
+  lastQuestion: Boolean;
 
   @Output()
   nextQuestion: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-  private foundAnswer: boolean;
-
 
   constructor() {
-    this.foundAnswer=false;
-    /*
-    let answers = this.question.answers;
-    for (let i=0; i<2; i++){
-      document.getElementById(answers[i].value).classList.add("isKill");
-    }
-    */
   }
 
   ngOnInit() {

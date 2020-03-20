@@ -3,104 +3,30 @@
     "label": "Qui a gagné la coupe du monde de foot en 1998 ?",
     "quizId": 1583226282450,
     "id": 1583226385509,
-    "imageUrl": "https://i.pinimg.com/originals/76/92/79/76927939ad6134c1b5b0fa472803ca4b.png",
-    "answers": [
-      {
-        "type": "Vraiment difficile",
-        "value": "La France",
-        "isCorrect": true,
-        "questionId": 1583226385509,
-        "id": 1583226817734
-      },
-      {
-        "type": "Vraiment difficile",
-        "value": "Le Brésil",
-        "isCorrect": false,
-        "questionId": 1583226385509,
-        "id": 1583226859272
-      }
-    ]
+    "imageURL": "https://sites.duke.edu/wcwp/files/2018/05/Coupe-du-Monde.jpeg"
   },
   {
     "label": "Qui a perdu la coupe du monde de foot en 1998 ?",
     "quizId": 1583226282450,
     "id": 1583226402611,
-    "answers": [
-      {
-        "type": "Vraiment difficile",
-        "value": "Le Brésil",
-        "isCorrect": true,
-        "questionId": 1583226402611,
-        "id": 1583226893511
-      },
-      {
-        "type": "Vraiment difficile",
-        "value": "La France",
-        "isCorrect": false,
-        "questionId": 1583226402611,
-        "id": 1583226903428
-      }
-    ]
+    "imageURL": "https://sites.duke.edu/wcwp/files/2018/05/Coupe-du-Monde.jpeg"
   },
   {
     "label": "Qui a joué shrek dans shrek 3 ?",
     "quizId": 1583226215551,
     "id": 1583226445021,
-    "answers": [
-      {
-        "type": "Vraiment difficile",
-        "value": "Pas shrek",
-        "isCorrect": false,
-        "questionId": 1583226445021,
-        "id": 1583226943587
-      },
-      {
-        "type": "Vraiment difficile",
-        "value": "Pas du tout shrek",
-        "isCorrect": false,
-        "questionId": 1583226445021,
-        "id": 1583226943194
-      },
-      {
-        "type": "Vraiment difficile",
-        "value": "Pas du tout du tout shrek",
-        "isCorrect": false,
-        "questionId": 1583226445021,
-        "id": 15894723843194
-      },
-      {
-        "type": "Vraiment difficile",
-        "value": "Shrek",
-        "isCorrect": true,
-        "questionId": 1583226445021,
-        "id": 1583226956818
-      }
-    ]
+    "imageURL": "https://i.ytimg.com/vi/QH0Ls3DIptE/maxresdefault.jpg"
   },
   {
     "label": "Cette question est-elle difficile ?",
     "quizId": 1583226215551,
     "id": 1583226478744,
-    "answers": [
-      {
-        "type": "Vraiment difficile",
-        "value": "La réponse D",
-        "isCorrect": true,
-        "questionId": 1583226478744,
-        "id": 1583226979569
-      },
-      {
-        "type": "Vraiment difficile",
-        "value": "Oui, vraiment trop !",
-        "isCorrect": false,
-        "questionId": 1583226478744,
-        "id": 1583226994975
-      }
-    ]
+    "imageURL": "https://i.ytimg.com/vi/lG2jQ7pmE90/maxresdefault.jpg"
   },
   {
     "label": "Qui a fait la voix de shrek dans shrek ?",
-    "quizId": 1584446384648,
-    "id": 1584569941504
+    "quizId": 1583226215551,
+    "id": 1584569941504,
+    "imageURL": "https://i.ytimg.com/vi/3AM7LX8q6Us/maxresdefault.jpg"
   }
 ]

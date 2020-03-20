@@ -1,16 +1,4 @@
-@import '../../../styles/card.scss';
-
-.button-card {
-  text-align: center;
-  margin: 10px 400px 40px;
+.btn{
+  max-width: 8em;
+  overflow-wrap: break-word;
 }
-
-.button-card:hover {
-  background-color: lightblue;
-}
-
-.card-img-top {
-  width: 200px;
-  height: 250px;
-}
-
