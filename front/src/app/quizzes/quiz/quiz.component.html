@@ -1,12 +1,13 @@
 <a routerLink="{{quiz.id}}">
     <div class="card">
-        <h2>
-            <i *ngIf ="quiz.imageURL">
-                <img [src]="quiz.imageURL" style="width: 150px ; height: 100px">
-              </i>
-              <br>
-            {{quiz.name}} <br/>
-
-        </h2>
+      <i *ngIf ="quiz.imageURL">
+        <img class="image" [src]="quiz.imageURL">
+      </i>
+      <i *ngIf ="!quiz.imageURL">
+        <img class="image" src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-image-512.png">
+      </i>
+      <br>
+        {{quiz.name}}
+      <br/>
     </div>
 </a>
