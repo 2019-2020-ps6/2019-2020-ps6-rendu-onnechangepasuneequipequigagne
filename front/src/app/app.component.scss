@@ -1,4 +1,10 @@
-.main-content {
-  padding: 0 1em 0 1em;
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgb(44,47,51);
+  z-index: 10;
 }
 
