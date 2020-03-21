@@ -1,4 +1,5 @@
-<div class="btn btn-primary btn-lg btn-block" (click)="selectAnswer()">
-  <div *ngIf="answer.imageURL"><img [src]="answer.imageURL" class="img-fluid" alt="Responsive image"></div>
-  <p class="card-text">{{answer.value}} </p>
+<div class="btn btn-primary" (click)="selectAnswer()">
+    <div *ngIf="answer.imageURL" class="img-wrap">
+      <img [src]="answer.imageURL"></div>
+    <p class="card-text">{{answer.value}} </p>
 </div>
