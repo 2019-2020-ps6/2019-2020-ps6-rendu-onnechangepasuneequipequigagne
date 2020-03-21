@@ -1,5 +1,9 @@
-<div class="jumbotron text-center">
-    <div class="quiz" *ngFor="let quiz of quizList">
-        <app-quiz [quiz]="quiz" (quizSelected)="quizSelected($event)" (quizDeleted)="quizDeleted($event)"></app-quiz>
+<div class="main">
+    <input type="text" placeholder="Rechercher...">
+    <br>
+    <div class="border border-primary rounded">
+        <div class="quiz" *ngFor="let quiz of quizList">
+            <app-quiz [quiz]="quiz" (quizSelected)="quizSelected($event)" (quizDeleted)="quizDeleted($event)"></app-quiz>
+        </div>
     </div>
 </div>

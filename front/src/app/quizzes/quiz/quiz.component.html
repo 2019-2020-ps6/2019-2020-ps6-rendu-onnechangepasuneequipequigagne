@@ -1,13 +1,17 @@
-<a routerLink="{{quiz.id}}">
-    <div class="card">
-      <i *ngIf ="quiz.imageURL">
-        <img class="image" [src]="quiz.imageURL">
-      </i>
-      <i *ngIf ="!quiz.imageURL">
-        <img class="image" src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-image-512.png">
-      </i>
-      <br>
-        {{quiz.name}}
-      <br/>
+<a class="text-control" routerLink="{{quiz.id}}">
+    <div class="btn btn-primary">
+        <i *ngIf ="quiz.imageURL">
+          <div class="img-wrap">
+            <img [src]="quiz.imageURL">
+          </div>
+        </i>
+        <i *ngIf ="!quiz.imageURL">
+          <div class="img-wrap">
+            <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-image-512.png">
+          </div>
+        </i>
+        <p class="text-control card-text">
+          {{quiz.name}}
+        </p>
     </div>
 </a>
