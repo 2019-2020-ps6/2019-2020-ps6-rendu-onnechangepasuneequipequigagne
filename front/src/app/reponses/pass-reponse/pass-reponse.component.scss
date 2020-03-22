@@ -1,11 +1,9 @@
 .btn{
-  overflow-wrap: break-word;
   height: 100%;
   background: rgba(0, 0, 0, 0.452);
 }
 
 .img-wrap{
-  overflow-wrap: break-word;
   width: 10em;
   height: 7em;
   display: inline-block;
@@ -18,10 +16,13 @@ img{
   max-height: 100%;
 }
 
-
 .text-control{
   width: 10em;
   height: 3em;
   text-align: center;
   overflow-wrap: break-word;
+}
+
+.card-text{
+  text-align: center;
 }
