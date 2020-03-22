@@ -1,23 +1,44 @@
-@import '../../../styles/card.scss';
-
 .isKill{
     visibility: hidden
 }
 
-.row {
-    display: -ms-flexbox;
+.main{
     display: flex;
-    -ms-flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
     flex-wrap: wrap;
-    margin-right: 150px;
-    margin-left: 150px;
 }
 
-.answer0{
-    visibility: hidden;
+.frame{
+    padding-left: 30%;
+    padding-right: 30%;
+    border: solid 1px indigo;
 }
 
-.img-thumbnail{
-    width: 16em;
+.center{
+    display: flex;
+    justify-content: center;
 }
 
+.answers{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.giant{
+    width:40em;
+}
+
+.pad{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+img {
+    display: block;
+    max-width:40em;
+    max-height:40em;
+    width: auto;
+    height: auto;
+  }

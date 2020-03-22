@@ -1,11 +1,12 @@
 @import '../../../styles/card.scss';
-
-.card {
+.q {
   text-align: center;
+  color: white;
   font-weight: bold;
   padding-bottom: 1%;
   margin-top: 1%;
-  margin-left: 30%;
+  margin-bottom: 1%;
+  background: grey;
   border: solid 1px black;
 }
  .button-card {
@@ -17,15 +18,15 @@
    background-color: lightblue;
  }
 
- .jumbotron{
-   padding: 0.6em 0.6em 0.6em 0.6em;
- }
-
  p {
    color: forestgreen;
    font-size: larger;
    font-weight: bold;
    margin-top: -5%;
+ }
+
+ .text-center{
+   color: white;
  }
 
 .image {

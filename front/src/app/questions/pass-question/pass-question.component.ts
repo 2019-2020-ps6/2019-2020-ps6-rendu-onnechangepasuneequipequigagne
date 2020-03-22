@@ -44,6 +44,9 @@ export class PassQuestionComponent implements OnInit {
 
   next(){
     this.nextQuestion.emit(true);
+    this.question.answers.forEach((a) => {
+      document.getElementById(a.value).classList.remove("isKill");
+    })
     this.foundAnswer = false;
   }
 

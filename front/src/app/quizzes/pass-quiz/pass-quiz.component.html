@@ -1,12 +1,11 @@
 <div *ngIf="!quizDone">
-    <div class="jumbotron text-center">Question n°{{numQuestion}}: {{question.label}}</div>
-    <br>
-    <app-pass-question [question]="question" [lastQuestion]="lastQuestion" (nextQuestion)="nextQuestion($event)"></app-pass-question>
+  <div class="q">Question n°{{numQuestion}}: {{question.label}}</div>
+  <app-pass-question [question]="question" [lastQuestion]="lastQuestion" (nextQuestion)="nextQuestion($event)"></app-pass-question>
 </div>
 <div class="quizDone" *ngIf="quizDone">
     <div class="text-center">
       <p>Bravo vous avez réussi le quiz !</p>
-      <div style="text-align: center;"><img class="image" src="https://media.giphy.com/media/Wrv5v6egIh7Ww/200.gif"></div>
+      <img class="image" src="https://media.giphy.com/media/Wrv5v6egIh7Ww/200.gif">
       <br>
       <div class="button-card" routerLink="..">Retourner au menu des quizz ></div>
     </div>
