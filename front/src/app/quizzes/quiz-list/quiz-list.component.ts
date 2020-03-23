@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { QuizService } from '../../../services/quiz.service';
 import { Quiz } from '../../../models/quiz.model';
 
@@ -15,7 +15,11 @@ export class QuizListComponent implements OnInit {
     this.quizService.quizzes$.subscribe((quiz) => this.quizList = quiz);
   }
 
+  @Input()
+  search: string;
+
   ngOnInit() {
+
   }
 
   quizSelected(selected: boolean) {

@@ -11,11 +11,15 @@
   background: rgb(150, 150, 150);
 }
 
-.main{
-  padding: 1em 5em 1em 1em;
-  margin: 2em;
+
+.search{
+  margin: 2%;
 }
 
-.if{
-  margin: 1em;
+.main{
+  margin-left: 2%;
+  margin-right: 2%;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
