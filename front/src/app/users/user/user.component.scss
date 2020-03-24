@@ -1,5 +1,30 @@
-@import '../../../styles/card.scss';
-
 a{
-    text-decoration: none;
+  text-decoration: none;
+}
+
+.img-wrap{
+  overflow-wrap: break-word;
+  width: 10em;
+  height: 7em;
+  display: inline-block;
+  overflow: hidden;
+  margin: 0;
+}
+
+img{
+  max-width:100%;
+  max-height: 100%;
+}
+
+.btn{
+  margin: 0 0 0 0.5em;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.452);
+}
+
+.text-control{
+  width: 10em;
+  height: 3em;
+  text-align: center;
+  overflow-wrap: break-word;
 }

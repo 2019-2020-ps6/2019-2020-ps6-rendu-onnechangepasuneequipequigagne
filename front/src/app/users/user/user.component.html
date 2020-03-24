@@ -1,7 +1,17 @@
-<div class="card">
-    <h2>
-        {{user.userName}} <br>
-    </h2>
-    <button class="button-card"><a routerLink="{{user.userName}}/quiz-list">Go !</a></button>
-    <button class="button-card" (click)="deleteUser()">Kill</button>
-</div>
+<a class="text-control" routerLink="{{user.id}}/quizzes">
+  <div class="btn btn-primary">
+    <i *ngIf ="user.profilePicture">
+      <div class="img-wrap">
+        <img [src]="user.profilePicture">
+      </div>
+    </i>
+    <i *ngIf ="!user.profilePicture">
+      <div class="img-wrap">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/OOjs_UI_icon_userAvatar.svg/1024px-OOjs_UI_icon_userAvatar.svg.png">
+      </div>
+    </i>
+    <p class="text-control card-text">
+      {{user.userName}}
+    </p>
+  </div>
+</a>

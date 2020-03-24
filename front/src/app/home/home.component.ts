@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   }
 
   goToPassQuizz() {
-    const link = ['/home/pass-quiz/quizzes'];
+    const link = ['/home/pass-quiz/users'];
     this.router.navigate(link);
   }
 

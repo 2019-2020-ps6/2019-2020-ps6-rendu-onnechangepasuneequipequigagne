@@ -14,7 +14,14 @@ export class UserComponent implements OnInit {
   user : User;
 
   @Output()
+  userSelected: EventEmitter<boolean> = new EventEmitter<boolean>();
+
+  @Output()
   userDeleted: EventEmitter<User> = new EventEmitter<User>();
+
+  selectUser() {
+    this.userSelected.emit(true);
+  }
 
   deleteUser(){
     this.userDeleted.emit(this.user);

@@ -12,7 +12,7 @@ import { Question, Answer } from 'src/models/question.model';
 })
 export class PassQuizComponent implements OnInit {
 
-  
+
   @Input()
   quiz: Quiz;
 
@@ -29,14 +29,14 @@ export class PassQuizComponent implements OnInit {
     private quizService: QuizService,
     private location: Location) {
       this.quizDone = false;
-      const id = +this.route.snapshot.paramMap.get('id');
+      const id = +this.route.snapshot.paramMap.get('quizId');
       this.question = {
         "label":"default",
         answers:[]
       }
       if (id != null){
-        this.quizService.getQuiz(id.toString()).subscribe((q) => {
-          this.quiz = q;
+        this.quizService.getQuiz(id.toString()).subscribe((quiz) => {
+          this.quiz = quiz;
           this.numQuestion = 1;
           this.question = this.quiz.questions[this.numQuestion-1];
           this.lastQuestion = this.quiz.questions.length<2;
