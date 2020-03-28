@@ -30,7 +30,7 @@
   display: inline-flex;
   width: 100%;
   max-width: 100%;
-  margin-left: -5%;
+  margin-left: 0%;
   margin-top: 1em;
   padding: 1em 1em 1em 1em;
   overflow: scroll;
@@ -54,4 +54,8 @@
   background-color: gray;
 }
 
+.image{
+  height: 150px;
+  width: 150px;
+}
 
