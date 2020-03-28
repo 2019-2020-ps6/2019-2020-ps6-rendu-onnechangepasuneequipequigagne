@@ -1,19 +1,23 @@
 <div class="card">
-    <h2>Ajouter un utilisateur</h2>
-    <form class="user-form" [formGroup]="userForm">
-      <label for="user">
-        Nom d'utilisateur <br>
-        <input class="input-custom" type="text" id="userName" [formControlName]="'userName'">
-      </label>
-      <br>
-      <button class="button-card" (click)="addUser()">Add user</button>
-      <br>
-    </form>
+  <h4>Créer un nouveau profil</h4>
+  <img class="image" [src]="imageUrl">
+  <form class="user-form" [formGroup]="userForm">
+    <label for="firstName">
+      First Name <br>
+      <input class="input-custom"  type="text" id="firstName" [formControlName]="'firstName'">
+    </label>
+    <br>
+    <label for="lastName">
+      Last Name <br>
+      <input class="input-custom"  type="text" id="lastName" [formControlName]="'lastName'">
+    </label>
+    <br>
+    <label for="profilePicture">
+      Lien de l'image <br>
+      <input class="input-custom"  type="text" id="profilePicture" [formControlName]="'profilePicture'">
+    </label>
+    <br>
+    <button type="submit" class="button-card" (click)="addUser()">Créer</button>
+  </form>
 </div>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/AUTNebF4fSI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/mXccK7Ps4Ik" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/hvUI8s0IfeA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/q6VxDM8Wd-o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/sTY0k4UkFkE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/OEo_UMSLvgA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<app-user-list></app-user-list>
+

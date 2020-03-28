@@ -11,7 +11,7 @@ import {User} from "../../../models/user.model";
 })
 export class UserQuizzesComponent implements OnInit {
 
-  public quizList: Quiz[] = [];
+  public quizList: Quiz[];
 
   constructor(public userService: UserService, private route: ActivatedRoute) {
   }

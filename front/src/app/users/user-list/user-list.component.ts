@@ -15,14 +15,6 @@ export class UserListComponent implements OnInit {
     this.userService.users$.subscribe((users) => this.userList = users);
   }
 
-  userSelected(selected: boolean) {
-    console.log('event received from child:', selected);
-  }
-
-  userDeleted(user: User){
-    this.userService.deleteUser(user);
-  }
-
   ngOnInit() {
 
   }

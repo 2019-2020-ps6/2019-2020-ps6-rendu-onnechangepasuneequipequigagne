@@ -22,6 +22,9 @@ import { PassReponseComponent } from './reponses/pass-reponse/pass-reponse.compo
 import {HomeComponent} from './home/home.component';
 import {EditMenuComponent} from './edit-menu/edit-menu.component';
 import {UserQuizzesComponent} from './users/user-quizzes/user-quizzes.component';
+import {EditUsersComponent} from './users/edit-users/edit-users.component';
+import {EditUserComponent} from './users/edit-user/edit-user.component';
+import {UserHistoryComponent} from './users/user-history/user-history.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +45,10 @@ import {UserQuizzesComponent} from './users/user-quizzes/user-quizzes.component'
     PassReponseComponent,
     HomeComponent,
     EditMenuComponent,
-    UserQuizzesComponent
+    UserQuizzesComponent,
+    EditUsersComponent,
+    EditUserComponent,
+    UserHistoryComponent
   ],
   imports: [
     BrowserModule,

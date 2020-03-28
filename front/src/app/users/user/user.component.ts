@@ -1,5 +1,5 @@
-import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
-import { User } from 'src/models/user.model'
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {User} from "../../../models/user.model";
 
 @Component({
   selector: 'app-user',
@@ -8,26 +8,38 @@ import { User } from 'src/models/user.model'
 })
 export class UserComponent implements OnInit {
 
-  constructor() { }
+  @Input()
+  user: User;
 
   @Input()
-  user : User;
+  edit: boolean;
 
   @Output()
-  userSelected: EventEmitter<boolean> = new EventEmitter<boolean>();
+  userEdited: EventEmitter<User> = new EventEmitter<User>();
+
+  @Output()
+  userHistory: EventEmitter<User> = new EventEmitter<User>();
 
   @Output()
   userDeleted: EventEmitter<User> = new EventEmitter<User>();
 
-  selectUser() {
-    this.userSelected.emit(true);
-  }
-
-  deleteUser(){
-    this.userDeleted.emit(this.user);
+  constructor() {
+    this.edit = false;
   }
 
   ngOnInit() {
+  }
+
+  editUser() {
+    this.userEdited.emit(this.user);
+  }
+
+  historyUser() {
+    this.userHistory.emit(this.user);
+  }
+
+  deleteUser() {
+    this.userDeleted.emit(this.user);
   }
 
 }

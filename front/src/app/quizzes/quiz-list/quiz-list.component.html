@@ -2,7 +2,7 @@
     <input type="text" placeholder="Rechercher..."><span class="glyphicon glyphicon-search"></span>
     <div class="border border-primary rounded">
         <div class="quiz" *ngFor="let quiz of quizList">
-            <app-quiz [quiz]="quiz" (quizSelected)="quizSelected($event)" (quizDeleted)="quizDeleted($event)"></app-quiz>
+            <app-quiz [quiz]="quiz"></app-quiz>
         </div>
     </div>
 </div>

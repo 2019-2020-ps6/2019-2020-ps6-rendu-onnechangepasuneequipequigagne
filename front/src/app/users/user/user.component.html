@@ -1,17 +1,20 @@
-<a class="text-control" routerLink="{{user.id}}/quizzes">
-  <div class="btn btn-primary">
-    <i *ngIf ="user.profilePicture">
+<div class="btn btn-primary">
+    <i *ngIf ="user.profilePicture !== 'none'">
       <div class="img-wrap">
         <img [src]="user.profilePicture">
       </div>
     </i>
-    <i *ngIf ="!user.profilePicture">
+    <i *ngIf ="user.profilePicture === 'none' ">
       <div class="img-wrap">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/OOjs_UI_icon_userAvatar.svg/1024px-OOjs_UI_icon_userAvatar.svg.png">
       </div>
     </i>
     <p class="text-control card-text">
-      {{user.userName}}
+      {{user.firstName}} {{user.lastName}}
     </p>
-  </div>
-</a>
+    <div class="button-card" *ngIf="edit">
+      <button class="button" (click)="editUser()"><i class="fas fa-user-edit"></i></button>
+      <button class="button" (click)="historyUser()"><i class="far fa-newspaper"></i></button>
+      <button class="button" (click)="deleteUser()"><i class="fas fa-trash"></i></button>
+    </div>
+</div>

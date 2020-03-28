@@ -1,5 +1,4 @@
-<a class="text-control" routerLink="{{quiz.id}}">
-    <div class="btn btn-primary">
+<div class="btn btn-primary">
         <i *ngIf ="quiz.imageURL">
           <div class="img-wrap">
             <img [src]="quiz.imageURL">
@@ -13,5 +12,15 @@
         <p class="text-control card-text">
           {{quiz.name}}
         </p>
+  <div class="button-card" *ngIf="edit">
+    <div *ngIf="isAdded">
+      <button class="button" [disabled]=true><i class="fas fa-plus-circle"></i></button>
+      <button class="button" [disabled]=false><i class="fas fa-minus-circle"></i></button>
     </div>
-</a>
+    <div *ngIf="!isAdded">
+      <button class="button" [disabled]=false><i class="fas fa-plus-circle"></i></button>
+      <button class="button" [disabled]=true><i class="fas fa-minus-circle"></i></button>
+    </div>
+  </div>
+</div>
+
