@@ -71,4 +71,5 @@ module.exports = class BaseModel {
     this.items = this.items.filter((item) => item.id !== id)
     this.save()
   }
+
 }

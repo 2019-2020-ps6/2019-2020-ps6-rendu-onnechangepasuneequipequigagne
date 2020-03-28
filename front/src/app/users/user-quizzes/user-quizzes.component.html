@@ -1,0 +1,11 @@
+<div class="main">
+  <input type="text" placeholder="Rechercher..."><span class="glyphicon glyphicon-search"></span>
+    <span class="text">Liste des quizz disponible</span>
+    <div class="border border-primary rounded">
+      <div class="quiz" *ngFor="let quiz of quizList">
+        <a class="text-control" routerLink="{{quiz.id}}">
+          <app-quiz [quiz]="quiz" (quizSelected)="quizSelected($event)"></app-quiz>
+        </a>
+      </div>
+    </div>
+</div>

@@ -3,17 +3,16 @@
 .border{
   display: inline-flex;
   width: 100%;
+  max-width: 100%;
   margin-top: 1em;
   padding: 1em 1em 1em 1em;
   border: solid 2px $blue;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  overflow: scroll;
   background: rgb(150, 150, 150);
 }
-
-
-.search{
-  margin: 2%;
+.main{
+  padding: 1em 5em 1em 1em;
+  margin: 2em;
 }
 
 .main{

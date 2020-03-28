@@ -1,0 +1,14 @@
+<div class="user-list">
+  <div id="gauche">
+    <app-user-form></app-user-form>
+  </div>
+  <div id="droite">
+    <span class="text">Edition des Accueillis</span>
+    <input type="text" placeholder="Rechercher..."><span class="search"></span>
+    <div class="border border-primary rounded">
+      <div class="user" *ngFor="let user of userList">
+        <app-user [edit]=true [user]="user" (userEdited)="userEdited($event)" (userHistory)="userHistory($event)" (userDeleted)="userDeleted($event)"></app-user>
+      </div>
+    </div>
+  </div>
+</div>

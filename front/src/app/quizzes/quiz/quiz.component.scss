@@ -28,3 +28,13 @@ img{
   text-align: center;
   overflow-wrap: break-word;
 }
+
+.button {
+  width: 50px;
+  margin-left: 5px;
+  border: gray 2px;
+}
+
+.button:hover {
+  background-color: gray;
+}

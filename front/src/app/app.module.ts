@@ -19,10 +19,12 @@ import { UserFormComponent } from './users/user-form/user-form.component';
 import { PassQuizComponent } from './quizzes/pass-quiz/pass-quiz.component';
 import { PassQuestionComponent } from './questions/pass-question/pass-question.component';
 import { PassReponseComponent } from './reponses/pass-reponse/pass-reponse.component';
-import {HomeComponent} from "./home/home.component";
-import {EditMenuComponent} from "./edit-menu/edit-menu.component";
-
-
+import {HomeComponent} from './home/home.component';
+import {EditMenuComponent} from './edit-menu/edit-menu.component';
+import {UserQuizzesComponent} from './users/user-quizzes/user-quizzes.component';
+import {EditUsersComponent} from './users/edit-users/edit-users.component';
+import {EditUserComponent} from './users/edit-user/edit-user.component';
+import {UserHistoryComponent} from './users/user-history/user-history.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,11 @@ import {EditMenuComponent} from "./edit-menu/edit-menu.component";
     PassQuestionComponent,
     PassReponseComponent,
     HomeComponent,
-    EditMenuComponent
+    EditMenuComponent,
+    UserQuizzesComponent,
+    EditUsersComponent,
+    EditUserComponent,
+    UserHistoryComponent
   ],
   imports: [
     BrowserModule,

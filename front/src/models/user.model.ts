@@ -1,4 +1,7 @@
 export interface User{
-    userName: string;
-    profilePicture: string;
+    firstName: string;
+    lastName: string;
+    id: string;
+    profilePicture?: string;
+    quizzesId?: string[];
 }

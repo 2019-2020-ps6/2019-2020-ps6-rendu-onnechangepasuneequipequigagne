@@ -1,7 +1,20 @@
-<div class="card">
-    <h2>
-        {{user.userName}} <br>
-    </h2>
-    <button class="button-card"><a routerLink="{{user.userName}}/quiz-list">Go !</a></button>
-    <button class="button-card" (click)="deleteUser()">Kill</button>
+<div class="btn btn-primary">
+    <i *ngIf ="user.profilePicture !== 'none'">
+      <div class="img-wrap">
+        <img [src]="user.profilePicture">
+      </div>
+    </i>
+    <i *ngIf ="user.profilePicture === 'none' ">
+      <div class="img-wrap">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/OOjs_UI_icon_userAvatar.svg/1024px-OOjs_UI_icon_userAvatar.svg.png">
+      </div>
+    </i>
+    <p class="text-control card-text">
+      {{user.firstName}} {{user.lastName}}
+    </p>
+    <div class="button-card" *ngIf="edit">
+      <button class="button" (click)="editUser()"><i class="fas fa-user-edit"></i></button>
+      <button class="button" (click)="historyUser()"><i class="far fa-newspaper"></i></button>
+      <button class="button" (click)="deleteUser()"><i class="fas fa-trash"></i></button>
+    </div>
 </div>
