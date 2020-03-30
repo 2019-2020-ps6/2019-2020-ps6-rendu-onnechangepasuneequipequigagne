@@ -15,10 +15,10 @@
   <div class="button-card" *ngIf="edit">
     <div *ngIf="isAdded">
       <button class="button" [disabled]=true><i class="fas fa-plus-circle"></i></button>
-      <button class="button" [disabled]=false><i class="fas fa-minus-circle"></i></button>
+      <button class="button" (click)="suspendQuiz()"  [disabled]=false><i class="fas fa-minus-circle"></i></button>
     </div>
     <div *ngIf="!isAdded">
-      <button class="button" [disabled]=false><i class="fas fa-plus-circle"></i></button>
+      <button class="button" (click)="addQuiz()" [disabled]=false><i class="fas fa-plus-circle"></i></button>
       <button class="button" [disabled]=true><i class="fas fa-minus-circle"></i></button>
     </div>
   </div>
