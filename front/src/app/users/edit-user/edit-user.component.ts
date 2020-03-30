@@ -5,6 +5,8 @@ import {User} from '../../../models/user.model';
 import {ActivatedRoute} from '@angular/router';
 import {Quiz} from '../../../models/quiz.model';
 import {QuizService} from "../../../services/quiz.service";
+import {UserListComponent} from "../user-list/user-list.component";
+import {EditUsersComponent} from "../edit-users/edit-users.component";
 
 @Component({
   selector: 'app-edit-user',
@@ -16,7 +18,6 @@ export class EditUserComponent implements OnInit {
   private user: User;
   private quizList: Quiz[];
   private userForm: FormGroup;
-  private imageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/OOjs_UI_icon_userAvatar.svg/1024px-OOjs_UI_icon_userAvatar.svg.png";
 
   constructor(public formBuilder: FormBuilder, public userService: UserService, public quizService: QuizService, public route: ActivatedRoute) {
     this.quizService.quizzes$.subscribe((quizzes) => this.quizList = quizzes);
@@ -58,5 +59,6 @@ export class EditUserComponent implements OnInit {
     if (infoUpdate.profilePicture) this.user.profilePicture = infoUpdate.profilePicture;
     this.userService.updateUser(this.user).subscribe((user) => this.user = user);
     alert("Changement du profil enregistré");
+    window.location.reload();
   }
 }
