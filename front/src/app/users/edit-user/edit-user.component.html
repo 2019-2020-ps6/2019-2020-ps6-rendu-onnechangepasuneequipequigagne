@@ -29,14 +29,14 @@
     <div class="border border-primary rounded">
       <div class="quiz" *ngFor="let quiz of quizList">
         <div *ngIf="!user.quizzesId">
-          <app-quiz [isAdded]=false [edit]=true [quiz]="quiz" (quizAdded)="addQuizToUser($event)" (quizDeleted)="suspendQuizToUser($event)"></app-quiz>
+          <app-quiz [isAdded]=false [edit]=true [quiz]="quiz" (quizAdded)="addQuizToUser($event)" (quizSuspended)="suspendQuizToUser($event)"></app-quiz>
         </div>
         <div *ngIf="user.quizzesId">
           <div *ngIf="isElement(quiz.id)">
-            <app-quiz [isAdded]=true [edit]=true [quiz]="quiz" (quizAdded)="addQuizToUser($event)" (quizDeleted)="suspendQuizToUser($event)"></app-quiz>
+            <app-quiz [isAdded]=true [edit]=true [quiz]="quiz" (quizAdded)="addQuizToUser($event)" (quizSuspended)="suspendQuizToUser($event)"></app-quiz>
           </div>
           <div *ngIf="!isElement(quiz.id)">
-            <app-quiz [isAdded]=false [edit]=true [quiz]="quiz" (quizAdded)="addQuizToUser($event)" (quizDeleted)="suspendQuizToUser($event)"></app-quiz>
+            <app-quiz [isAdded]=false [edit]=true [quiz]="quiz" (quizAdded)="addQuizToUser($event)" (quizSuspended)="suspendQuizToUser($event)"></app-quiz>
           </div>
       </div>
     </div>

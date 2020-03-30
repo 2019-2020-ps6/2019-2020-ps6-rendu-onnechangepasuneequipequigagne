@@ -46,6 +46,7 @@ export class EditUserComponent implements OnInit {
 
   suspendQuizToUser(quiz: Quiz) {
     const id =  this.user.quizzesId.indexOf(quiz.id.toString());
+    console.log(id);
     this.user.quizzesId.splice(id,1);
     this.userService.updateUser(this.user).subscribe((user) => this.user = user);
   }
