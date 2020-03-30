@@ -5,6 +5,8 @@ import {User} from '../../../models/user.model';
 import {ActivatedRoute} from '@angular/router';
 import {Quiz} from '../../../models/quiz.model';
 import {QuizService} from "../../../services/quiz.service";
+import {UserListComponent} from "../user-list/user-list.component";
+import {EditUsersComponent} from "../edit-users/edit-users.component";
 
 @Component({
   selector: 'app-edit-user',
@@ -22,6 +24,7 @@ export class EditUserComponent implements OnInit {
     this.userForm = this.formBuilder.group({
       firstName: '',
       lastName: '',
+      profilePicture: ''
     });
   }
 
@@ -45,12 +48,17 @@ export class EditUserComponent implements OnInit {
 
   suspendQuizToUser(quiz: Quiz) {
     const id =  this.user.quizzesId.indexOf(quiz.id.toString());
-    console.log(id);
     this.user.quizzesId.splice(id,1);
     this.userService.updateUser(this.user).subscribe((user) => this.user = user);
   }
 
   updateUser() {
-    console.log('Add user: ');
+    const infoUpdate = this.userForm.getRawValue();
+    if (infoUpdate.firstName) this.user.firstName = infoUpdate.firstName;
+    if (infoUpdate.lastName) this.user.lastName = infoUpdate.lastName;
+    if (infoUpdate.profilePicture) this.user.profilePicture = infoUpdate.profilePicture;
+    this.userService.updateUser(this.user).subscribe((user) => this.user = user);
+    alert("Changement du profil enregistré");
+    window.location.reload();
   }
 }

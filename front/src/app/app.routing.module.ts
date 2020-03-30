@@ -5,9 +5,10 @@ import {HomeComponent} from './home/home.component';
 import {EditMenuComponent} from './edit-menu/edit-menu.component';
 import {UserListComponent} from './users/user-list/user-list.component';
 import {UserQuizzesComponent} from './users/user-quizzes/user-quizzes.component';
-import {EditUsersComponent} from './users/edit-users/edit-users.component';
 import {EditUserComponent} from './users/edit-user/edit-user.component';
 import {UserHistoryComponent} from './users/user-history/user-history.component';
+import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
+import {EditUsersComponent} from './users/edit-users/edit-users.component';
 
 
 const routes: Routes = [
@@ -19,7 +20,8 @@ const routes: Routes = [
   {path: 'home/edit-menu', component: EditMenuComponent},
   {path: 'home/edit-menu/edit-users', component: EditUsersComponent},
   {path: 'home/edit-menu/edit-users/:id/quizzes', component: EditUserComponent},
-  {path: 'home/edit-menu/edit-users/:id/quizzes-history', component: UserHistoryComponent}
+  {path: 'home/edit-menu/edit-users/:id/quizzes-history', component: UserHistoryComponent},
+  {path: '**', component: PageNotFoundComponent}
 ];
 
 @NgModule({

@@ -23,8 +23,10 @@ import {HomeComponent} from './home/home.component';
 import {EditMenuComponent} from './edit-menu/edit-menu.component';
 import {UserQuizzesComponent} from './users/user-quizzes/user-quizzes.component';
 import {EditUsersComponent} from './users/edit-users/edit-users.component';
-import {EditUserComponent} from './users/edit-user/edit-user.component';
 import {UserHistoryComponent} from './users/user-history/user-history.component';
+import {EditUserComponent} from './users/edit-user/edit-user.component';
+import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
+
 
 @NgModule({
   declarations: [
@@ -48,7 +50,8 @@ import {UserHistoryComponent} from './users/user-history/user-history.component'
     UserQuizzesComponent,
     EditUsersComponent,
     EditUserComponent,
-    UserHistoryComponent
+    UserHistoryComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
