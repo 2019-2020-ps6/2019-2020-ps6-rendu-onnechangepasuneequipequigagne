@@ -16,7 +16,6 @@ export class EditUserComponent implements OnInit {
   private user: User;
   private quizList: Quiz[];
   private userForm: FormGroup;
-  private imageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/OOjs_UI_icon_userAvatar.svg/1024px-OOjs_UI_icon_userAvatar.svg.png";
 
   constructor(public formBuilder: FormBuilder, public userService: UserService, public quizService: QuizService, public route: ActivatedRoute) {
     this.quizService.quizzes$.subscribe((quizzes) => this.quizList = quizzes);

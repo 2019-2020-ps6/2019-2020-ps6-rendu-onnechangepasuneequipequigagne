@@ -28,7 +28,7 @@ export class UserFormComponent implements OnInit {
     const userToCreate: User = this.userForm.getRawValue();
     userToCreate.quizzesId = [];
     if(!userToCreate.profilePicture){
-      userToCreate.profilePicture = "none";
+      userToCreate.profilePicture = this.imageUrl;
     }
     this.userService.addUser(userToCreate);
     console.log('Add user: ', userToCreate);
