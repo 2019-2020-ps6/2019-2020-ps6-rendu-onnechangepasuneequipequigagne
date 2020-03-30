@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {FormArray, FormBuilder, FormControl, FormGroup} from "@angular/forms";
+import {FormBuilder, FormGroup} from "@angular/forms";
 import {UserService} from '../../../services/user.service';
 import {User} from '../../../models/user.model';
 import {ActivatedRoute} from '@angular/router';
@@ -13,9 +13,7 @@ import {QuizService} from "../../../services/quiz.service";
 })
 export class EditUserComponent implements OnInit {
 
-  @Input()
-  user: User;
-
+  private user: User;
   private quizList: Quiz[];
   private userForm: FormGroup;
   private imageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/OOjs_UI_icon_userAvatar.svg/1024px-OOjs_UI_icon_userAvatar.svg.png";
@@ -36,12 +34,20 @@ export class EditUserComponent implements OnInit {
   }
 
   isElement(quizId: string): boolean{
-   this.user.quizzesId.forEach(function (id) {
-     if(id === quizId){
-       return true;
-     }
-   })
-    return false;
+    const id = this.user.quizzesId.find(element => element == quizId);
+    return !!id;
+    // le !! signifie est définit
+  }
+
+  addQuizToUser(quiz: Quiz) {
+    this.user.quizzesId.push(quiz.id.toString());
+    this.userService.updateUser(this.user).subscribe((user) => this.user = user);
+  }
+
+  suspendQuizToUser(quiz: Quiz) {
+    const id =  this.user.quizzesId.indexOf(quiz.id.toString());
+    this.user.quizzesId.splice(id,1);
+    this.userService.updateUser(this.user).subscribe((user) => this.user = user);
   }
 
   updateUser() {

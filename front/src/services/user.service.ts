@@ -14,6 +14,7 @@ export class UserService {
 
   public users$: BehaviorSubject<User[]> = new BehaviorSubject(this.users);
 
+
   constructor(private http: HttpClient) {
     this.setUsersFromUrl();
   }
@@ -31,6 +32,7 @@ export class UserService {
     return this.http.get<User>(userUrl);
   }
 
+
   getUserQuizzes(id: string): Observable<Quiz[]>{
     const userQuizzesUrl = `${this.url}/${id}/quizzes`;
     return this.http.get<Quiz[]>(userQuizzesUrl);
@@ -43,9 +45,17 @@ export class UserService {
     })
   }
 
-  updateUser(user: User) {
+  updateUser(user: User): Observable<User> {
     const userUrl = `${this.url}/${user.id}`;
-    this.http.put<User>(userUrl,user).subscribe();
+    return this.http.put<User>(userUrl,user);
+  }
+
+  addQuizToUser(user: Quiz) {
+
+  }
+
+  suspendQuizToUser(quiz: Quiz) {
+
   }
 
   deleteUser(user: User) {
