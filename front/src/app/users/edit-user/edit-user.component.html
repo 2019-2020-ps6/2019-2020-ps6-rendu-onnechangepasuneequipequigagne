@@ -4,18 +4,18 @@
     <img class="image" [src]="user.profilePicture">
     <form class="user-form" [formGroup]="userForm">
       <label for="firstName">
-        First Name <br>
+        Prénom <br>
         <input class="input-custom"  type="text" [value]="user.firstName" id="firstName" [formControlName]="'firstName'">
       </label>
       <br>
       <label for="lastName">
-        Last Name <br>
+        Nom <br>
         <input class="input-custom"  type="text" [value]="user.lastName" id="lastName" [formControlName]="'lastName'">
       </label>
       <br>
       <label for="profilePicture">
         Lien de l'image <br>
-        <input class="input-custom"  type="text" value="url..." id="profilePicture" [formControlName]="'profilePicture'">
+        <input class="input-custom"  type="text" [value]="user.profilePicture" id="profilePicture" [formControlName]="'profilePicture'">
       </label>
       <br>
       <button type="submit" class="button-card" (click)="updateUser()">Enregistrer</button>

@@ -16,12 +16,14 @@ export class EditUserComponent implements OnInit {
   private user: User;
   private quizList: Quiz[];
   private userForm: FormGroup;
+  private imageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/OOjs_UI_icon_userAvatar.svg/1024px-OOjs_UI_icon_userAvatar.svg.png";
 
   constructor(public formBuilder: FormBuilder, public userService: UserService, public quizService: QuizService, public route: ActivatedRoute) {
     this.quizService.quizzes$.subscribe((quizzes) => this.quizList = quizzes);
     this.userForm = this.formBuilder.group({
       firstName: '',
       lastName: '',
+      profilePicture: ''
     });
   }
 
@@ -45,12 +47,16 @@ export class EditUserComponent implements OnInit {
 
   suspendQuizToUser(quiz: Quiz) {
     const id =  this.user.quizzesId.indexOf(quiz.id.toString());
-    console.log(id);
     this.user.quizzesId.splice(id,1);
     this.userService.updateUser(this.user).subscribe((user) => this.user = user);
   }
 
   updateUser() {
-    console.log('Add user: ');
+    const infoUpdate = this.userForm.getRawValue();
+    if (infoUpdate.firstName) this.user.firstName = infoUpdate.firstName;
+    if (infoUpdate.lastName) this.user.lastName = infoUpdate.lastName;
+    if (infoUpdate.profilePicture) this.user.profilePicture = infoUpdate.profilePicture;
+    this.userService.updateUser(this.user).subscribe((user) => this.user = user);
+    alert("Changement du profil enregistré");
   }
 }
