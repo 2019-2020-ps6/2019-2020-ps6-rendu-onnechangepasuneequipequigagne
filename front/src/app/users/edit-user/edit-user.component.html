@@ -1,0 +1,45 @@
+<div id="gauche">
+  <div class="card">
+    <h4>Informations du profil</h4>
+    <img class="image" [src]="imageUrl">
+    <form class="user-form" [formGroup]="userForm">
+      <label for="firstName">
+        First Name <br>
+        <input class="input-custom"  type="text" [value]="user.firstName" id="firstName" [formControlName]="'firstName'">
+      </label>
+      <br>
+      <label for="lastName">
+        Last Name <br>
+        <input class="input-custom"  type="text" [value]="user.lastName" id="lastName" [formControlName]="'lastName'">
+      </label>
+      <br>
+      <label for="profilePicture">
+        Lien de l'image <br>
+        <input class="input-custom"  type="text" value="url..." id="profilePicture" [formControlName]="'profilePicture'">
+      </label>
+      <br>
+      <button type="submit" class="button-card" (click)="updateUser()">Enregistrer</button>
+    </form>
+  </div>
+</div>
+<div id="droite">
+  <div class="main">
+    <span class="text">Edition des quizz de {{user.firstName}}</span>
+    <input type="text" placeholder="Rechercher..."><span class="search"></span>
+    <div class="border border-primary rounded">
+      <div class="quiz" *ngFor="let quiz of quizList">
+        <div *ngIf="!user.quizzesId">
+          <app-quiz [isAdded]=false [edit]=true [quiz]="quiz" (quizAdded)="addQuizToUser($event)" (quizSuspended)="suspendQuizToUser($event)"></app-quiz>
+        </div>
+        <div *ngIf="user.quizzesId">
+          <div *ngIf="isElement(quiz.id)">
+            <app-quiz [isAdded]=true [edit]=true [quiz]="quiz" (quizAdded)="addQuizToUser($event)" (quizSuspended)="suspendQuizToUser($event)"></app-quiz>
+          </div>
+          <div *ngIf="!isElement(quiz.id)">
+            <app-quiz [isAdded]=false [edit]=true [quiz]="quiz" (quizAdded)="addQuizToUser($event)" (quizSuspended)="suspendQuizToUser($event)"></app-quiz>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

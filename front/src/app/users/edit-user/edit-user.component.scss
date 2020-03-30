@@ -1,0 +1,61 @@
+@import '../../../styles/card.scss';
+
+#gauche{
+  margin-top: 2%;
+  margin-bottom: 10%;
+  width: 30%;
+  height: 100%;
+  float: left;
+}
+
+#droite {
+  margin-top: 0%;
+  margin-bottom: 10%;
+  width: 70%;
+  height: 100%;
+  float: left;
+}
+
+.image{
+  height: 200px;
+  width: 200px;
+  border: black 2px;
+}
+
+.button-card:hover {
+  background-color: lightblue;
+}
+
+.border{
+  display: inline-flex;
+  width: 100%;
+  max-width: 100%;
+  margin-left: 0%;
+  margin-top: 1em;
+  padding: 1em 1em 1em 1em;
+  overflow: scroll;
+  background: rgb(150, 150, 150);
+}
+
+.text {
+  font-size: larger;
+  font-weight: bold;
+  margin-left: 20%;
+  margin-right: 30%;
+}
+
+.button {
+  width: 50px;
+  margin-left: 5px;
+  border: gray 2px;
+}
+
+.button:hover {
+  background-color: gray;
+}
+
+.image{
+  height: 150px;
+  width: 150px;
+}
+

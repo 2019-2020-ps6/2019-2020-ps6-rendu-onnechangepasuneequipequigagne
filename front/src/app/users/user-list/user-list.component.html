@@ -1,5 +1,11 @@
-<div class="user-list">
+<div class="main">
+  <input type="text" placeholder="Rechercher..."><span class="glyphicon glyphicon-search"></span>
+  <span class="text">Liste des accueillis</span>
+  <div class="border border-primary rounded">
     <div class="user" *ngFor="let user of userList">
-        <app-user [user]="user" (userDeleted)="userDeleted($event)"></app-user>
+      <a class="text-control" routerLink="{{user.id}}/quizzes">
+        <app-user [user]="user"></app-user>
+      </a>
     </div>
+  </div>
 </div>
