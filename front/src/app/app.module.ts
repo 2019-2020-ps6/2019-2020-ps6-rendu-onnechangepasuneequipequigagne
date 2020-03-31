@@ -9,7 +9,7 @@ import { QuizListComponent } from './quizzes/quiz-list/quiz-list.component';
 import { QuizComponent } from './quizzes/quiz/quiz.component';
 import { HeaderComponent } from './header/header.component';
 import { QuizFormComponent } from './quizzes/quiz-form/quiz-form.component';
-import { EditQuizComponent } from './quizzes/edit-quiz/edit-quiz.component';
+import { EditQuizzesComponent } from './quizzes/edit-quizzes/edit-quizzes.component';
 import { QuestionComponent } from './questions/question/question.component';
 import { QuestionFormComponent } from './questions/question-form/question-form.component';
 import { QuestionListComponent } from './questions/question-list/question-list.component';
@@ -35,7 +35,7 @@ import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
     QuizComponent,
     HeaderComponent,
     QuizFormComponent,
-    EditQuizComponent,
+    EditQuizzesComponent,
     QuestionComponent,
     QuestionFormComponent,
     QuestionListComponent,

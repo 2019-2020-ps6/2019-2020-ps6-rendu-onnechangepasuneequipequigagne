@@ -1,7 +1,7 @@
 import { Injectable, OnInit } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { Quiz } from '../models/quiz.model';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient} from '@angular/common/http';
 import { Question } from '../models/question.model';
 
 @Injectable({
@@ -10,7 +10,7 @@ import { Question } from '../models/question.model';
 export class QuizService{
 
   private quizzes: Quiz[] = [];
-  private url = "http://localhost:9428/api/quizzes"
+  private url = 'http://localhost:9428/api/quizzes';
 
   public quizzes$: BehaviorSubject<Quiz[]> = new BehaviorSubject(this.quizzes);
 
@@ -26,14 +26,18 @@ export class QuizService{
   }
 
   addQuiz(quiz: Quiz) {
-    this.quizzes.push(quiz);
-    this.quizzes$.next(this.quizzes);
+    this.http.post<Quiz>(this.url,quiz).subscribe((quiz) => {
+      this.quizzes.push(quiz);
+      this.quizzes$.next(this.quizzes);
+    })
   }
 
   deleteQuiz(quiz: Quiz){
+    const quizUrl = `${this.url}/${quiz.id}`;
     const index = this.quizzes.indexOf(quiz);
     this.quizzes.splice(index, 1);
     this.quizzes$.next(this.quizzes);
+    this.http.delete<Quiz>(quizUrl).subscribe();
   }
 
   getQuiz(id : string): Observable<Quiz> {
@@ -45,7 +49,4 @@ export class QuizService{
     return this.http.get<Question[]>(this.url+id+"/questions/");
   }
 
-  addQuestion(id : string, question: Question){
-
-  }
 }
