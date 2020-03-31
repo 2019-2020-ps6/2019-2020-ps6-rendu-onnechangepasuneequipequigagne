@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { QuizService} from '../../../services/quiz.service'
 import { Quiz } from 'src/models/quiz.model';
-import { Question, Answer } from 'src/models/question.model';
+import { Question} from 'src/models/question.model';
 
 @Component({
   selector: 'app-pass-quiz',

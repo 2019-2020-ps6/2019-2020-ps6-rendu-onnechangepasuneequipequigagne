@@ -1,0 +1,37 @@
+@import '../../../styles/card.scss';
+
+#gauche{
+  margin-top: 2%;
+  margin-bottom: 10%;
+  width: 30%;
+  height: 100%;
+  float: left;
+}
+
+#droite {
+  margin-top: 0%;
+  margin-bottom: 10%;
+  width: 70%;
+  height: 100%;
+  float: left;
+}
+
+.border{
+  display: inline-flex;
+  width: 100%;
+  max-width: 100%;
+  margin-left: 0%;
+  margin-top: 1em;
+  padding: 1em 1em 1em 1em;
+  border: solid 2px $blue;
+  overflow: scroll;
+  background: rgb(150, 150, 150);
+}
+
+.text {
+  font-size: larger;
+  font-weight: bold;
+  margin-left: 25%;
+  margin-right: 30%;
+}
+

@@ -50,14 +50,6 @@ export class UserService {
     return this.http.put<User>(userUrl,user);
   }
 
-  addQuizToUser(user: Quiz) {
-
-  }
-
-  suspendQuizToUser(quiz: Quiz) {
-
-  }
-
   deleteUser(user: User) {
     const userUrl = `${this.url}/${user.id}`;
     const id = this.users.indexOf(user);

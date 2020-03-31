@@ -1,0 +1,14 @@
+<div class="user-list">
+  <div id="gauche">
+    <app-quiz-form></app-quiz-form>
+  </div>
+  <div id="droite">
+    <span class="text">Edition des Quizz</span>
+    <input type="text" placeholder="Rechercher..."><span class="search"></span>
+    <div class="border border-primary rounded">
+      <div class="user" *ngFor="let quiz of quizList">
+        <app-quiz [editQuizMenu]=true [quiz]="quiz" (quizEdited)="editQuiz($event)" (quizDeleted)="deleteQuiz($event)"></app-quiz>
+      </div>
+    </div>
+  </div>
+</div>

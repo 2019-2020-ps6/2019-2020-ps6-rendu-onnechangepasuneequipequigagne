@@ -5,8 +5,6 @@ import {User} from '../../../models/user.model';
 import {ActivatedRoute} from '@angular/router';
 import {Quiz} from '../../../models/quiz.model';
 import {QuizService} from "../../../services/quiz.service";
-import {UserListComponent} from "../user-list/user-list.component";
-import {EditUsersComponent} from "../edit-users/edit-users.component";
 
 @Component({
   selector: 'app-edit-user',

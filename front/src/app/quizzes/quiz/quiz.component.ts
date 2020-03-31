@@ -15,6 +15,9 @@ export class QuizComponent implements OnInit {
   edit: boolean;
 
   @Input()
+  editQuizMenu: boolean;
+
+  @Input()
   isAdded: boolean;
 
   @Output()
@@ -24,10 +27,14 @@ export class QuizComponent implements OnInit {
   quizSuspended: EventEmitter<Quiz> = new EventEmitter<Quiz>();
 
   @Output()
+  quizEdited: EventEmitter<Quiz> = new EventEmitter<Quiz>();
+
+  @Output()
   quizDeleted: EventEmitter<Quiz> = new EventEmitter<Quiz>();
 
   constructor() {
     this.edit = false;
+    this.editQuizMenu = false;
   }
 
 
@@ -42,6 +49,9 @@ export class QuizComponent implements OnInit {
     this.quizSuspended.emit(this.quiz);
   }
 
+  editQuiz(){
+    this.quizEdited.emit(this.quiz);
+  }
 
   deleteQuiz(){
     this.quizDeleted.emit(this.quiz);

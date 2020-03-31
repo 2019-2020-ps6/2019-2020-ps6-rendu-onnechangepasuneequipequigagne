@@ -22,5 +22,9 @@
       <button class="button" [disabled]=true><i class="fas fa-minus-circle"></i></button>
     </div>
   </div>
+  <div *ngIf="editQuizMenu">
+    <button class="button" (click)="editQuiz()"><i class="fas fa-user-edit"></i></button>
+    <button class="button" (click)="deleteQuiz()"><i class="fas fa-trash"></i></button>
+  </div>
 </div>
 
