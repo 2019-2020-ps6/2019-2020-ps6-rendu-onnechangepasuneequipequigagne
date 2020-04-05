@@ -5,4 +5,5 @@ module.exports = new BaseModel('Quiz', {
   name: Joi.string().required(),
   theme: Joi.string().required(),
   imageURL: Joi.string(),
+  quizHistory: Joi.array()
 })

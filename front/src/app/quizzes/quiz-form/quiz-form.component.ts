@@ -27,10 +27,11 @@ export class QuizFormComponent implements OnInit {
 
   addQuiz() {
     const quizToCreate: Quiz = this.quizForm.getRawValue();
+    quizToCreate.quizHistory = [];
     if(!quizToCreate.imageURL){
       quizToCreate.imageURL = this.imageUrl;
     }
     this.quizService.addQuiz(quizToCreate);
-    console.log('Add quiz: ', quizToCreate);
+    console.log('quiz created: ', quizToCreate);
   }
 }
