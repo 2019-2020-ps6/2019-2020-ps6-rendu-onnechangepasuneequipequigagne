@@ -27,7 +27,6 @@ export class QuizFormComponent implements OnInit {
 
   addQuiz() {
     const quizToCreate: Quiz = this.quizForm.getRawValue();
-    quizToCreate.quizHistory = [];
     if(!quizToCreate.imageURL){
       quizToCreate.imageURL = this.imageUrl;
     }

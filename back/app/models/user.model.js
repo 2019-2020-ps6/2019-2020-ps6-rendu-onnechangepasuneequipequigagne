@@ -6,4 +6,5 @@ module.exports = new BaseModel('User', {
   lastName: Joi.string().required(),
   profilePicture: Joi.string(),
   quizzesId: Joi.array(),
+  quizzesHistorical: Joi.array(),
 })

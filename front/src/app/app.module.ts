@@ -26,6 +26,7 @@ import {EditUsersComponent} from './users/edit-users/edit-users.component';
 import {UserHistoryComponent} from './users/user-history/user-history.component';
 import {EditUserComponent} from './users/edit-user/edit-user.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
+import {QuizzesHistoricalComponent} from './historical/quizzes-historical/quizzes-historical.component';
 
 
 @NgModule({
@@ -51,6 +52,7 @@ import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
     EditUsersComponent,
     EditUserComponent,
     UserHistoryComponent,
+    QuizzesHistoricalComponent,
     PageNotFoundComponent
   ],
   imports: [

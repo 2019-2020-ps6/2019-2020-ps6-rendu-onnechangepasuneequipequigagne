@@ -1,9 +1,12 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { QuizService} from '../../../services/quiz.service'
 import { Quiz } from 'src/models/quiz.model';
 import { Question} from 'src/models/question.model';
+import {UserService} from '../../../services/user.service';
+import {User} from '../../../models/user.model';
+import {Historical} from '../../../models/historical.model';
 
 @Component({
   selector: 'app-pass-quiz',
@@ -19,14 +22,20 @@ export class PassQuizComponent implements OnInit {
   @Input()
   question: Question;
 
+  private user: User;
+
   private lastQuestion: boolean;
 
   private numQuestion;
 
   private quizDone;
 
+  private date = new Date();
+
+  private historical: Historical;
+
   constructor(private route: ActivatedRoute,
-    private quizService: QuizService,
+    private quizService: QuizService, private userService: UserService,
     private location: Location) {
       this.quizDone = false;
       const id = +this.route.snapshot.paramMap.get('quizId');
@@ -45,6 +54,10 @@ export class PassQuizComponent implements OnInit {
   }
 
   ngOnInit() {
+    const id = +this.route.snapshot.paramMap.get('id');
+    if (id != null) {
+      this.userService.getUser(id.toString()).subscribe((user) => this.user = user);
+    }
   }
 
   nextQuestion(next: boolean){
@@ -54,5 +67,12 @@ export class PassQuizComponent implements OnInit {
     } else {
       this.quizDone=true;
     }
+  }
+
+  finalScore(score: number) {
+    this.historical.quizId = this.quiz.id;
+    this.historical.date = this.date.toDateString();
+    this.historical.score = score;
+    this.userService.setUserQuizzesHistorical(this.historical,this.user.id);
   }
 }

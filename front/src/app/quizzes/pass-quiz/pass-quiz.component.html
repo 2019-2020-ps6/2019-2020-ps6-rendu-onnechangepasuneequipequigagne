@@ -1,6 +1,6 @@
-<div *ngIf="!quizDone">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <div *ngIf="!quizDone">
   <div class="q">Question n°{{numQuestion}}: {{question.label}}</div>
-  <app-pass-question [question]="question" [lastQuestion]="lastQuestion" (nextQuestion)="nextQuestion($event)"></app-pass-question>
+  <app-pass-question [user]="user" [quiz]= "quiz" [question]="question" [lastQuestion]="lastQuestion" (nextQuestion)="nextQuestion($event)" (finalScore)="finalScore($event)"></app-pass-question>
 </div>
 <div class="quizDone" *ngIf="quizDone">
     <div class="text-center">
