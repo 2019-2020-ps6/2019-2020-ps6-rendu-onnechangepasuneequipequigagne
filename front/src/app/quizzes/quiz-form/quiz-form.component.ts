@@ -31,6 +31,6 @@ export class QuizFormComponent implements OnInit {
       quizToCreate.imageURL = this.imageUrl;
     }
     this.quizService.addQuiz(quizToCreate);
-    console.log('Add quiz: ', quizToCreate);
+    console.log('quiz created: ', quizToCreate);
   }
 }

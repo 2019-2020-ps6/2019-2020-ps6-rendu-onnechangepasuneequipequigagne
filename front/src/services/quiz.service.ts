@@ -1,8 +1,8 @@
-import { Injectable, OnInit } from '@angular/core';
+import { Injectable} from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { Quiz } from '../models/quiz.model';
-import { HttpClient} from '@angular/common/http';
 import { Question } from '../models/question.model';
+import { HttpClient} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'

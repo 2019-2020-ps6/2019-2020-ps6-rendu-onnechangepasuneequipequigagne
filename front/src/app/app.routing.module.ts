@@ -22,7 +22,7 @@ const routes: Routes = [
   {path: 'home/edit-menu/edit-users', component: EditUsersComponent},
   {path: 'home/edit-menu/edit-quizzes', component: EditQuizzesComponent},
   {path: 'home/edit-menu/edit-users/:id/quizzes', component: EditUserComponent},
-  {path: 'home/edit-menu/edit-users/:id/quizzes-history', component: UserHistoryComponent},
+  {path: 'home/edit-menu/edit-users/:id/quizzes-historical', component: UserHistoryComponent},
   {path: '**', component: PageNotFoundComponent}
 ];
 

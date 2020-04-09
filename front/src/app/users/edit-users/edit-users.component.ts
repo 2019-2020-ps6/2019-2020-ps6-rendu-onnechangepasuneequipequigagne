@@ -25,7 +25,7 @@ import {Router} from "@angular/router";
   }
 
   userHistory(user: User) {
-    const link = ['home/edit-menu/edit-users/'+user.id+'/quizzes-history'];
+    const link = ['home/edit-menu/edit-users/'+user.id+'/quizzes-historical'];
     this.router.navigate(link);
   }
 

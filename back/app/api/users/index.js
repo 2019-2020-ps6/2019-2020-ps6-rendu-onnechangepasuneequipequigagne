@@ -4,6 +4,9 @@ const { User } = require('../../models')
 
 const { Quiz} = require('../../models')
 
+const HistoryRouter = require('../users/quizzes-historical')
+
+
 const router = new Router()
 
 
@@ -65,5 +68,7 @@ router.put('/:id', (req, res) => {
     res.status(404).json(err)
   }
 })
+
+router.use('/:userId/quizzes-historical',HistoryRouter)
 
 module.exports = router

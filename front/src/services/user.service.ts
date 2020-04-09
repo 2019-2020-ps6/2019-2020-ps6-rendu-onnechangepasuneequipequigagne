@@ -1,8 +1,9 @@
 import {Injectable} from '@angular/core';
 import {BehaviorSubject, Observable, of} from 'rxjs';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {HttpClient} from '@angular/common/http';
 import {User} from '../models/user.model';
 import {Quiz} from "../models/quiz.model";
+import {Historical} from "../models/historical.model";
 
 @Injectable({
   providedIn: 'root'
@@ -57,5 +58,11 @@ export class UserService {
     this.users$.next(this.users);
     this.http.delete<User>(userUrl).subscribe();
   }
+
+  setUserQuizzesHistorical(historical: Historical, userId: string) {
+    const url = `${this.url}/${userId}/quizzes-historical`;
+    this.http.post<Historical>(url, historical).subscribe();
+  }
+
 }
 
