@@ -6,10 +6,10 @@ import {EditMenuComponent} from './edit-menu/edit-menu.component';
 import {UserListComponent} from './users/user-list/user-list.component';
 import {UserQuizzesComponent} from './users/user-quizzes/user-quizzes.component';
 import {EditUserComponent} from './users/edit-user/edit-user.component';
-import {UserHistoryComponent} from './users/user-history/user-history.component';
-import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
+import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {EditUsersComponent} from './users/edit-users/edit-users.component';
 import {EditQuizzesComponent} from './quizzes/edit-quizzes/edit-quizzes.component';
+import {QuizzesHistoricalComponent} from './historical/quizzes-historical/quizzes-historical.component';
 
 
 const routes: Routes = [
@@ -22,7 +22,7 @@ const routes: Routes = [
   {path: 'home/edit-menu/edit-users', component: EditUsersComponent},
   {path: 'home/edit-menu/edit-quizzes', component: EditQuizzesComponent},
   {path: 'home/edit-menu/edit-users/:id/quizzes', component: EditUserComponent},
-  {path: 'home/edit-menu/edit-users/:id/quizzes-historical', component: UserHistoryComponent},
+  {path: 'home/edit-menu/edit-users/:id/quizzes-historical', component: QuizzesHistoricalComponent},
   {path: '**', component: PageNotFoundComponent}
 ];
 

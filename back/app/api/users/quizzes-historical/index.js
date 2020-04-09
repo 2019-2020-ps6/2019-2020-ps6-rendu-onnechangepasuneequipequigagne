@@ -18,7 +18,7 @@ router.get('/', (req, res) => {
 router.get('/:historicalId', (req, res) => {
     try {
         let historical = Historical.getById(req.params.historicalId)
-        if(history.userId ===  parseInt(req.params.userId)) {
+        if(historical.userId ===  parseInt(req.params.userId)) {
             res.status(200).json(historical)
         }
         else {

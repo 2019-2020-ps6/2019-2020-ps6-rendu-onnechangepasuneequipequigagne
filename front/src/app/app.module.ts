@@ -23,10 +23,10 @@ import {HomeComponent} from './home/home.component';
 import {EditMenuComponent} from './edit-menu/edit-menu.component';
 import {UserQuizzesComponent} from './users/user-quizzes/user-quizzes.component';
 import {EditUsersComponent} from './users/edit-users/edit-users.component';
-import {UserHistoryComponent} from './users/user-history/user-history.component';
 import {EditUserComponent} from './users/edit-user/edit-user.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {QuizzesHistoricalComponent} from './historical/quizzes-historical/quizzes-historical.component';
+import {QuizHistoricalComponent} from './historical/quiz-historical/quiz-historical.component';
 
 
 @NgModule({
@@ -51,7 +51,7 @@ import {QuizzesHistoricalComponent} from './historical/quizzes-historical/quizze
     UserQuizzesComponent,
     EditUsersComponent,
     EditUserComponent,
-    UserHistoryComponent,
+    QuizHistoricalComponent,
     QuizzesHistoricalComponent,
     PageNotFoundComponent
   ],

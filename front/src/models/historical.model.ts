@@ -1,5 +1,6 @@
 export interface Historical {
-  quizId: string;
-  score: number;
+  id: string;
+  quizName: string;
+  score: string;
   date: string;
 }
