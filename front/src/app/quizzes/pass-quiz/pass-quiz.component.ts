@@ -37,6 +37,11 @@ export class PassQuizComponent implements OnInit {
   constructor(private route: ActivatedRoute,
     private quizService: QuizService, private userService: UserService,
     private location: Location) {
+      this.historical = {
+        quizId: "0",
+        score: 0,
+        date: this.date.toDateString()
+      }
       this.quizDone = false;
       const id = +this.route.snapshot.paramMap.get('quizId');
       this.question = {
