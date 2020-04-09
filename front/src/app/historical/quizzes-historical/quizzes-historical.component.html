@@ -1,0 +1,9 @@
+<div class="main">
+  <input type="text" placeholder="Rechercher..."><span class="glyphicon glyphicon-search"></span>
+  <span class="text">Historique de {{user.firstName}}</span>
+  <div class="border border-primary rounded">
+    <div class="user" *ngFor="let historical of historicalList">
+        <app-quiz-historical [historical]="historical"></app-quiz-historical>
+    </div>
+  </div>
+</div>

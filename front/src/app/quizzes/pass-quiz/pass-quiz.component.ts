@@ -32,7 +32,12 @@ export class PassQuizComponent implements OnInit {
 
   private date = new Date();
 
-  private historical: Historical;
+  private historical: Historical = new class implements Historical {
+    date: string;
+    id: string;
+    quizName: string;
+    score: string;
+  }
 
   constructor(private route: ActivatedRoute,
     private quizService: QuizService, private userService: UserService,
@@ -75,9 +80,11 @@ export class PassQuizComponent implements OnInit {
   }
 
   finalScore(score: number) {
-    this.historical.quizId = this.quiz.id;
+    this.historical.quizName = this.quiz.name;
     this.historical.date = this.date.toDateString();
-    this.historical.score = score;
+    this.historical.score = `${score}/${this.quiz.questions.length}`;
+    this.user.quizzesHistorical.push(this.historical);
     this.userService.setUserQuizzesHistorical(this.historical,this.user.id);
+    this.userService.updateUser(this.user).subscribe((user) => this.user = user);
   }
 }

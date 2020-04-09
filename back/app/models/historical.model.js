@@ -3,7 +3,7 @@ const BaseModel = require('../utils/base-model.js')
 
 module.exports = new BaseModel('Historical', {
     userId: Joi.number().required(),
-    quizId: Joi.string().required(),
-    score: Joi.number().required(),
+    quizName: Joi.string().required(),
+    score: Joi.string().required(),
     date: Joi.string(),
 })

@@ -6,5 +6,5 @@ export interface User {
     id: string;
     profilePicture?: string;
     quizzesId?: string[];
-    quizzesHistorical: Historical[];
+    quizzesHistorical?: Historical[];
 }

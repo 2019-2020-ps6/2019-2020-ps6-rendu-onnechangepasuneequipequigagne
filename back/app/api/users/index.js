@@ -4,6 +4,8 @@ const { User } = require('../../models')
 
 const { Quiz} = require('../../models')
 
+const { Historical} = require('../../models')
+
 const HistoryRouter = require('../users/quizzes-historical')
 
 
@@ -25,6 +27,7 @@ router.get('/:id', (req, res) => {
     res.status(404).json(err)
   }
 })
+
 
 router.get('/:id/quizzes', (req, res) => {
   try {
@@ -55,6 +58,10 @@ router.post('/', (req, res) => {
 
 router.delete('/:id', (req, res) => {
   try {
+    const quizzesHistorical = Historical.get().filter((historical) => historical.userId === parseInt(req.params.id))
+    quizzesHistorical.forEach(function (historical) {
+      Historical.delete(historical.id)
+    })
     res.status(200).json(User.delete(req.params.id))
   } catch (err) {
     res.status(404).json(err)

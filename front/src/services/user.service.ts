@@ -61,7 +61,7 @@ export class UserService {
 
   setUserQuizzesHistorical(historical: Historical, userId: string) {
     const url = `${this.url}/${userId}/quizzes-historical`;
-    this.http.post<Historical>(url, historical).subscribe();
+    return this.http.post<Historical>(url, historical).subscribe();
   }
 
 }
