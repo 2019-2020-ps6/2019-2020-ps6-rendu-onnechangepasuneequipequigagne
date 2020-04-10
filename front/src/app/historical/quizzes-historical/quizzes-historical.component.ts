@@ -12,7 +12,7 @@ import {User} from '../../../models/user.model';
 export class QuizzesHistoricalComponent implements OnInit {
 
   private user: User;
-  private historicalList: Historical[] ;
+  private historicalList: Historical[];
 
   constructor(private userService: UserService, private route: ActivatedRoute) {
   }
@@ -21,9 +21,9 @@ export class QuizzesHistoricalComponent implements OnInit {
   ngOnInit() {
     const id = +this.route.snapshot.paramMap.get('id');
     if (id != null) {
-      this.userService.getUser(id.toString()).subscribe((user) => {
-        this.user = user
-        this.historicalList = user.quizzesHistorical;
+      this.userService.getUserQuizzesHistorical(id.toString()).subscribe((historicalList) => {
+        this.historicalList = historicalList;
+        this.userService.getUser(id.toString()).subscribe((user) => this.user = user);
       });
     }
   }

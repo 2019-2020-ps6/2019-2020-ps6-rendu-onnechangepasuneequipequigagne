@@ -59,9 +59,22 @@ export class UserService {
     this.http.delete<User>(userUrl).subscribe();
   }
 
-  setUserQuizzesHistorical(historical: Historical, userId: string) {
+
+  getUserQuizzesHistorical(userId: string): Observable<Historical[]> {
     const url = `${this.url}/${userId}/quizzes-historical`;
-    return this.http.post<Historical>(url, historical).subscribe();
+    return this.http.get<Historical[]>(url);
+  }
+
+
+  getUserQuizHistorical(historicalId: string, userId: string): Observable<Historical> {
+    const url = `${this.url}/${userId}/quizzes-historical/${historicalId}`;
+    return this.http.get<Historical>(url);
+  }
+
+
+  setUserQuizzesHistorical(historical: Historical, userId: string): Observable<Historical> {
+    const url = `${this.url}/${userId}/quizzes-historical`;
+    return this.http.post<Historical>(url, historical);
   }
 
 }
