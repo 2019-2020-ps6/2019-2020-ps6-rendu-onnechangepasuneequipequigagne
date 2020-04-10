@@ -30,7 +30,9 @@ import {Router} from "@angular/router";
   }
 
   userDeleted(user: User){
-    this.userService.deleteUser(user);
+    if (confirm("Etes-vous sur de vouloir supprimer le profil de "+user.firstName+" ?")) {
+      this.userService.deleteUser(user);
+    }
   }
 
 }

@@ -19,6 +19,8 @@ export class QuizHistoricalDetailsComponent implements OnInit {
     falseAnswersIds: string[];
   }
   private questionIndex: number = 0;
+  private answerIndex: number = 0;
+  private rank: string = '';
 
   constructor(private userService: UserService, private quizService: QuizService, private router: Router, private route: ActivatedRoute) {
   }
@@ -43,6 +45,17 @@ export class QuizHistoricalDetailsComponent implements OnInit {
 
   nextQuestion(): boolean {
     this.answerOrder = this.historical.answersOrder[this.questionIndex++];
+    this.answerIndex = 0;
+    return true;
+  }
+
+  nextAnswer(): boolean {
+    this.answerIndex++;
+    if(this.answerIndex == 1) {
+        this.rank = this.answerIndex+" er clic"
+    } else {
+      this.rank = this.answerIndex+" ème clic"
+    }
     return true;
   }
 

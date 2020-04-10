@@ -25,7 +25,9 @@ export class EditQuizzesComponent implements OnInit {
   }
 
   deleteQuiz(quiz: Quiz) {
-    this.quizService.deleteQuiz(quiz);
+    if (confirm("Etes-vous sur de vouloir supprimer ce quiz ?")) {
+      this.quizService.deleteQuiz(quiz);
+    }
   }
 
 
