@@ -33,8 +33,198 @@
     "firstName": "test",
     "lastName": "test",
     "profilePicture": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcThuB5b0TO6F40mF3AZ0bvBXpCiwXuJLbTb9W2a_UPBBnh3A7mN&usqp=CAU",
-    "quizzesId": [],
-    "quizzesHistorical": [],
+    "quizzesId": [
+      "1583226215551",
+      "1586700017004"
+    ],
+    "quizzesHistorical": [
+      {
+        "quizId": 1583226215551,
+        "quizName": "Les acteurs",
+        "date": "Sun Apr 12 2020",
+        "score": "1/3",
+        "answersOrder": [
+          {
+            "falseAnswersIds": [
+              1583226943194,
+              15894723843194
+            ]
+          },
+          {
+            "falseAnswersIds": [
+              1583273594975
+            ]
+          },
+          {
+            "falseAnswersIds": []
+          }
+        ]
+      },
+      {
+        "quizId": 1586700017004,
+        "quizName": "Les mangas",
+        "date": "Sun Apr 12 2020",
+        "score": "0/1",
+        "answersOrder": [
+          {
+            "falseAnswersIds": [
+              1586700061341
+            ]
+          }
+        ]
+      },
+      {
+        "quizId": 1583226215551,
+        "quizName": "Les acteurs",
+        "date": "Sun Apr 12 2020",
+        "score": "2/3",
+        "answersOrder": [
+          {
+            "falseAnswersIds": [
+              15894723843194
+            ]
+          },
+          {
+            "falseAnswersIds": []
+          },
+          {
+            "falseAnswersIds": []
+          }
+        ]
+      },
+      {
+        "quizId": 1586700017004,
+        "quizName": "Les mangas",
+        "date": "Sun Apr 12 2020",
+        "score": "1/1",
+        "answersOrder": [
+          {
+            "falseAnswersIds": []
+          }
+        ]
+      },
+      {
+        "quizId": 1586700017004,
+        "quizName": "Les mangas",
+        "date": "Sun Apr 12 2020",
+        "score": "1/1",
+        "answersOrder": [
+          {
+            "falseAnswersIds": []
+          }
+        ]
+      },
+      {
+        "quizId": 1586700017004,
+        "quizName": "Les mangas",
+        "date": "Sun Apr 12 2020",
+        "score": "1/1",
+        "answersOrder": [
+          {
+            "falseAnswersIds": []
+          }
+        ]
+      },
+      {
+        "quizId": 1586700017004,
+        "quizName": "Les mangas",
+        "date": "Sun Apr 12 2020",
+        "score": "1/1",
+        "answersOrder": [
+          {
+            "falseAnswersIds": []
+          }
+        ]
+      },
+      {
+        "quizId": 1586700017004,
+        "quizName": "Les mangas",
+        "date": "Sun Apr 12 2020",
+        "score": "1/1",
+        "answersOrder": [
+          {
+            "falseAnswersIds": []
+          }
+        ]
+      },
+      {
+        "quizId": 1586700017004,
+        "quizName": "Les mangas",
+        "date": "Sun Apr 12 2020",
+        "score": "1/1",
+        "answersOrder": [
+          {
+            "falseAnswersIds": []
+          }
+        ]
+      },
+      {
+        "quizId": 1586700017004,
+        "quizName": "Les mangas",
+        "date": "Sun Apr 12 2020",
+        "score": "1/1",
+        "answersOrder": [
+          {
+            "falseAnswersIds": []
+          }
+        ]
+      },
+      {
+        "quizId": 1586700017004,
+        "quizName": "Les mangas",
+        "date": "Sun Apr 12 2020",
+        "score": "1/1",
+        "answersOrder": [
+          {
+            "falseAnswersIds": []
+          }
+        ]
+      },
+      {
+        "quizId": 1586700017004,
+        "quizName": "Les mangas",
+        "date": "Sun Apr 12 2020",
+        "score": "1/1",
+        "answersOrder": [
+          {
+            "falseAnswersIds": []
+          }
+        ]
+      },
+      {
+        "quizId": 1586700017004,
+        "quizName": "Les mangas",
+        "date": "Sun Apr 12 2020",
+        "score": "1/1",
+        "answersOrder": [
+          {
+            "falseAnswersIds": []
+          }
+        ]
+      },
+      {
+        "quizId": 1586700017004,
+        "quizName": "Les mangas",
+        "date": "Sun Apr 12 2020",
+        "score": "1/1",
+        "answersOrder": [
+          {
+            "falseAnswersIds": []
+          }
+        ]
+      },
+      {
+        "quizId": 1586700017004,
+        "quizName": "Les mangas",
+        "date": "Sun Apr 12 2020",
+        "score": "1/1",
+        "answersOrder": [
+          {
+            "falseAnswersIds": []
+          }
+        ]
+      }
+    ],
     "id": 1586662092604
   }
 ]
