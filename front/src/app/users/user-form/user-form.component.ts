@@ -14,14 +14,18 @@ export class UserFormComponent implements OnInit {
   private imageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/OOjs_UI_icon_userAvatar.svg/1024px-OOjs_UI_icon_userAvatar.svg.png";
 
   constructor(public formBuilder: FormBuilder, public userService: UserService) {
+    this.setUserForm();
+  }
+
+  ngOnInit() {
+  }
+
+  setUserForm() {
     this.userForm = this.formBuilder.group({
       firstName: '',
       lastName: '',
       profilePicture: '',
     });
-  }
-
-  ngOnInit() {
   }
 
   addUser() {
@@ -32,6 +36,7 @@ export class UserFormComponent implements OnInit {
       userToCreate.profilePicture = this.imageUrl;
     }
     this.userService.addUser(userToCreate);
+    this.setUserForm();
     console.log('Add user: ', userToCreate);
   }
 }

@@ -16,6 +16,13 @@ export class AnswerFormComponent implements OnInit {
 
 
   constructor(private formBuilder: FormBuilder, private quizService: QuizService, private route: ActivatedRoute) {
+    this.setAnswerForm();
+  }
+
+  ngOnInit() {
+  }
+
+  setAnswerForm() {
     this.answerForm = this.formBuilder.group({
       value: '',
       isCorrect: false,
@@ -23,11 +30,7 @@ export class AnswerFormComponent implements OnInit {
     });
   }
 
-  ngOnInit() {
-  }
-
-
-  addAnswer(answer: Answer) {
+  addAnswer() {
     const answerToCreate: Answer = this.answerForm.getRawValue();
     if(!answerToCreate.imageURL){
       answerToCreate.imageURL = this.imageUrl;
@@ -37,6 +40,7 @@ export class AnswerFormComponent implements OnInit {
     if (quizId != null && questionId != null) {
       this.quizService.addAnswer(answerToCreate, quizId.toString(), questionId.toString());
     }
+    this.setAnswerForm();
   }
 
 }
