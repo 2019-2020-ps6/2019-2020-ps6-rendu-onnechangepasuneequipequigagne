@@ -1,28 +1,18 @@
 <div class="card">
-    <h2>Créer une question</h2>
-    <form class="quiz-form" [formGroup]="questionForm">
-      <label for="question">
-        Question <br>
-        <input class="input-custom" type="text" id="label" [formControlName]="'label'">
-      </label>
-      <br>
-      <button class="button-card" (click)="addAnswer()">Add answer</button>
-      <br>
-
-      <div class="answer" formArrayName="answers">
-        <div *ngFor="let address of answers.controls; let i=index">
-            <div class="answer-form" [formGroupName]="i">
-                <label>
-                    Answer
-                    <input type="text" [formControlName]="'value'">
-                    <br>
-                    Correct
-                    <input type="checkbox" [formControlName]="'isCorrect'">
-                </label>
-            </div>
-        </div>
-    </div>
-</form>
-    <button type="submit" class="button-card" (click)="addQuestion()">Create</button>
-    
+  <h4>Créer une nouvelle question</h4>
+  <img class="image" [src]="imageUrl">
+  <form class="question-form" [formGroup]="questionForm">
+    <label for="name">
+      Question: <br>
+      <input class="input-custom"  type="text" id="name" [formControlName]="'label'">
+    </label>
+    <br>
+    <label for="imageURL">
+      Lien de l'image <br>
+      <input class="input-custom"  type="text" id="imageURL" [formControlName]="'imageURL'">
+    </label>
+    <br>
+    <button type="submit" class="button-card" (click)="addQuestion()">Créer</button>
+  </form>
 </div>
+

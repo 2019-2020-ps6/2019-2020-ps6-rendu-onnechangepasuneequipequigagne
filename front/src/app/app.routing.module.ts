@@ -11,6 +11,8 @@ import {EditUsersComponent} from './users/edit-users/edit-users.component';
 import {EditQuizzesComponent} from './quizzes/edit-quizzes/edit-quizzes.component';
 import {QuizzesHistoricalComponent} from './historical/quizzes-historical/quizzes-historical.component';
 import {QuizHistoricalDetailsComponent} from './historical/quiz-historical-details/quiz-historical-details.component';
+import {EditQuestionsComponent} from './questions/edit-questions/edit-questions.component';
+import {EditAnswersComponent} from './reponses/edit-reponses/edit-answers.component';
 
 
 const routes: Routes = [
@@ -20,8 +22,10 @@ const routes: Routes = [
   {path: 'home/pass-quiz/users/:id/quizzes', component: UserQuizzesComponent},
   {path: 'home/pass-quiz/users/:id/quizzes/:quizId', component: PassQuizComponent},
   {path: 'home/edit-menu', component: EditMenuComponent},
-  {path: 'home/edit-menu/edit-users', component: EditUsersComponent},
   {path: 'home/edit-menu/edit-quizzes', component: EditQuizzesComponent},
+  {path: 'home/edit-menu/edit-quizzes/:quizId/questions', component: EditQuestionsComponent},
+  {path: 'home/edit-menu/edit-quizzes/:quizId/questions/:questionId/answers', component: EditAnswersComponent},
+  {path: 'home/edit-menu/edit-users', component: EditUsersComponent},
   {path: 'home/edit-menu/edit-users/:id/quizzes', component: EditUserComponent},
   {path: 'home/edit-menu/edit-users/:id/quizzes-historical', component: QuizzesHistoricalComponent},
   {path: 'home/edit-menu/edit-users/:id/quizzes-historical/:historicalId/details', component: QuizHistoricalDetailsComponent},

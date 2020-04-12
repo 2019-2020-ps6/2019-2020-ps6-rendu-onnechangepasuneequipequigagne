@@ -29,6 +29,10 @@ import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {QuizzesHistoricalComponent} from './historical/quizzes-historical/quizzes-historical.component';
 import {QuizHistoricalComponent} from './historical/quiz-historical/quiz-historical.component';
 import {QuizHistoricalDetailsComponent} from './historical/quiz-historical-details/quiz-historical-details.component';
+import {EditQuestionsComponent} from './questions/edit-questions/edit-questions.component';
+import {AnswerComponent} from './reponses/reponse/answer.component';
+import {AnswerFormComponent} from './reponses/reponse-form/answer-form.component';
+import {EditAnswersComponent} from './reponses/edit-reponses/edit-answers.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +45,10 @@ import {QuizHistoricalDetailsComponent} from './historical/quiz-historical-detai
     QuestionComponent,
     QuestionFormComponent,
     QuestionListComponent,
+    AnswerComponent,
+    AnswerFormComponent,
+    EditAnswersComponent,
+    EditQuestionsComponent,
     UserComponent,
     UserListComponent,
     UserFormComponent,

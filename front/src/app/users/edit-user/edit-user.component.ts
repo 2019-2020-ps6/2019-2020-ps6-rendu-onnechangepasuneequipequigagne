@@ -40,18 +40,16 @@ export class EditUserComponent implements OnInit {
   }
 
   addQuizToUser(quiz: Quiz) {
-    if (confirm("Etes-vous sur de vouloir ajouté le quiz "+quiz.name+' à la liste des quizz de '+this.user.firstName+" ?")) {
       this.user.quizzesId.push(quiz.id.toString());
       this.userService.updateUser(this.user).subscribe((user) => this.user = user);
-    }
+      alert("Le quiz "+quiz.name+" a été ajouté à liste des quizz de "+this.user.firstName);
   }
 
   suspendQuizToUser(quiz: Quiz) {
-    if (confirm("Etes-vous sur de vouloir suspendre le quiz "+quiz.name+' de la liste des quizz de '+this.user.firstName+" ?")) {
       const id =  this.user.quizzesId.indexOf(quiz.id.toString());
       this.user.quizzesId.splice(id,1);
       this.userService.updateUser(this.user).subscribe((user) => this.user = user);
-    }
+      alert("Le quiz "+quiz.name+" a été suspendu de la liste des quizz de "+this.user.firstName);
   }
 
   updateUser() {
