@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import { Question } from 'src/models/question.model';
 
 @Component({
@@ -9,11 +9,25 @@ import { Question } from 'src/models/question.model';
 export class QuestionComponent implements OnInit {
 
   @Input()
-  question : Question
+  question : Question;
+
+  @Output()
+  questionEdited: EventEmitter<Question> = new EventEmitter<Question>();
+
+  @Output()
+  questionDeleted: EventEmitter<Question> = new EventEmitter<Question>();
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  editQuestion() {
+    this.questionEdited.emit(this.question);
+  }
+
+  deleteQuestion() {
+    this.questionDeleted.emit(this.question);
   }
 
 }

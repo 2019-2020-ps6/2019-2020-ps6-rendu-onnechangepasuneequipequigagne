@@ -79,7 +79,7 @@
   {
     "value": "Shrek",
     "isCorrect": true,
-    "imageURL":"http://theweekender.com/wp-content/uploads/2015/07/web1_shrek2.jpg",
+    "imageURL": "http://theweekender.com/wp-content/uploads/2015/07/web1_shrek2.jpg",
     "questionId": 1583226445021,
     "id": 1583226956818
   },
@@ -110,8 +110,7 @@
     "imageURL": "http://s2.dmcdn.net/yY5a/526x297-cd2.jpg",
     "questionId": 1583226478744,
     "id": 1583226994975
-  }
-  ,
+  },
   {
     "value": "Tom Cruise",
     "isCorrect": false,

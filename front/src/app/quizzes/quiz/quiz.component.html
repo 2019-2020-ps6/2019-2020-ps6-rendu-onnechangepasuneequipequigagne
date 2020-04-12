@@ -1,14 +1,7 @@
 <div class="btn btn-primary">
-        <i *ngIf ="quiz.imageURL">
           <div class="img-wrap">
             <img [src]="quiz.imageURL">
           </div>
-        </i>
-        <i *ngIf ="!quiz.imageURL">
-          <div class="img-wrap">
-            <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-image-512.png">
-          </div>
-        </i>
         <p class="text-control card-text">
           {{quiz.name}}
         </p>
