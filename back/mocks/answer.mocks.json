@@ -138,5 +138,19 @@
     "imageURL": "https://upload.wikimedia.org/wikipedia/commons/7/72/Jamel_Debbouze_AVP_2016.jpg",
     "questionId": 1584569941504,
     "id": 1584329212557
+  },
+  {
+    "value": "oui",
+    "isCorrect": true,
+    "imageURL": "https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-image-512.png",
+    "questionId": 1586700053329,
+    "id": 1586700057842
+  },
+  {
+    "value": "non",
+    "isCorrect": false,
+    "imageURL": "https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-image-512.png",
+    "questionId": 1586700053329,
+    "id": 1586700061341
   }
 ]
