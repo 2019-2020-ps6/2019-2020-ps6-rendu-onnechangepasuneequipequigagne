@@ -28,7 +28,8 @@
     "lastName": "Cherkaoui",
     "profilePicture": "https://scontent.fcdg1-1.fna.fbcdn.net/v/t1.0-9/77399162_10218615148963874_1485368891193425920_n.jpg?_nc_cat=107&_nc_sid=7aed08&_nc_ohc=x-ZyZea5Jl8AX-S4PaH&_nc_ht=scontent.fcdg1-1.fna&oh=a1a28ba2db75bfda75d00c6c968021f7&oe=5EB844FE",
     "quizzesId": [
-      "1583226215551"
+      "1583226215551",
+      "1583226282450"
     ],
     "quizzesHistorical": [
       {
@@ -41,6 +42,39 @@
             "falseAnswersIds": [
               1583226943194
             ]
+          },
+          {
+            "falseAnswersIds": []
+          },
+          {
+            "falseAnswersIds": []
+          }
+        ]
+      },
+      {
+        "quizId": 1583226282450,
+        "quizName": "Les championnats de football",
+        "date": "Tue Apr 14 2020",
+        "score": "1/2",
+        "answersOrder": [
+          {
+            "falseAnswersIds": [
+              1583226859272
+            ]
+          },
+          {
+            "falseAnswersIds": []
+          }
+        ]
+      },
+      {
+        "quizId": 1583226215551,
+        "quizName": "Les acteurs",
+        "date": "Tue Apr 14 2020",
+        "score": "3/3",
+        "answersOrder": [
+          {
+            "falseAnswersIds": []
           },
           {
             "falseAnswersIds": []
