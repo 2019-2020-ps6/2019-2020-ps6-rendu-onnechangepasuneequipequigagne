@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app.routing.module';
+import {AuthGuard} from '../services/auth-guard.service';
+
 
 
 import { AppComponent } from './app.component';
@@ -33,10 +35,12 @@ import {EditQuestionsComponent} from './questions/edit-questions/edit-questions.
 import {AnswerComponent} from './reponses/reponse/answer.component';
 import {AnswerFormComponent} from './reponses/reponse-form/answer-form.component';
 import {EditAnswersComponent} from './reponses/edit-reponses/edit-answers.component';
+import {LoginComponent} from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    LoginComponent,
     QuizListComponent,
     QuizComponent,
     HeaderComponent,
@@ -71,7 +75,7 @@ import {EditAnswersComponent} from './reponses/edit-reponses/edit-answers.compon
     HttpClientModule,
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

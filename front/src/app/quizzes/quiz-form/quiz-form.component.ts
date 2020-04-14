@@ -15,14 +15,18 @@ export class QuizFormComponent implements OnInit {
   private imageUrl = "https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-image-512.png";
 
   constructor(public formBuilder: FormBuilder, public quizService: QuizService) {
+    this.setQuizForm();
+  }
+
+  ngOnInit() {
+  }
+
+  setQuizForm() {
     this.quizForm = this.formBuilder.group({
       name: '',
       theme: '',
       imageURL: '',
     });
-  }
-
-  ngOnInit() {
   }
 
   addQuiz() {
@@ -31,6 +35,7 @@ export class QuizFormComponent implements OnInit {
       quizToCreate.imageURL = this.imageUrl;
     }
     this.quizService.addQuiz(quizToCreate);
+    this.setQuizForm();
     console.log('quiz created: ', quizToCreate);
   }
 }

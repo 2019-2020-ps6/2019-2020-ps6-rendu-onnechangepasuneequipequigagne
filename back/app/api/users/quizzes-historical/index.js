@@ -9,7 +9,8 @@ const router = new Router({mergeParams: true})
 
 router.get('/', (req, res) => {
     try {
-        res.status(200).json(Historical.get())
+        let historical = Historical.get().filter((historical) => historical.userId === parseInt(req.params.userId))
+        res.status(200).json(historical)
     } catch (err) {
         res.status(500).json(err)
     }

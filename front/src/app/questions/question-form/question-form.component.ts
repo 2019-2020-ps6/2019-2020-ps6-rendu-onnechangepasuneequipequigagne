@@ -16,13 +16,17 @@ export class QuestionFormComponent implements OnInit {
 
 
   constructor(private formBuilder: FormBuilder, private quizService: QuizService, private route: ActivatedRoute) {
+    this.setQuestionForm();
+  }
+
+  ngOnInit() {
+  }
+
+  setQuestionForm() {
     this.questionForm = this.formBuilder.group({
       label: '',
       imageURL: '',
     });
-  }
-
-  ngOnInit() {
   }
 
   addQuestion() {
@@ -34,6 +38,7 @@ export class QuestionFormComponent implements OnInit {
     if (id != null) {
       this.quizService.addQuestion(questionToCreate, id.toString());
     }
+    this.setQuestionForm();
   }
 
 }

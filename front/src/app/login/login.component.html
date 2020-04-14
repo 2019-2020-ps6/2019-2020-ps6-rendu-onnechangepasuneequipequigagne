@@ -1,0 +1,31 @@
+<div id="gauche">
+  <div class="card">
+     <img class="logo" [src]="logoUrl">
+     <span id="title">Quizzy</span>
+    <br><br>
+    <form class="login-form" [formGroup]="loginForm">
+      <label for="username">
+        Nom d'utilisateur: <br>
+        <input class="input-custom"  type="text" id="username" [formControlName]="'username'">
+      </label>
+      <br>
+      <label for="password">
+        Mot de passe: <br>
+        <input class="input-custom"  type="password" id="password" [formControlName]="'password'">
+      </label>
+      <br><br>
+      <button type="submit" class="button-card" id="submit" (click)="login()">se connecter</button>
+    </form>
+  </div>
+</div>
+<div id="droite">
+  <div class="button-card">
+    <div style="text-align: center;"><img class="image" src="https://png.pngtree.com/png-vector/20190930/ourlarge/pngtree-padlock-icon-png-image_1773582.jpg"></div>
+    <p>Menu d'édition</p>
+  </div>
+  <br>
+  <div class="button-card">
+    <div style="text-align: center;"><img class="image" src="https://png.pngtree.com/png-vector/20190930/ourlarge/pngtree-padlock-icon-png-image_1773582.jpg"></div>
+    <p>Passer des quizz</p>
+  </div>
+</div>

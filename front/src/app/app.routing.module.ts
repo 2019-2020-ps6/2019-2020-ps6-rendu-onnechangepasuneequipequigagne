@@ -13,22 +13,25 @@ import {QuizzesHistoricalComponent} from './historical/quizzes-historical/quizze
 import {QuizHistoricalDetailsComponent} from './historical/quiz-historical-details/quiz-historical-details.component';
 import {EditQuestionsComponent} from './questions/edit-questions/edit-questions.component';
 import {EditAnswersComponent} from './reponses/edit-reponses/edit-answers.component';
+import {LoginComponent} from './login/login.component';
+import {AuthGuard} from '../services/auth-guard.service';
 
 
 const routes: Routes = [
-  {path: '', redirectTo: 'home', pathMatch: 'full'},
-  {path: 'home', component: HomeComponent},
-  {path: 'home/pass-quiz/users', component: UserListComponent},
-  {path: 'home/pass-quiz/users/:id/quizzes', component: UserQuizzesComponent},
-  {path: 'home/pass-quiz/users/:id/quizzes/:quizId', component: PassQuizComponent},
-  {path: 'home/edit-menu', component: EditMenuComponent},
-  {path: 'home/edit-menu/edit-quizzes', component: EditQuizzesComponent},
-  {path: 'home/edit-menu/edit-quizzes/:quizId/questions', component: EditQuestionsComponent},
-  {path: 'home/edit-menu/edit-quizzes/:quizId/questions/:questionId/answers', component: EditAnswersComponent},
-  {path: 'home/edit-menu/edit-users', component: EditUsersComponent},
-  {path: 'home/edit-menu/edit-users/:id/quizzes', component: EditUserComponent},
-  {path: 'home/edit-menu/edit-users/:id/quizzes-historical', component: QuizzesHistoricalComponent},
-  {path: 'home/edit-menu/edit-users/:id/quizzes-historical/:historicalId/details', component: QuizHistoricalDetailsComponent},
+  {path: '', redirectTo: 'login', pathMatch: 'full'},
+  {path: 'login', component: LoginComponent},
+  {path: 'home', component: HomeComponent, canActivate: [AuthGuard]},
+  {path: 'home/pass-quiz/users', component: UserListComponent, canActivate: [AuthGuard]},
+  {path: 'home/pass-quiz/users/:id/quizzes', component: UserQuizzesComponent, canActivate: [AuthGuard]},
+  {path: 'home/pass-quiz/users/:id/quizzes/:quizId', component: PassQuizComponent, canActivate: [AuthGuard]},
+  {path: 'home/edit-menu', component: EditMenuComponent, canActivate: [AuthGuard]},
+  {path: 'home/edit-menu/edit-quizzes', component: EditQuizzesComponent, canActivate: [AuthGuard]},
+  {path: 'home/edit-menu/edit-quizzes/:quizId/questions', component: EditQuestionsComponent, canActivate: [AuthGuard]},
+  {path: 'home/edit-menu/edit-quizzes/:quizId/questions/:questionId/answers', component: EditAnswersComponent, canActivate: [AuthGuard]},
+  {path: 'home/edit-menu/edit-users', component: EditUsersComponent, canActivate: [AuthGuard]},
+  {path: 'home/edit-menu/edit-users/:id/quizzes', component: EditUserComponent, canActivate: [AuthGuard]},
+  {path: 'home/edit-menu/edit-users/:id/quizzes-historical', component: QuizzesHistoricalComponent, canActivate: [AuthGuard]},
+  {path: 'home/edit-menu/edit-users/:id/quizzes-historical/:historicalId/details', component: QuizHistoricalDetailsComponent, canActivate: [AuthGuard]},
   {path: '**', component: PageNotFoundComponent}
 ];
 
