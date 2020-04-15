@@ -46,8 +46,10 @@ export class PassQuizComponent implements OnInit {
     private quizService: QuizService, private userService: UserService,
     private location: Location) {
       this.historical = {
+        id: '',
+        quizName: '',
         quizId: "0",
-        score: 0,
+        score: '',
         date: this.date.toDateString()
       }
       this.quizDone = false;
