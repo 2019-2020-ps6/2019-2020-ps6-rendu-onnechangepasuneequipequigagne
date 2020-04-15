@@ -1,5 +1,5 @@
 <div class="main">
-  <input type="text" placeholder="Rechercher..."><span class="glyphicon glyphicon-search"></span>
+  <input class="input-custom"  type="text" id="firstName" placeholder="Rechercher..." [(ngModel)]="trim" (input)="search()">
   <span class="text">Liste des accueillis</span>
   <div class="border border-primary rounded">
     <div class="user" *ngFor="let user of userList">

@@ -4,7 +4,7 @@
   </div>
   <div id="droite">
     <span class="text">Edition des quizz</span>
-    <input type="text" placeholder="Rechercher..."><span class="search"></span>
+    <input type="text" placeholder="Rechercher..." [(ngModel)]="trim" (input)="search()">
     <div class="border border-primary rounded">
       <div class="user" *ngFor="let quiz of quizList">
         <app-quiz [editQuizMenu]=true [quiz]="quiz" (quizEdited)="editQuiz($event)" (quizDeleted)="deleteQuiz($event)"></app-quiz>

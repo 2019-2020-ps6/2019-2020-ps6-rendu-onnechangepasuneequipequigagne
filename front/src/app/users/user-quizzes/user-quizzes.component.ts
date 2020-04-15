@@ -11,6 +11,8 @@ import {UserService} from "../../../services/user.service";
 export class UserQuizzesComponent implements OnInit {
 
   public quizList: Quiz[];
+  private trim: string = "";
+
 
   constructor(public userService: UserService, private route: ActivatedRoute) {
   }
@@ -25,5 +27,16 @@ export class UserQuizzesComponent implements OnInit {
   quizSelected(selected: boolean) {
     console.log('event received from child:', selected);
   }
+
+  search() {
+    if(this.trim) {
+      this.quizList = this.quizList.filter((quiz) =>
+        quiz.name.toLocaleLowerCase().indexOf(this.trim.toLocaleLowerCase()) !== -1
+      );
+    } else {
+      this.ngOnInit();
+    }
+  }
+
 
 }

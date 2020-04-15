@@ -77,5 +77,6 @@ export class UserService {
     return this.http.post<Historical>(url, historical);
   }
 
+
 }
 
