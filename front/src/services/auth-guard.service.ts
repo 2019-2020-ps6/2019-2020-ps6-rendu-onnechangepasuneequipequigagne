@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, Router } from '@angular/router';
-import {BehaviorSubject} from "rxjs";
+import {BehaviorSubject} from 'rxjs';
 
 @Injectable()
 export class AuthGuard implements CanActivate {
 
+  private activatedUser;
   private isLoggedIn: boolean = false;
   public  isLoggedIn$: BehaviorSubject<boolean> = new BehaviorSubject(this.isLoggedIn);
 
@@ -28,6 +29,14 @@ export class AuthGuard implements CanActivate {
       let link =  ['login'];
       this.router.navigate(link);
     }
+  }
+
+  setActivatedUser(login: string) {
+    this.activatedUser = login;
+  }
+
+  getActivatedUser(): string {
+    return this.activatedUser;
   }
 
 }

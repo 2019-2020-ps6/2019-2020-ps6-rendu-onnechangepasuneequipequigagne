@@ -16,9 +16,9 @@ export class EditUserComponent implements OnInit {
   private user: User;
   private quizList: Quiz[];
   private userForm: FormGroup;
+  private trim: string = "";
 
   constructor(public formBuilder: FormBuilder, public userService: UserService, public quizService: QuizService, public route: ActivatedRoute) {
-    this.quizService.quizzes$.subscribe((quizzes) => this.quizList = quizzes);
     this.userForm = this.formBuilder.group({
       firstName: '',
       lastName: '',
@@ -31,6 +31,7 @@ export class EditUserComponent implements OnInit {
     if (id != null) {
       this.userService.getUser(id.toString()).subscribe((user) => this.user = user);
     }
+    this.quizService.quizzes$.subscribe((quizzes) => this.quizList = quizzes);
   }
 
   isElement(quizId: string): boolean{
@@ -60,5 +61,15 @@ export class EditUserComponent implements OnInit {
     this.userService.updateUser(this.user).subscribe((user) => this.user = user);
     alert("Changement du profil enregistré");
     window.location.reload();
+  }
+
+  search() {
+    if(this.trim) {
+      this.quizList = this.quizList.filter((quiz) =>
+        quiz.name.toLocaleLowerCase().indexOf(this.trim.toLocaleLowerCase()) !== -1
+      );
+    } else {
+      this.ngOnInit();
+    }
   }
 }

@@ -1,5 +1,6 @@
 <div class="main">
-  <input type="text" placeholder="Rechercher..."><span class="glyphicon glyphicon-search"></span>
+  <input type="text" placeholder="Rechercher..." [(ngModel)]="trim" (input)="search()">
+  <span class="glyphicon glyphicon-search"></span>
     <span class="text">Liste des quizz disponibles</span>
     <div class="border border-primary rounded">
       <div class="quiz" *ngFor="let quiz of quizList">

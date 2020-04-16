@@ -11,12 +11,14 @@ import {Router} from "@angular/router";
 export class EditQuizzesComponent implements OnInit {
 
   private quizList: Quiz[];
+  private trim: string = "";
+
 
   constructor(private quizService: QuizService, private router: Router) {
-    this.quizService.quizzes$.subscribe((quizzes) => this.quizList = quizzes);
   }
 
   ngOnInit() {
+    this.quizService.quizzes$.subscribe((quizzes) => this.quizList = quizzes);
   }
 
   editQuiz(quiz: Quiz) {
@@ -30,5 +32,13 @@ export class EditQuizzesComponent implements OnInit {
     }
   }
 
-
+  search() {
+    if(this.trim) {
+      this.quizList = this.quizList.filter((quiz) =>
+        quiz.name.toLocaleLowerCase().indexOf(this.trim.toLocaleLowerCase()) !== -1
+      );
+    } else {
+      this.ngOnInit();
+    }
+  }
 }

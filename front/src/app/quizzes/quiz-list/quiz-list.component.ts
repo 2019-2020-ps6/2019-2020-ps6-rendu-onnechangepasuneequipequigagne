@@ -19,7 +19,6 @@ export class QuizListComponent implements OnInit {
   search: string;
 
   ngOnInit() {
-
   }
 
 }

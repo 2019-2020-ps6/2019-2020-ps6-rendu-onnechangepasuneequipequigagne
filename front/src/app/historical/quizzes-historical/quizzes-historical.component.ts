@@ -13,6 +13,7 @@ export class QuizzesHistoricalComponent implements OnInit {
 
   private user: User;
   private historicalList: Historical[];
+  private trim: string = "";
 
   constructor(private userService: UserService, private route: ActivatedRoute) {
   }
@@ -25,6 +26,16 @@ export class QuizzesHistoricalComponent implements OnInit {
         this.historicalList = historicalList;
         this.userService.getUser(id.toString()).subscribe((user) => this.user = user);
       });
+    }
+  }
+
+  search() {
+    if(this.trim) {
+      this.historicalList = this.historicalList.filter((historical) =>
+        historical.quizName.toLocaleLowerCase().indexOf(this.trim.toLocaleLowerCase()) !== -1
+      );
+    } else {
+      this.ngOnInit();
     }
   }
 

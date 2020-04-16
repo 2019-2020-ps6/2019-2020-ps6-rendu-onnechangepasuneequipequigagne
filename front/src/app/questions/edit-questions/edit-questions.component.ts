@@ -12,16 +12,18 @@ export class EditQuestionsComponent implements OnInit {
 
   public questionList: Question[] = [];
   public quizId: number;
+  private trim: string = "";
+
 
   constructor(private quizService: QuizService, private router: Router, private route: ActivatedRoute) {
+  }
+
+  ngOnInit() {
     this.quizId = +this.route.snapshot.paramMap.get('quizId');
     if (this.quizId != null) {
       this.quizService.setQuestionsFromUrl(this.quizId.toString());
     }
     this.quizService.questions$.subscribe((questions) => this.questionList = questions);
-  }
-
-  ngOnInit() {
   }
 
   editQuestion(question: Question) {
@@ -32,6 +34,16 @@ export class EditQuestionsComponent implements OnInit {
   deleteQuestion(question: Question) {
     if(confirm("Etes-vous sur de supprimer cette question ?")){
       this.quizService.deleteQuestion(question, this.quizId.toString());
+    }
+  }
+
+  search() {
+    if(this.trim) {
+      this.questionList = this.questionList.filter((question) =>
+        question.label.toLocaleLowerCase().indexOf(this.trim.toLocaleLowerCase()) !== -1
+      );
+    } else {
+      this.ngOnInit();
     }
   }
 

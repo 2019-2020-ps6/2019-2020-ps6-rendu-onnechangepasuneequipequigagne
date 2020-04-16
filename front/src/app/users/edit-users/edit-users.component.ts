@@ -11,12 +11,14 @@ import {Router} from "@angular/router";
   export class EditUsersComponent implements OnInit {
 
   private userList: User[];
+  private trim: string = "";
+
 
   constructor(private userService: UserService, private router: Router) {
-    this.userService.users$.subscribe((users) => this.userList = users);
   }
 
   ngOnInit() {
+    this.userService.users$.subscribe((users) => this.userList = users);
   }
 
   userEdited(user: User) {
@@ -32,6 +34,16 @@ import {Router} from "@angular/router";
   userDeleted(user: User){
     if (confirm("Etes-vous sur de vouloir supprimer le profil de "+user.firstName+" ?")) {
       this.userService.deleteUser(user);
+    }
+  }
+
+  search() {
+    if(this.trim) {
+      this.userList = this.userList.filter((user) =>
+        user.firstName.toLocaleLowerCase().indexOf(this.trim.toLocaleLowerCase()) !== -1
+      );
+    } else {
+      this.ngOnInit();
     }
   }
 

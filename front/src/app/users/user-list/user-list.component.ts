@@ -10,13 +10,24 @@ import { User } from 'src/models/user.model';
 export class UserListComponent implements OnInit {
 
   private userList: User[];
+  private trim: string = "";
 
   constructor(private userService: UserService) {
-    this.userService.users$.subscribe((users) => this.userList = users);
   }
 
   ngOnInit() {
+    this.userService.users$.subscribe((users) => this.userList = users);
+  }
 
+
+  search() {
+      if(this.trim) {
+        this.userList = this.userList.filter((user) =>
+          user.firstName.toLocaleLowerCase().indexOf(this.trim.toLocaleLowerCase()) !== -1
+        );
+      } else {
+        this.ngOnInit();
+      }
   }
 
 }
