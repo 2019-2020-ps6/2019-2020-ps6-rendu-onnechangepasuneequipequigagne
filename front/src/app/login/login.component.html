@@ -1,6 +1,6 @@
 <!--suppress XmlDuplicatedId -->
 <div id="gauche">
-  <div class="card">
+  <div class="card" id="login">
      <img class="logo" src="https://lh3.googleusercontent.com/g4f3JWzT9_qwHKsz63ntrz8T17vYCLkXzSlFy4EZx0WuGAyXIkDLgihJzH0HunJdYw">
      <span id="title">Quizzy</span>
     <br><br>
@@ -9,7 +9,7 @@
         Nom d'utilisateur: <br>
         <input class="input-custom"  type="text" id="username" [formControlName]="'username'">
       </label>
-      <br>
+      <br><br>
       <label for="password">
         Mot de passe: <br>
         <input class="input-custom"  type="password" id="password" [formControlName]="'password'">
@@ -18,9 +18,9 @@
       <button type="submit" class="button-card" id="submit" (click)="login()">se connecter</button>
     </form>
   </div>
-  <div class="card" id="register">
+  <div class="card" >
     <img class="logoRegister" src="https://t4.ftcdn.net/jpg/00/25/96/39/240_F_25963984_SJZEobOTJSxDD1kh8vYRnURmFSNW6RIP.jpg">
-    <br><br>
+    <br>
     <form class="login-form" [formGroup]="registerForm">
       <label for="username">
         Nom d'utilisateur: <br>

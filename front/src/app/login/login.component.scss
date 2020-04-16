@@ -9,18 +9,18 @@ html, body {
 }
 
 #gauche{
-  width: 40%;
+  width: 50%;
   height: 100%;
-  margin-left: 5%;
+  margin-left: 8%;
   margin-top: 3%;
   float: left;
 }
 
 #droite {
   margin-top: 3%;
-  margin-left: 40%;
+  margin-left: 50%;
   margin-bottom: 10%;
-  width: 60%;
+  width: 50%;
   height: 100%;
 }
 
@@ -44,9 +44,10 @@ html, body {
   height: 90px;
 }
 
-#register {
+#login {
   float: right;
-  margin-top: 3%;
+  margin-right: 8%;
+  margin-top: 2%;
 }
 
 .logoRegister {
