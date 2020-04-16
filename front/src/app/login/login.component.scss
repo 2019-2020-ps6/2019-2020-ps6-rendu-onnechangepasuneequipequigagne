@@ -11,7 +11,7 @@ html, body {
 #gauche{
   width: 40%;
   height: 100%;
-  margin-left: 10%;
+  margin-left: 5%;
   margin-top: 3%;
   float: left;
 }
@@ -45,7 +45,8 @@ html, body {
 }
 
 #register {
-  margin: 1% 5% 5%;
+  float: right;
+  margin-top: 3%;
 }
 
 .logoRegister {
@@ -65,18 +66,17 @@ p {
   font-size: larger;
 }
 
-.button-card {
-  margin-left: 100px;
-  margin-right: 100px;
+#droite .button-card {
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
-#submit {
-  margin-left: 20px;
-}
 
 #submit:hover {
   background-color: lightblue;
 }
+
+
 
 
 
