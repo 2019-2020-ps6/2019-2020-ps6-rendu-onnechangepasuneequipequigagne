@@ -1,32 +1,36 @@
-<div class="main">
-    <div class="pad center">
-        <div *ngIf="foundAnswer" class="btn btn-outline-success giant" (click)="next()">
-            <div>
-            Bonne réponse !
+<html>
+    <div class="row">
+        <div class="column left">
+            <div class="card-body" [id]="question.answers[0].value">
+                <app-pass-reponse [answer]="question.answers[0]" (answerSelected)="answerSelected($event)"></app-pass-reponse>
             </div>
-            <div *ngIf="!lastQuestion">
-                Passer à la question suivante >
-            </div>
-            <div *ngIf="lastQuestion">
-                Terminer le quiz >
+            <div class="card-body" [id]="question.answers[2].value">
+                <app-pass-reponse [answer]="question.answers[2]" (answerSelected)="answerSelected($event)"></app-pass-reponse>
             </div>
         </div>
-        <div class="center"*ngIf="!foundAnswer">
-            <img [src]="question.imageURL" class="img-fluid">
+        <div *ngIf="!foundAnswer" class="column middle showBorder">
+            <img [src]="question.imageURL" class="img-fluid fill">
         </div>
-    </div>
-    <div class="pad">
-        <div class="answers">
-            <div *ngFor="let answer of question.answers; let i = index">
-                <div class="card-body" [id]="answer.value">
-                    <app-pass-reponse [answer]="answer" (answerSelected)="answerSelected($event)"></app-pass-reponse>
+        <div *ngIf="foundAnswer" class="column middle showBorder">
+            <p class="bp">
+                Bonne réponse !
+            </p>
+            <div *ngIf="foundAnswer" class="btn-outline-success btn" (click)="next()">
+                <div *ngIf="!lastQuestion">
+                    Passer à la question suivante >
+                </div>
+                <div *ngIf="lastQuestion">
+                    Terminer le quiz >
                 </div>
             </div>
+        </div>      
+        <div class="column right">
+            <div class="card-body" [id]="question.answers[1].value">
+                <app-pass-reponse [answer]="question.answers[1]" (answerSelected)="answerSelected($event)"></app-pass-reponse>
+            </div>
+            <div class="card-body" [id]="question.answers[3].value">
+                <app-pass-reponse [answer]="question.answers[3]" (answerSelected)="answerSelected($event)"></app-pass-reponse>
+            </div>
         </div>
     </div>
-</div>
-
-
-
-
-
+</html>

@@ -74,6 +74,8 @@ export class PassQuestionComponent implements OnInit {
     this.nextQuestion.emit(true);
     this.question.answers.forEach((a) => {
       document.getElementById(a.value).classList.remove("isKill");
+      document.getElementById(a.value+"2").classList.add("btn-primary");
+      document.getElementById(a.value+"2").classList.remove("showCorrect");
     })
     this.foundAnswer = false;
     this.foundAnswerFirstTime = true;
