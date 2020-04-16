@@ -1,11 +1,13 @@
-<div *ngIf="!quizDone">
-  <div class="q">Question n°{{numQuestion}}: {{question.label}}</div>
-  <app-pass-question [question]="question" [lastQuestion]="lastQuestion" (nextQuestion)="nextQuestion($event)"></app-pass-question>
-</div>
-<div class="quizDone" *ngIf="quizDone">
-    <div class="text-center">
-      <p>Bravo vous avez réussi le quiz !</p>
-      <img class="image" src="https://media.giphy.com/media/Wrv5v6egIh7Ww/200.gif">
-      <div class="button-card" routerLink="..">Retourner au menu des quizz ></div>
-    </div>
-</div>
+<html>
+  <div *ngIf="!quizDone">
+    <div class="q">Question n°{{numQuestion}}: {{question.label}}</div>
+    <app-pass-question [user]="user" [quiz]= "quiz" [question]="question" [lastQuestion]="lastQuestion" (nextQuestion)="nextQuestion($event)" (finalScore)="finalScore($event)" (quizAnswersOrder)="answersOrder($event)"></app-pass-question>
+  </div>
+  <div class="quizDone" *ngIf="quizDone">
+      <div class="text-center">
+        <p>Bravo vous avez réussi le quiz !</p>
+        <img class="image" src="https://www.speciman.fr/wp-content/uploads/2018/04/felicitations-1.jpg">
+        <div class="button-card" routerLink="..">Retourner au menu des quizz ></div>
+      </div>
+  </div>
+</html>

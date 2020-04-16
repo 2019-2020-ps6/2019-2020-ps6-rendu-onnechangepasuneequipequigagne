@@ -1,0 +1,31 @@
+<div *ngFor="let question of quiz.questions">
+  <div class="q">{{question.label}}</div>
+  <div class="pad">
+    <div class="answers" *ngIf="nextQuestion()">
+      <div *ngFor="let answer of question.answers">
+          <div class="btnFalse" *ngIf="isTrueOrFalse(answer.id) && nextAnswer()">
+            <div  class="img-wrap">
+              <img [src]="answer.imageURL">
+            </div>
+            <p class="card-text text-control">{{answer.value}} </p>
+            <p class="card-text text-control">{{rank}}</p>
+          </div>
+          <div class="btnTrue" *ngIf="answer.isCorrect">
+            <div  class="img-wrap">
+              <img [src]="answer.imageURL">
+            </div>
+            <p class="card-text text-control">{{answer.value}} </p>
+          </div>
+          <div class="btnAnswer" *ngIf="!answer.isCorrect && !isTrueOrFalse(answer.id)">
+            <div  class="img-wrap">
+              <img [src]="answer.imageURL">
+            </div>
+            <p class="card-text text-control">{{answer.value}} </p>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+<button type="submit" class="button-card" (click)="goBack()"><-  Retourner à la page précédente <-</button>
+
+

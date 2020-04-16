@@ -1,0 +1,14 @@
+<div class="user-list">
+  <div id="gauche">
+    <app-answer-form></app-answer-form>
+  </div>
+  <div id="droite">
+    <span class="text">Edition des réponses</span>
+    <input type="text" placeholder="Rechercher..." [(ngModel)]="trim" (input)="search()">
+    <div class="border border-primary rounded">
+      <div class="answer" *ngFor="let answer of answerList">
+        <app-answer [answer]="answer" (answerDeleted)="deleteAnswer($event)"></app-answer>
+      </div>
+    </div>
+  </div>
+</div>

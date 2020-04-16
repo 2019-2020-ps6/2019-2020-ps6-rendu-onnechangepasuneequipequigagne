@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
-import { Quiz } from '../../../models/quiz.model';
 import { Question } from 'src/models/question.model';
 import { QuizService } from 'src/services/quiz.service';
 import { ActivatedRoute } from '@angular/router';
@@ -14,9 +13,9 @@ import { ActivatedRoute } from '@angular/router';
 
 export class QuestionListComponent implements OnInit {
 
-  questionList: Question[];
+  public questionList: Question[];
 
-  constructor(private route: ActivatedRoute, private quizService: QuizService) { 
+  constructor(private route: ActivatedRoute, private quizService: QuizService) {
   }
 
 

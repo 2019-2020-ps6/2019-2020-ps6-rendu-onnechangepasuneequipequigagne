@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
+import {AuthGuard} from "../../services/auth-guard.service";
 
 @Component({
   selector: 'app-home',
@@ -8,15 +9,18 @@ import {Router} from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
+  private userLoggedIn: string = "";
   private logoUrl: string = 'https://lh3.googleusercontent.com/g4f3JWzT9_qwHKsz63ntrz8T17vYCLkXzSlFy4EZx0WuGAyXIkDLgihJzH0HunJdYw';
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private route: ActivatedRoute, private authGuard: AuthGuard) {
+   this.userLoggedIn = this.authGuard.getActivatedUser();
+  }
 
   ngOnInit() {
   }
 
   goToPassQuizz() {
-    const link = ['/home/pass-quiz/quizzes'];
+    const link = ['/home/pass-quiz/users'];
     this.router.navigate(link);
   }
 

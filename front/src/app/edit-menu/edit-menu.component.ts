@@ -14,12 +14,12 @@ export class EditMenuComponent implements OnInit {
   }
 
   goToEditQuizzes() {
-    const link = ['/Home/edit-menu-menu/edit-menu-quizzes'];
+    const link = ['home/edit-menu/edit-quizzes'];
     this.router.navigate(link);
   }
 
   goToEditUsers() {
-    const link = ['/Home/edit-menu-menu/edit-menu-users'];
+    const link = ['home/edit-menu/edit-users'];
     this.router.navigate(link);
   }
 }

@@ -20,6 +20,10 @@ export class PassReponseComponent implements OnInit {
   }
 
   selectAnswer() {
+    if (this.answer.isCorrect){
+      document.getElementById(this.answer.value + "2").classList.add("showCorrect");
+      document.getElementById(this.answer.value + "2").classList.remove("btn-primary");
+    }
     this.answerSelected.emit(this.answer);
   }
 

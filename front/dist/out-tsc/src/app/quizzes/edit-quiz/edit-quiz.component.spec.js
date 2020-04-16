@@ -1,6 +1,6 @@
 import { async, TestBed } from '@angular/core/testing';
 import { EditQuizComponent } from './edit-quiz.component';
-describe('EditQuizComponent', () => {
+describe('EditQuizzesComponent', () => {
     let component;
     let fixture;
     beforeEach(async(() => {

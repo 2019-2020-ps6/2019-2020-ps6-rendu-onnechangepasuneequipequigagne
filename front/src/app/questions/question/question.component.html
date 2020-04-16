@@ -1,11 +1,10 @@
-<div class="card">
-    <h2>
-        Question : {{question.label}} <br/>
-    </h2>
-    <div class="reponse" *ngFor="let answer of question.answers">
-        <i *ngIf ="answer.isCorrect" class="fa fa-check" aria-hidden="true"></i>
-        <i *ngIf ="!answer.isCorrect" class="fa fa-ban"></i>
-        {{answer.value}} 
-
+<div class="btn btn-primary">
+    <div class="img-wrap">
+      <img [src]="question.imageURL">
     </div>
+  <p class="text-control card-text">
+    {{question.label}}
+  </p>
+    <button class="button" (click)="editQuestion()"><i class="fas fa-user-edit"></i></button>
+    <button class="button" (click)="deleteQuestion()"><i class="fas fa-trash"></i></button>
 </div>

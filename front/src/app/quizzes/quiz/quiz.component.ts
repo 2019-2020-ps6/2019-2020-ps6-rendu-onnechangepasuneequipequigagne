@@ -11,21 +11,46 @@ export class QuizComponent implements OnInit {
   @Input()
   quiz: Quiz;
 
+  @Input()
+  edit: boolean;
+
+  @Input()
+  editQuizMenu: boolean;
+
+  @Input()
+  isAdded: boolean;
+
   @Output()
-  quizSelected: EventEmitter<boolean> = new EventEmitter<boolean>();
+  quizAdded: EventEmitter<Quiz> = new EventEmitter<Quiz>();
+
+  @Output()
+  quizSuspended: EventEmitter<Quiz> = new EventEmitter<Quiz>();
+
+  @Output()
+  quizEdited: EventEmitter<Quiz> = new EventEmitter<Quiz>();
 
   @Output()
   quizDeleted: EventEmitter<Quiz> = new EventEmitter<Quiz>();
 
   constructor() {
+    this.edit = false;
+    this.editQuizMenu = false;
   }
 
 
   ngOnInit() {
   }
 
-  selectQuiz() {
-    this.quizSelected.emit(true);
+  addQuiz() {
+    this.quizAdded.emit(this.quiz);
+  }
+
+  suspendQuiz() {
+    this.quizSuspended.emit(this.quiz);
+  }
+
+  editQuiz(){
+    this.quizEdited.emit(this.quiz);
   }
 
   deleteQuiz(){

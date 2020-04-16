@@ -4,8 +4,12 @@
   height: 100%;
   left: 0;
   top: 0;
-  background: whitesmoke;
+  background-image: url("https://www.netpremacy.com/wp-content/uploads/2018/09/Background-website-01.jpg");
   z-index: 10;
   overflow-y: scroll;
 }
 
+html, body
+{
+    height: 100%;
+}

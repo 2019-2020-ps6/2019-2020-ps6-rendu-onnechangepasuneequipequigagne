@@ -1,0 +1,18 @@
+ <div class="btn btn-primary" id="correct" *ngIf="answer.isCorrect">
+    <div class="img-wrap">
+      <img [src]="answer.imageURL">
+    </div>
+    <p class="text-control card-text">
+      {{answer.value}}
+    </p>
+    <button class="button" (click)="deleteAnswer()"><i class="fas fa-trash"></i></button>
+  </div>
+  <div class="btn btn-primary" id="notCorrect" *ngIf="!answer.isCorrect">
+    <div class="img-wrap">
+      <img [src]="answer.imageURL">
+    </div>
+    <p class="text-control card-text">
+      {{answer.value}}
+    </p>
+    <button class="button" (click)="deleteAnswer()"><i class="fas fa-trash"></i></button>
+  </div>

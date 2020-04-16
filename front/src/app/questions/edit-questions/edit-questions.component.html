@@ -1,0 +1,14 @@
+<div class="user-list">
+  <div id="gauche">
+    <app-question-form></app-question-form>
+  </div>
+  <div id="droite">
+    <span class="text">Edition des questions</span>
+    <input type="text" placeholder="Rechercher..." [(ngModel)]="trim" (input)="search()">
+    <div class="border border-primary rounded">
+      <div class="user" *ngFor="let question of questionList">
+        <app-question [question]="question" (questionEdited)="editQuestion($event)" (questionDeleted)="deleteQuestion($event)"></app-question>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+@import '../../../styles/card.scss';
+
+.image{
+  height: 150px;
+  width: 150px;
+  border: black 2px;
+}
+
+.button-card:hover {
+  background-color: lightblue;
+}
+
+#isCorrect{
+  width:25px;
+  height:25px;
+  margin-left: 10px;
+}

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { QuizService } from '../../../services/quiz.service';
 import { Quiz } from '../../../models/quiz.model';
 
@@ -12,18 +12,13 @@ export class QuizListComponent implements OnInit {
   public quizList: Quiz[] = [];
 
   constructor(public quizService: QuizService) {
-    this.quizService.quizzes$.subscribe((quiz) => this.quizList = quiz);
+    this.quizService.quizzes$.subscribe((quizzes) => this.quizList = quizzes);
   }
+
+  @Input()
+  search: string;
 
   ngOnInit() {
   }
 
-  quizSelected(selected: boolean) {
-    console.log('event received from child:', selected);
-  }
-  
-  quizDeleted(quiz: Quiz){
-    console.log("where were you when " + quiz + " is kil\ni was at home eating dorito when phone ring\nobject object is kil\nno\n");
-    this.quizService.deleteQuiz(quiz);
-  }
 }

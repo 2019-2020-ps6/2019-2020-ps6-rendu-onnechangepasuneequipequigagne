@@ -1,4 +1,5 @@
 export interface Answer {
+    id?: string;
     type?: string;
     imageURL?: string;
     value: string;
@@ -6,7 +7,8 @@ export interface Answer {
 }
 
 export interface Question {
+    id?: string;
     label: string;
     imageURL?: string;
-    answers: Answer[];
+    answers?: Answer[];
 }

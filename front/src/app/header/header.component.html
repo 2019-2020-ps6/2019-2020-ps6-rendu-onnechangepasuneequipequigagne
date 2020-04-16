@@ -4,5 +4,8 @@
     <span class="text1"> Créez et partagez vos quizz avec </span>
     <span class="text2"> Quizzy </span>
   </div>
+  <div class="logout" *ngIf="isLoggedIn">
+    <button type="submit" class=" button" (click)="logout()">Déconnexion</button>
+  </div>
 </div>
 

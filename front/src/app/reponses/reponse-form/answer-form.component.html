@@ -1,0 +1,23 @@
+<div class="card">
+  <h4>Créer une nouvelle réponse</h4>
+  <img class="image" [src]="imageUrl">
+  <form class="answer-form" [formGroup]="answerForm">
+    <label for="value">
+      Réponse: <br>
+      <input class="input-custom"  type="text" id="value" [formControlName]="'value'">
+    </label>
+    <br>
+    <label for="isCorrect">
+       Cochez si c'est la bonne réponse:
+      <input type="checkbox" id="isCorrect" [formControlName]="'isCorrect'">
+    </label>
+    <br>
+    <label for="imageURL">
+      Lien de l'image <br>
+      <input class="input-custom"  type="text" id="imageURL" [formControlName]="'imageURL'">
+    </label>
+    <br>
+    <button type="submit" class="button-card" (click)="addAnswer()">Créer</button>
+  </form>
+</div>
+

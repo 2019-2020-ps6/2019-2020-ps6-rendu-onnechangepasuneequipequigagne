@@ -1,4 +1,4 @@
-<div class="btn btn-primary" (click)="selectAnswer()">
+<div class="btn-primary btn" [id]="answer.value+'2'" (click)="selectAnswer()">
     <div *ngIf="answer.imageURL" class="img-wrap">
       <img [src]="answer.imageURL"></div>
     <p class="card-text text-control">{{answer.value}} </p>

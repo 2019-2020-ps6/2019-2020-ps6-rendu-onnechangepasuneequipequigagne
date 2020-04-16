@@ -1,0 +1,11 @@
+<div class="main">
+  <input type="text" placeholder="Rechercher..." [(ngModel)]="trim" (input)="search()">
+  <span class="text">Historique de {{user.firstName}}</span>
+  <div class="border border-primary rounded">
+    <div class="user" *ngFor="let historical of historicalList">
+      <a class="text-control" routerLink="{{historical.id}}/details">
+        <app-quiz-historical [historical]="historical"></app-quiz-historical>
+      </a>
+    </div>
+  </div>
+</div>

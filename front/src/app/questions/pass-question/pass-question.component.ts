@@ -1,7 +1,8 @@
-import { Component, OnInit, Input, Output, EventEmitter, OnChanges } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import { Question, Answer } from 'src/models/question.model';
-import { Quiz } from 'src/models/quiz.model';
-import { BehaviorSubject } from 'rxjs';
+import {User} from '../../../models/user.model';
+import {Quiz} from '../../../models/quiz.model';
+import {AnswerOrder} from '../../../models/answerorder.model';
 
 @Component({
   selector: 'app-pass-question',
@@ -10,14 +11,31 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class PassQuestionComponent implements OnInit {
 
-  private foundAnswer = false;
+  private foundAnswer: boolean = false;
+  private foundAnswerFirstTime: boolean = true;
+  private score: number = 0;
+  private answersIds: string[] = [];
+  private answersOrder: AnswerOrder[] = [];
+  private answerOrder: AnswerOrder;
 
+
+  @Input()
+  user: User
+
+  @Input()
+  quiz: Quiz
 
   @Input()
   question: Question
 
   @Input()
   lastQuestion: Boolean;
+
+  @Output()
+  finalScore: EventEmitter<number> = new EventEmitter<number>();
+
+  @Output()
+  quizAnswersOrder: EventEmitter<AnswerOrder[]> = new EventEmitter<AnswerOrder[]>();
 
   @Output()
   nextQuestion: EventEmitter<boolean> = new EventEmitter<boolean>();
@@ -30,11 +48,16 @@ export class PassQuestionComponent implements OnInit {
   }
 
   answerSelected(answer: Answer){
-    var elem =  document.getElementById(answer.value);
+    const elem =  document.getElementById(answer.value);
     if (!answer.isCorrect){
      elem.classList.add("isKill");
+     this.foundAnswerFirstTime=false;
+     this.answersIds.push(answer.id);
     } else {
       this.foundAnswer=true;
+      if(this.foundAnswerFirstTime){
+        this.score++;
+      }
       this.question.answers.forEach((a) => {
         document.getElementById(a.value).classList.add("isKill");
       })
@@ -43,11 +66,24 @@ export class PassQuestionComponent implements OnInit {
   }
 
   next(){
+    this.answerOrder = new class implements AnswerOrder {
+      falseAnswersIds: string[] ;
+    }
+    this.answerOrder.falseAnswersIds = this.answersIds;
+    this.answersOrder.push(this.answerOrder);
     this.nextQuestion.emit(true);
     this.question.answers.forEach((a) => {
       document.getElementById(a.value).classList.remove("isKill");
+      document.getElementById(a.value+"2").classList.add("btn-primary");
+      document.getElementById(a.value+"2").classList.remove("showCorrect");
     })
     this.foundAnswer = false;
+    this.foundAnswerFirstTime = true;
+    this.answersIds = [];
+    if(this.lastQuestion) {
+      this.finalScore.emit(this.score);
+      this.quizAnswersOrder.emit(this.answersOrder);
+    }
   }
 
 }
