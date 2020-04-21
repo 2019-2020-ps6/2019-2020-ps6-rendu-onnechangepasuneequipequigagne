@@ -1,10 +1,10 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup} from "@angular/forms";
 import {UserService} from '../../../services/user.service';
 import {User} from '../../../models/user.model';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {Quiz} from '../../../models/quiz.model';
-import {QuizService} from "../../../services/quiz.service";
+import {QuizService} from '../../../services/quiz.service';
 
 @Component({
   selector: 'app-edit-user',
@@ -18,7 +18,8 @@ export class EditUserComponent implements OnInit {
   private userForm: FormGroup;
   private trim: string = "";
 
-  constructor(public formBuilder: FormBuilder, public userService: UserService, public quizService: QuizService, public route: ActivatedRoute) {
+  constructor(public formBuilder: FormBuilder, public userService: UserService, public quizService: QuizService,
+              public route: ActivatedRoute, private router: Router) {
     this.userForm = this.formBuilder.group({
       firstName: '',
       lastName: '',
@@ -71,5 +72,10 @@ export class EditUserComponent implements OnInit {
     } else {
       this.ngOnInit();
     }
+  }
+
+  goBack() {
+    let link = ['home/edit-menu/edit-users'];
+    this.router.navigate(link);
   }
 }

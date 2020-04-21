@@ -62,3 +62,19 @@ p {
   box-shadow: none;
   float: none;
 }
+
+.button {
+  background-color: $white;
+  border: solid 1px $blue;
+  color: $blue;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  margin-top: 10%;
+  max-width: 42%;
+  margin-left: -20%;
+}
+
+.button:hover {
+  background-color: lightblue;
+  cursor: pointer;
+}

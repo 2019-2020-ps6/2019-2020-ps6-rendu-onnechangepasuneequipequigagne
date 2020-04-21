@@ -41,4 +41,11 @@ export class EditQuizzesComponent implements OnInit {
       this.ngOnInit();
     }
   }
+
+  goBack() {
+    let link = ['home/edit-menu'];
+    this.router.navigate(link);
+  }
+
+
 }
