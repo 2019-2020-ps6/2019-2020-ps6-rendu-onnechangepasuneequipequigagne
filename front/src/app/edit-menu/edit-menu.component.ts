@@ -22,4 +22,10 @@ export class EditMenuComponent implements OnInit {
     const link = ['home/edit-menu/edit-users'];
     this.router.navigate(link);
   }
+
+  goBack() {
+    let link = ['home'];
+    this.router.navigate(link);
+  }
+
 }

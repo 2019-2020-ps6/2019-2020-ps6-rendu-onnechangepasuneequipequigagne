@@ -47,4 +47,9 @@ import {Router} from "@angular/router";
     }
   }
 
+  goBack() {
+    let link = ['home/edit-menu'];
+    this.router.navigate(link);
+  }
+
 }

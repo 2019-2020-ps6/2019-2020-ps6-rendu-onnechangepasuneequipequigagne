@@ -59,3 +59,20 @@
   width: 150px;
 }
 
+.myButton {
+  background-color: $white;
+  border: solid 1px $blue;
+  color: $blue;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  margin-top: 2%;
+  max-width: 34%;
+  margin-left: 20%;
+}
+
+.myButton:hover {
+  background-color: lightblue;
+  cursor: pointer;
+}
+
+

@@ -1,0 +1,60 @@
+[
+  {
+    "quizId": 1583226215551,
+    "quizName": "Les acteurs",
+    "date": "Sun Apr 12 2020",
+    "score": "2/3",
+    "answersOrder": [
+      {
+        "falseAnswersIds": [
+          1583226943194
+        ]
+      },
+      {
+        "falseAnswersIds": []
+      },
+      {
+        "falseAnswersIds": []
+      }
+    ],
+    "userId": 1586727479864,
+    "id": 1586727847932
+  },
+  {
+    "quizId": 1583226282450,
+    "quizName": "Les championnats de football",
+    "date": "Tue Apr 14 2020",
+    "score": "1/2",
+    "answersOrder": [
+      {
+        "falseAnswersIds": [
+          1583226859272
+        ]
+      },
+      {
+        "falseAnswersIds": []
+      }
+    ],
+    "userId": 1586727479864,
+    "id": 1586823695041
+  },
+  {
+    "quizId": 1583226215551,
+    "quizName": "Les acteurs",
+    "date": "Tue Apr 14 2020",
+    "score": "3/3",
+    "answersOrder": [
+      {
+        "falseAnswersIds": []
+      },
+      {
+        "falseAnswersIds": []
+      },
+      {
+        "falseAnswersIds": []
+      }
+    ],
+    "userId": 1586727479864,
+    "id": 1586831352000
+  }
+]

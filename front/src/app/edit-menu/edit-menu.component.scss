@@ -42,8 +42,8 @@ p {
 }
 
 .button-card {
-  margin-left: 100px;
-  margin-right: 100px;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 .button-card:hover {
@@ -61,4 +61,20 @@ p {
   margin-left: 43%;
   box-shadow: none;
   float: none;
+}
+
+.button {
+  background-color: $white;
+  border: solid 1px $blue;
+  color: $blue;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  margin-top: 10%;
+  max-width: 42%;
+  margin-left: -20%;
+}
+
+.button:hover {
+  background-color: lightblue;
+  cursor: pointer;
 }

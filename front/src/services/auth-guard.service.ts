@@ -12,8 +12,7 @@ export class AuthGuard implements CanActivate {
   constructor(private router: Router) { }
 
   canActivate(): boolean {
-    return true;
-    //return this.checkLogin(); a laisser comme ça le temps du dev pour gagner du temps en testant le site
+    return this.checkLogin();
   }
 
   setAuthGuardState(isLoggedIn: boolean) {
@@ -22,8 +21,7 @@ export class AuthGuard implements CanActivate {
   }
 
   checkLogin(): boolean {
-    if (true){//idem
-    //if(this.isLoggedIn){
+    if(this.isLoggedIn){
       return true;
     } else {
       let link =  ['login'];
