@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit {
 
   constructor(private router: Router, private route: ActivatedRoute, private authGuard: AuthGuard) {
    this.userLoggedIn = this.authGuard.getActivatedUser();
+   this.userLoggedIn = "André"
   }
 
   ngOnInit() {

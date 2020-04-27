@@ -1,6 +1,9 @@
 @import "../../styles/variables";
 @import "../../styles/card";
 
+html, body { height:100%; margin:0; padding:0 }
+div { position:sticky; width:50%; height:50%; background-color: rgb(122,122,122); }
+
 :host {
   color: $white;
 }

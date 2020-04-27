@@ -1,19 +1,30 @@
-<div id="gauche">
-  <div >
-     <img class="logo" [src]="logoUrl">
-     <span id="title">Quizzy</span>
-     <div id="text">Créez et partagez vos quiz</div>
-    <p>Bonjour <strong>{{userLoggedIn}}</strong> et bienvenue sur Quizzy</p>
+<body>
+  <div class="upleft" [routerLink]="home">
+    <div class="logo">
+      <img class="logo" [src]="logoUrl">
+    </div>
+    <div class="title" >
+        <p class="mainTitle">Quizzy</p> 
+        <p class="secondaryTitle">Créez et partagez vos quizz</p>
+    </div>
   </div>
-</div>
-<div id="droite">
-  <div class="button-card" (click)="goToMenuEdition()">
-    <div style="text-align: center;"><img class="image" src="assets/menu.png"></div>
-    <p>Menu d'édition</p>
+  <div class="downleft">
+    <div class="welcome">Bienvenue {{userLoggedIn}}</div>
   </div>
-  <br>
-  <div class="button-card" (click)="goToPassQuizz()">
-    <div style="text-align: center;"><img class="image" src="assets/ampoule.png"></div>
-    <p>Passer des quizz</p>
+
+  <div class="right">
+    <span class="button-card">
+      <img class="card-img-top" src="assets/menu.png">
+      <span class="card-body">
+        <p class="card-text">Menu d'édition et historique</p>
+      </span>
+    </span>
+    <span class="button-card">
+      <img class="card-img-top" src="assets/ampoule.png">
+      <span class="card-body">
+        <p class="card-text">Passer des quizz</p>
+      </span>
+    </span>
   </div>
-</div>
+</body>
+<!--{{userLoggedIn}}-->

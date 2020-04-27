@@ -1,35 +1,44 @@
-<!--suppress XmlDuplicatedId -->
-<div id="gauche">
-  <div class="card" id="login">
-     <img class="logo" src="https://lh3.googleusercontent.com/g4f3JWzT9_qwHKsz63ntrz8T17vYCLkXzSlFy4EZx0WuGAyXIkDLgihJzH0HunJdYw">
-     <span id="title">Quizzy</span>
-    <br><br>
-    <form class="login-form" [formGroup]="loginForm">
-      <label for="username">
-        Nom d'utilisateur: <br>
-        <input class="input-custom"  type="text" id="username" [formControlName]="'username'">
-      </label>
-      <br><br>
-      <label for="password">
-        Mot de passe: <br>
-        <input class="input-custom"  type="password" id="password" [formControlName]="'password'">
-      </label>
-      <br><br>
-      <button type="submit" class="button-card" id="submit" (click)="login()">Se connecter</button>
-    </form>
+<body>
+  <div class="upleft" [routerLink]="home">
+    <div class="logo">
+      <img class="logo" [src]="logoUrl">
+    </div>
+    <div class="title" >
+        <p class="mainTitle">Quizzy</p> 
+        <p class="secondaryTitle">Créez et partagez vos quizz</p>
+    </div>
   </div>
-  <div class="card" >
-    <img class="logoRegister" src="https://t4.ftcdn.net/jpg/00/25/96/39/240_F_25963984_SJZEobOTJSxDD1kh8vYRnURmFSNW6RIP.jpg">
-    <br>
-    <form class="login-form" [formGroup]="registerForm">
+  <div class="downleft">
+    <form class="in card centered" [formGroup]="registerForm">
+      <h2>
+        Créer un compte
+      </h2>
       <label for="username">
         Nom d'utilisateur: <br>
         <input class="input-custom"  type="text" id="username" [formControlName]="'login'">
       </label>
-      <br>
       <label for="mail">
         E-mail: <br>
         <input class="input-custom"  type="email" id="mail" [formControlName]="'email'">
+      </label>
+      <label for="password">
+        Mot de passe: <br>
+        <input class="input-custom"  type="password" id="password" [formControlName]="'password'">
+      </label>
+      <label for="password">
+        Confirmation mot de passe: <br>
+        <input class="input-custom"  type="password" id="password" [formControlName]="'passwordConfirmation'">
+      </label>
+      <button type="submit" class="button-card" id="submit" (click)="register()">s'inscrire</button>
+    </form>
+  
+    <form class="in card centered" [formGroup]="loginForm">
+      <h2>
+        Se connecter <br>
+      </h2>
+      <label for="username">
+        Nom d'utilisateur: <br>
+        <input class="input-custom"  type="text" id="username" [formControlName]="'username'">
       </label>
       <br>
       <label for="password">
@@ -37,23 +46,22 @@
         <input class="input-custom"  type="password" id="password" [formControlName]="'password'">
       </label>
       <br>
-      <label for="password">
-        Confirmation mot de passe: <br>
-        <input class="input-custom"  type="password" id="password" [formControlName]="'passwordConfirmation'">
-      </label>
-      <br><br>
-      <button type="submit" class="button-card" id="submit" (click)="register()">S'inscrire</button>
+      <button type="submit" class="button-card" id="submit" (click)="login()">se connecter</button>
     </form>
   </div>
-</div>
-<div id="droite">
-  <div class="button-card">
-    <div style="text-align: center;"><img class="image" src="https://png.pngtree.com/png-vector/20190930/ourlarge/pngtree-padlock-icon-png-image_1773582.jpg"></div>
-    <p>Menu d'édition</p>
+
+  <div class="right">
+    <span class="button-card">
+      <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Lock_font_awesome.svg/600px-Lock_font_awesome.svg.png" alt="Card image cap">
+      <span class="card-body">
+        <p class="card-text">Connectez-vous pour jouer à Quizzy</p>
+      </span>
+    </span>
+    <span class="button-card">
+      <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Lock_font_awesome.svg/600px-Lock_font_awesome.svg.png" alt="Card image cap">
+      <span class="card-body">
+        <p class="card-text">Connectez-vous pour jouer à Quizzy</p>
+      </span>
+    </span>
   </div>
-  <br>
-  <div class="button-card">
-    <div style="text-align: center;"><img class="image" src="https://png.pngtree.com/png-vector/20190930/ourlarge/pngtree-padlock-icon-png-image_1773582.jpg"></div>
-    <p>Passer des quizz</p>
-  </div>
-</div>
+</body>
