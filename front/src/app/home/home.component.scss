@@ -3,7 +3,7 @@ div { position:fixed; width:50%; height:50%; background-color: rgb(122,122,122);
 h2{margin: 0.3em;}
 .upleft { top:0;   left:0; }
 .right { top:0;   left:50%;  height: 100%; display: flex; justify-content: space-around; flex-direction: column; align-items: center;}
-.downleft { top: 35%; left:0; height:65% ; display: flex; justify-content: space-evenly;}
+.downleft { top: 35%; left:0; height:65%; text-align: center;}
 
 .title{
   top: 15%;
@@ -57,7 +57,8 @@ h2{margin: 0.3em;}
 }
 
 .button-card:hover{
-  background-color: green;
+  background-color: rgba(42, 102, 192, 0.5);
+  text-decoration: none;
 }
 
 .card{
@@ -70,9 +71,28 @@ h2{margin: 0.3em;}
   color: white;
 }
 
+.card-text:hover{
+  text-decoration: none;
+}
+
 .welcome{
-  text-align: center;
   top: 45%;
   font-size: 3em;
   color: white;
+}
+
+.img-pp{
+  top: 65%;
+}
+
+.a:link{
+  text-decoration: none;
+}
+
+.rounded-circle{
+  background-repeat: no-repeat;
+  background-size: contain;
+  text-align: center;
+  width: 20%;
+  height: 40%;
 }
