@@ -1,80 +1,70 @@
-@import '../../styles/card.scss';
-* {
-  margin: 0;
-  padding: 0;
+html, body { height:100%; margin:0; padding:0 }
+div { position:fixed; width:50%; height:50%; background-color: whitesmoke; }
+
+
+.buttons{
+  top:30%;
+  left:0%;
+  height: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
 }
 
-html, body {
-  height: 100%;
-}
-
-#gauche{
-  margin-top: 5%;
-  margin-bottom: 10%;
-  width: 50%;
-  height: 100%;
-  float: left;
-}
-
-#droite {
-  margin-top: 5%;
-  margin-bottom: 10%;
-  width: 50%;
-  height: 100%;
-  float: left;
-}
-
-.logo {
-  margin-top: 20%;
-  margin-left: 20%;
-  width: 120px;
-  height: 90px;
-}
-
-.image {
-  width: 250px;
-  height: 250px;
-}
-
-p {
+.button-card{
   text-align: center;
-  font-size: larger;
+  background-color: rgba(34, 34, 41, 0.445);
+  border: solid;
+  border-radius: 1em;
+  border-color: black;
+  height: 45%;
+  width: 35%;
 }
 
-.button-card {
-  margin-left: 20%;
-  margin-right: 20%;
+.button-card:hover{
+  background-color: rgba(42, 102, 192, 0.5);
+  text-decoration: none;
 }
 
-.button-card:hover {
-  background-color: lightblue;
-}
-
-.card {
-  color: $blue;
+.title{
+  top: 15%;
+  width: 100%;
   text-align: center;
-  font-size: larger;
-  font-weight: bold;
-  padding-bottom: 1%;
-  margin-top: 1%;
-  margin-right: 30%;
-  margin-left: 43%;
-  box-shadow: none;
-  float: none;
 }
 
-.button {
-  background-color: $white;
-  border: solid 1px $blue;
-  color: $blue;
-  font-weight: bold;
-  padding: 0.5em 1em;
-  margin-top: 10%;
-  max-width: 42%;
-  margin-left: -20%;
+.card-img-top{
+  background-repeat: no-repeat;
+  background-size: contain;
+  text-align: center;
+  height: 70%;
+  width: 35%;
 }
 
-.button:hover {
-  background-color: lightblue;
-  cursor: pointer;
+.card-text{
+  font-size: 2em;
+  color: white;
+}
+
+.card-text:hover{
+  text-decoration: none;
+}
+
+
+.a:link{
+  text-decoration: none;
+}
+
+.goBack{
+  color: white;
+  text-align: center;
+  border-radius: 1em;
+  margin: 5%;
+  height: 7%;
+  width: 90%;
+  top: 75%;
+  background-color: grey;
+}
+
+.goBack:hover{
+  background-color: rgba(0, 58, 145, 0.5);
 }

@@ -1,20 +1,24 @@
-<div class="card">
+<div class="title">
   Menu d'édition
 </div>
-<div id="gauche">
-  <div class="button-card" (click)="goToEditQuizzes()">
-    <div style="text-align: center;"><img class="image" src="https://www.freeiconspng.com/uploads/survey-icon-12.png"></div>
-    <p>Ecrire ou éditer des quizz</p>
-  </div>
-</div>
-<div id="droite">
-  <div class="button-card" (click)="goToEditUsers()">
-    <div style="text-align: center;"><img class="image" src="https://bayeexpress.com/wp-content/uploads/2020/02/groupe-avatar.png"></div>
-    <p>Editer les accueillis</p>
-  </div>
-  <div class="button text-center" (click)="goBack()"><svg class="bi bi-arrow-left" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-    <path fill-rule="evenodd" d="M5.854 4.646a.5.5 0 010 .708L3.207 8l2.647 2.646a.5.5 0 01-.708.708l-3-3a.5.5 0 010-.708l3-3a.5.5 0 01.708 0z" clip-rule="evenodd"/>
-    <path fill-rule="evenodd" d="M2.5 8a.5.5 0 01.5-.5h10.5a.5.5 0 010 1H3a.5.5 0 01-.5-.5z" clip-rule="evenodd"/>
-  </svg> Retourner au menu principal  </div>
+
+<div class='buttons'>
+  <a class="button-card" routerLink='/home/edit-menu/edit-quizzes'>
+    <img class="card-img-top" src="https://www.freeiconspng.com/uploads/survey-icon-12.png">
+    <span class="card-body">
+      <p class="card-text">Écriture et édition des quiz</p>
+    </span>
+  </a>
+  <a class="button-card" routerLink="/home/edit-menu/edit-users">
+    <img class="card-img-top" src="https://bayeexpress.com/wp-content/uploads/2020/02/groupe-avatar.png">
+    <span class="card-body">
+      <p class="card-text">Édition des accueillis</p>
+    </span>
+  </a>
 </div>
 
+<a routerLink="/home">
+  <div class="goBack">
+    <h3>Retourner au menu principal</h3>
+  </div>
+</a>
