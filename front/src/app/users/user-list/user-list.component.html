@@ -1,25 +1,35 @@
 <div class="main">
   
   <div class="row">
-      <div class="col-md-4">
-        <input class="input-custom"  type="text" id="firstName" placeholder="Rechercher..." [(ngModel)]="trim" (input)="search()">
+    <div class="col-md-4">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a routerLink="/home">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Liste des accueillis</li>
+          </ol>
+        </nav>
         
-      </div>
+      </div> 
       <div class="col-md-4">
         <span class="text">Liste des accueillis</span>
       </div>
       <div class="col-md-4">
+        <input class="input-custom"  type="text" id="firstName" placeholder="Rechercher..." [(ngModel)]="trim" (input)="search()">
         
       </div>
+     
     </div>
     
     <div class="row">
       <div class="col-md-12">
         <div class="border border-primary rounded">
           <div class="user" *ngFor="let user of userList">
-            <a class="text-control" routerLink="{{user.id}}/quizzes">
-              <app-user [user]="user"></app-user>
-            </a>
+            <div class="col-md-2">
+              <a class="text-control" routerLink="{{user.id}}/quizzes">
+                <app-user [user]="user"></app-user>
+              </a>
+            </div>
+            
           </div>
         </div>
       </div>
@@ -27,10 +37,7 @@
     </div>
       
     <div class="row">
-      <div class="col-md-4 text-center">
-        <br>
-        <button type="button" class="btn btn-outline-primary " (click)="goBack()"> &lt; Retourner au menu principal </button>
-      </div>
+      
 
     </div>
   </div>

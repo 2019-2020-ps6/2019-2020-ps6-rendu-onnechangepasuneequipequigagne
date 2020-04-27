@@ -23,9 +23,28 @@
   </div>
 </div>
 <div id="droite">
-  <div class="main">
-    <span class="text">Edition des quizz de {{user.firstName}}</span>
-    <input type="text" placeholder="Rechercher..." [(ngModel)]="trim" (input)="search()">
+  
+    <div class="row">
+      <div class="col-md-4">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a routerLink="/home">Home</a></li>
+            <li class="breadcrumb-item"><a routerLink="/home/edit-menu">Menu d'édition</a></li>
+            <li class="breadcrumb-item"><a routerLink="/home/edit-menu/edit-users">Menu d'édition des utilisateurs</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Edition des quizz de {{user.firstName}}</li>
+          </ol>
+        </nav>
+        
+      </div>
+      <div class="col-md-4 ">
+        <span class="text">Edition des quizz de {{user.firstName}}</span>
+      </div>
+      <div class="col-md-4 ">
+        <input type="text" placeholder="Rechercher..." [(ngModel)]="trim" (input)="search()">
+      </div>
+    </div>
+    
+    
     <div class="border border-primary rounded">
       <div class="quiz" *ngFor="let quiz of quizList">
         <div *ngIf="!user.quizzesId">
@@ -41,6 +60,5 @@
       </div>
     </div>
   </div>
-</div>
-  <div class="myButton" (click)="goBack()">< Retourner à lédition des accueillis < </div>
+
 </div>

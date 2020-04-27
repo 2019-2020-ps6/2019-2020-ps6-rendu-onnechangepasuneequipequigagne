@@ -3,13 +3,30 @@
     <app-answer-form></app-answer-form>
   </div>
   <div id="droite">
-    <span class="text">Edition des réponses</span>
-    <input type="text" placeholder="Rechercher..." [(ngModel)]="trim" (input)="search()">
+    <div class="row">
+      <div class="col-md-5">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a routerLink="/home">Home</a></li>
+            <li class="breadcrumb-item"><a routerLink="/home/edit-menu">Menu d'édition</a></li>
+            <li class="breadcrumb-item"><a routerLink="/home/edit-menu/edit-quizzes">Edition des quiz</a></li>
+            <li class="breadcrumb-item"><a routerLink="../..">Edition des questions</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Edition des réponses</li>
+          </ol>
+        </nav>
+        
+      </div>
+      <div class="col-md-4 ">
+        <span class="text">Edition des réponses</span>
+      </div>
+      <div class="col-md-3 text-right">
+        <input type="text" placeholder="Rechercher..." [(ngModel)]="trim" (input)="search()">
+      </div>
+    </div>
     <div class="border border-primary rounded">
       <div class="answer" *ngFor="let answer of answerList">
         <app-answer [answer]="answer" (answerDeleted)="deleteAnswer($event)"></app-answer>
       </div>
     </div>
-    <div class="button-card" (click)="goBack()">< Retourner à l'édition des questions < </div>
   </div>
 </div>

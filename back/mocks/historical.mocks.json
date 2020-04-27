@@ -56,44 +56,33 @@
     ],
     "userId": 1586727479864,
     "id": 1586831352000
-<<<<<<< HEAD
   },
   {
-    "quizId": 1583226282450,
-    "quizName": "Les championnats de football",
-    "date": "Tue Apr 21 2020",
-    "score": "1/2",
-    "answersOrder": [
-      {
-        "falseAnswersIds": [
-          1583226859272
-        ]
-      },
-      {
-        "falseAnswersIds": []
-      }
-    ],
-    "userId": 1586727479864,
-    "id": 1587452869460
-  },
-  {
-    "quizId": 1583226282450,
-    "quizName": "Les championnats de football",
+    "quizId": 1583226215551,
+    "quizName": "Les acteurs",
     "date": "Mon Apr 27 2020",
-    "score": "1/2",
+    "score": "0/3",
     "answersOrder": [
       {
         "falseAnswersIds": [
-          1583226859272
+          1583226943587,
+          1583226943194
         ]
       },
       {
-        "falseAnswersIds": []
+        "falseAnswersIds": [
+          1583226994193
+        ]
+      },
+      {
+        "falseAnswersIds": [
+          1584329212557,
+          1584570212557,
+          1584329212557
+        ]
       }
     ],
     "userId": 1586727479864,
-    "id": 1587954070447
-=======
->>>>>>> 4b07a99d16ed038cb4bf6ccf1250cf7ee6a22fd5
+    "id": 1588000282780
   }
 ]

@@ -1,13 +1,13 @@
 @import '../../../styles/card.scss';
 
 .border{
-  display: inline-flex;
+  display: flex;
   width: 100%;
   max-width: 100%;
   margin-top: 1em;
   padding: 1em 1em 1em 1em;
   border: solid 2px $blue;
-  overflow: scroll;
+  overflow: auto;
   background: rgb(150, 150, 150);
 }
 
