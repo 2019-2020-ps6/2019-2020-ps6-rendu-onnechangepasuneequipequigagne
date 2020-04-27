@@ -1,12 +1,39 @@
 <div class="main">
-  <input class="input-custom"  type="text" id="firstName" placeholder="Rechercher..." [(ngModel)]="trim" (input)="search()">
-  <span class="text">Liste des accueillis</span>
-  <div class="border border-primary rounded">
-    <div class="user" *ngFor="let user of userList">
-      <a class="text-control" routerLink="{{user.id}}/quizzes">
-        <app-user [user]="user"></app-user>
-      </a>
+  
+  <div class="row">
+      <div class="col-md-4">
+        <input class="input-custom"  type="text" id="firstName" placeholder="Rechercher..." [(ngModel)]="trim" (input)="search()">
+        
+      </div>
+      <div class="col-md-4">
+        <span class="text">Liste des accueillis</span>
+      </div>
+      <div class="col-md-4">
+        
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-12">
+        <div class="border border-primary rounded">
+          <div class="user" *ngFor="let user of userList">
+            <a class="text-control" routerLink="{{user.id}}/quizzes">
+              <app-user [user]="user"></app-user>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+      
+    <div class="row">
+      <div class="col-md-4 text-center">
+        <br>
+        <button type="button" class="btn btn-outline-primary " (click)="goBack()"> &lt; Retourner au menu principal </button>
+      </div>
+
     </div>
   </div>
-  <div class="button-card" (click)="goBack()">< Retourner au menu principal < </div>
-</div>
+  
+  
+
