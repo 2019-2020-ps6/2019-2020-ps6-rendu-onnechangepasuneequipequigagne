@@ -47,13 +47,17 @@ h2{margin: 0.3em;}
 }
 
 .button-card{
-  background-color: rgb(55, 72, 228);
+  background-color: rgba(34, 34, 41, 0.445);
   border: solid;
   text-align: center;
   border-radius: 1em;
   border-color: black;
   height: 40%;
   width: 80%;
+}
+
+.button-card:hover{
+  background-color: green;
 }
 
 .card{
@@ -67,7 +71,7 @@ h2{margin: 0.3em;}
 }
 
 .welcome{
-  left: 15%;
+  text-align: center;
   top: 45%;
   font-size: 3em;
   color: white;
