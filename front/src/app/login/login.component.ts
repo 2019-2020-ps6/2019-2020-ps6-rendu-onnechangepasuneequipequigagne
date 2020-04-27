@@ -53,7 +53,6 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    /*
     this.loginData = this.loginForm.getRawValue();
     this.superUser = this.superusers.find((superUser) =>
       superUser.login === this.loginData.username && superUser.password === this.loginData.password
@@ -67,9 +66,6 @@ export class LoginComponent implements OnInit {
       alert("Nom d'utilisateur ou mot de passe incorrect, veuillez réessayer !");
       this.setLoginForm();
     }
-    */
-   let link =  ['home'];
-   this.router.navigate(link);
   }
 
   register() {

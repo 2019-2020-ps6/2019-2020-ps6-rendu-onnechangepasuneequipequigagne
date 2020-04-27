@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 50a076a4ecd3680adb0d632c27e785169b9fe06e
 <body>
   <div class="upleft" [routerLink]="home">
     <div class="logo">
@@ -14,54 +10,48 @@
   </div>
   <div class="downleft">
     <form class="in card centered" [formGroup]="registerForm">
-      <h2>
-        Créer un compte
-      </h2>
+      <h3>
+        Créer un <br> compte
+      </h3>
       <label for="username">
-        Nom d'utilisateur: <br>
-        <input class="input-custom"  type="text" id="username" [formControlName]="'login'">
+        <input class="input-custom" placeholder="Nom d'utilisateur" type="text" id="username" [formControlName]="'login'">
       </label>
       <label for="mail">
-        E-mail: <br>
-        <input class="input-custom"  type="email" id="mail" [formControlName]="'email'">
+        <input class="input-custom" placeholder="E-mail" type="email" id="mail" [formControlName]="'email'">
       </label>
       <label for="password">
-        Mot de passe: <br>
-        <input class="input-custom"  type="password" id="password" [formControlName]="'password'">
+        <input class="input-custom" placeholder="Mot de passe" type="password" id="password" [formControlName]="'password'">
       </label>
       <label for="password">
-        Confirmation mot de passe: <br>
-        <input class="input-custom"  type="password" id="password" [formControlName]="'passwordConfirmation'">
+        <input class="input-custom" placeholder="Confirmer le mot de passe" type="password" id="password" [formControlName]="'passwordConfirmation'">
       </label>
-      <button type="submit" class="button-card" id="submit" (click)="register()">s'inscrire</button>
+      <button type="submit" class="button-log" id="submit" (click)="register()">s'inscrire</button>
     </form>
   
     <form class="in card centered" [formGroup]="loginForm">
-      <h2>
-        Se connecter <br>
-      </h2>
+      <h3>
+        Se connecter <br> <br>
+      </h3>
       <label for="username">
-        Nom d'utilisateur: <br>
-        <input class="input-custom"  type="text" id="username" [formControlName]="'username'">
+        <input class="input-custom" placeholder="E-mail" type="text" id="username" [formControlName]="'username'">
       </label>
       <br>
       <label for="password">
-        Mot de passe: <br>
-        <input class="input-custom"  type="password" id="password" [formControlName]="'password'">
+        <input class="input-custom" placeholder="Mot de passe" type="password" id="password" [formControlName]="'password'">
       </label>
       <br>
-      <button type="submit" class="button-card" id="submit" (click)="login()">se connecter</button>
+      <button type="submit" class="button-log" id="submit" (click)="login()">Se connecter</button>
     </form>
   </div>
 
   <div class="right">
-    <span class="button-card">
+    <span class="button-card dead">
       <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Lock_font_awesome.svg/600px-Lock_font_awesome.svg.png" alt="Card image cap">
       <span class="card-body">
         <p class="card-text">Connectez-vous pour jouer à Quizzy</p>
       </span>
     </span>
-    <span class="button-card">
+    <span class="button-card dead">
       <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Lock_font_awesome.svg/600px-Lock_font_awesome.svg.png" alt="Card image cap">
       <span class="card-body">
         <p class="card-text">Connectez-vous pour jouer à Quizzy</p>

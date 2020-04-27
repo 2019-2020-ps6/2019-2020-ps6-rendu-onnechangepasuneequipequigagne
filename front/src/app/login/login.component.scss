@@ -1,8 +1,9 @@
 html, body { height:100%; margin:0; padding:0 }
-div { position:fixed; width:50%; height:50%; background-color: rgb(122,122,122); }
-h2{margin: 0.3em;}
-.upleft { top:0;   left:0; }
-.right { top:0;   left:50%;  height: 100%; display: flex; justify-content: space-around; flex-direction: column; align-items: center;}
+div { position:fixed; width:50%; height:50%; background-color: whitesmoke; }
+label{margin-left: 10%;}
+h3{margin-left: 10%; margin-right: 10%; margin-top: 5%; text-align: center;}
+.upleft { top:8%;   left:0; }
+.right { top:8%;   left:50%;  height: 92%; display: flex; justify-content: space-around; flex-direction: column; align-items: center;}
 .downleft { top: 35%; left:0; height:65% ; display: flex; justify-content: space-evenly;}
 
 .title{
@@ -13,16 +14,15 @@ h2{margin: 0.3em;}
 .centered{
   display: flex;
   justify-content: space-around;
-  text-align: center;
 }
 
 .mainTitle{
-  color: white;
+  color: black;
   font-size: 2.3em;
 }
 
 .secondaryTitle{
-  color: white;
+  color: blue;
   font-size: 1.2em;
 }
 
@@ -36,6 +36,7 @@ h2{margin: 0.3em;}
   top: 5%;
   width: 30%;
   height: 70%;
+  background-color: rgba(31, 31, 255, 0.514);
 }
 
 .card-img-top{
@@ -43,7 +44,7 @@ h2{margin: 0.3em;}
   background-size: contain;
   text-align: center;
   height: 80%;
-  width: 45%;
+  width: 35%;
 }
 
 .button-card{
@@ -56,6 +57,18 @@ h2{margin: 0.3em;}
   width: 80%;
 }
 
+.button-log{
+  border-radius: 1em;
+  margin: 5%;
+  height: 15%;
+  width: 90%;
+  background-color: grey;
+}
+
+.button-log:hover{
+  background-color: rgba(0, 58, 145, 0.5);
+}
+
 .card{
   border: solid;
   border-color: rgb(66, 66, 250);
@@ -64,4 +77,8 @@ h2{margin: 0.3em;}
 .card-text{
   font-size: 2em;
   color: white;
+}
+
+.dead:hover{
+  background-color: rgba(34, 34, 41, 0.445);
 }

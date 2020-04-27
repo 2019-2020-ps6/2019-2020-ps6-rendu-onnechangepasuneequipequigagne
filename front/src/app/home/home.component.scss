@@ -1,8 +1,8 @@
 html, body { height:100%; margin:0; padding:0 }
-div { position:fixed; width:50%; height:50%; background-color: rgb(122,122,122); }
+div { position:fixed; width:50%; height:50%; background-color: whitesmoke; }
 h2{margin: 0.3em;}
-.upleft { top:0;   left:0; }
-.right { top:0;   left:50%;  height: 100%; display: flex; justify-content: space-around; flex-direction: column; align-items: center;}
+.upleft { top:8%;   left:0; }
+.right { top:8%;   left:50%;  height: 92%; display: flex; justify-content: space-around; flex-direction: column; align-items: center;}
 .downleft { top: 35%; left:0; height:65%; text-align: center;}
 
 .title{
@@ -17,12 +17,12 @@ h2{margin: 0.3em;}
 }
 
 .mainTitle{
-  color: white;
+  color: black;
   font-size: 2.3em;
 }
 
 .secondaryTitle{
-  color: white;
+  color: blue;
   font-size: 1.2em;
 }
 
@@ -43,7 +43,7 @@ h2{margin: 0.3em;}
   background-size: contain;
   text-align: center;
   height: 80%;
-  width: 45%;
+  width: 35%;
 }
 
 .button-card{
@@ -63,7 +63,7 @@ h2{margin: 0.3em;}
 
 .card{
   border: solid;
-  border-color: blue;
+  border-color: rgb(93, 57, 255);
 }
 
 .card-text{
@@ -78,7 +78,7 @@ h2{margin: 0.3em;}
 .welcome{
   top: 45%;
   font-size: 3em;
-  color: white;
+  color: black;
 }
 
 .img-pp{

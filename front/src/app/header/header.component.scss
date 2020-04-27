@@ -1,55 +1,7 @@
-@import "../../styles/variables";
-@import "../../styles/card";
-
 html, body { height:100%; margin:0; padding:0 }
-div { position:sticky; width:50%; height:50%; background-color: rgb(122,122,122); }
+div { position:fixed; width:50%; height:50%; background-color: rgb(122,122,122); }
 
-:host {
-  color: $white;
-}
-
-.header {
-  background: $blue;
-  padding: 0.5em;
-  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
-}
-
-.logo {
-  width: 70px;
-  height: 60px;
-}
-
-.text1 {
-  color: $white;
-  font-size: large;
-}
-
-.text2 {
-  color: $white;
-  font-size: larger;
-  font-family: "Cooper Black";
-}
-
-.button-card {
-  background-color: $blue;
-}
-
-.logout {
-  float: right;
-  margin-top: -2%;
-}
-
-.button {
-  padding:6px 0 6px 0;
-  font:bold 13px Arial;
-  background:#f5f5f5;
-  color: black;
-  border-radius: 2px;
-  width:100px;
-  border:1px solid #ccc;
-  box-shadow:1px 1px 1px #999;
-}
-
-.button:hover {
-  background-color: lightgrey;
+.header{
+  width: 100%;
+  z-index: 1;
 }
