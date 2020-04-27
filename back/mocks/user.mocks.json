@@ -82,6 +82,44 @@
             "falseAnswersIds": []
           }
         ]
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      },
+      {
+        "quizId": 1583226282450,
+        "quizName": "Les championnats de football",
+        "date": "Tue Apr 21 2020",
+        "score": "1/2",
+        "answersOrder": [
+          {
+            "falseAnswersIds": [
+              1583226859272
+            ]
+          },
+          {
+            "falseAnswersIds": []
+          }
+        ]
+      },
+      {
+        "quizId": 1583226282450,
+        "quizName": "Les championnats de football",
+        "date": "Mon Apr 27 2020",
+        "score": "1/2",
+        "answersOrder": [
+          {
+            "falseAnswersIds": [
+              1583226859272
+            ]
+          },
+          {
+            "falseAnswersIds": []
+          }
+        ]
+=======
+>>>>>>> 4b07a99d16ed038cb4bf6ccf1250cf7ee6a22fd5
+>>>>>>> 50a076a4ecd3680adb0d632c27e785169b9fe06e
       }
     ],
     "id": 1586727479864
