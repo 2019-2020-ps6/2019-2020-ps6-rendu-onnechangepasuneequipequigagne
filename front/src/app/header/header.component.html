@@ -12,9 +12,11 @@
 -->
 
 <nav class="navbar navbar-dark bg-primary header" *ngIf="isLoggedIn">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+  <a class="navbar-brand">
+    <img [src]="logoUrl" (click)="goToHomePage()" style="width:45px;">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="width:60px;">
+    <span class="navbar-toggler-icon" style="width:30px;"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -38,4 +40,4 @@
       </li>
     </ul>
   </div>
-
+</nav>
