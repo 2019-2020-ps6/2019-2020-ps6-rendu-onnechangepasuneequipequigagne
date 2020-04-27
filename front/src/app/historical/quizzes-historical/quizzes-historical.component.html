@@ -1,6 +1,23 @@
 <div class="main">
-  <input type="text" placeholder="Rechercher..." [(ngModel)]="trim" (input)="search()">
-  <span class="text">Historique de {{user.firstName}}</span>
+  <div class="row">
+    <div class="col-md-5">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a routerLink="/home">Home</a></li>
+          <li class="breadcrumb-item"><a routerLink="/home/edit-menu">Menu d'édition</a></li>
+          <li class="breadcrumb-item"><a routerLink="/home/edit-menu/edit-quizzes">Edition des accueillis</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Historique de {{user.firstName}}</li>
+        </ol>
+      </nav>
+      
+    </div>
+    <div class="col-md-4 ">
+      <span class="text">Historique de {{user.firstName}}</span>
+    </div>
+    <div class="col-md-3 text-right">
+      <input type="text" placeholder="Rechercher..." [(ngModel)]="trim" (input)="search()">
+    </div>
+  </div>
   <div class="border border-primary rounded">
     <div class="user" *ngFor="let historical of historicalList">
       <a class="text-control" routerLink="{{historical.id}}/details">
@@ -8,5 +25,4 @@
       </a>
     </div>
   </div>
-  <div class="button-card" (click)="goBack()">< Retourner à lédition des accueillis < </div>
 </div>
