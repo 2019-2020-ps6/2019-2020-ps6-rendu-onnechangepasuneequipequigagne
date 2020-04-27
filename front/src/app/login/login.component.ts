@@ -23,6 +23,8 @@ export class LoginComponent implements OnInit {
     password: string;
   };
   public superusers: SuperUser[] = [];
+  private logoUrl: string = 'https://lh3.googleusercontent.com/g4f3JWzT9_qwHKsz63ntrz8T17vYCLkXzSlFy4EZx0WuGAyXIkDLgihJzH0HunJdYw';
+  
 
 
   constructor(private formBuilder: FormBuilder, private superUserService: SuperuserService, private router: Router, private authGuard: AuthGuard) {
@@ -51,6 +53,7 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
+    /*
     this.loginData = this.loginForm.getRawValue();
     this.superUser = this.superusers.find((superUser) =>
       superUser.login === this.loginData.username && superUser.password === this.loginData.password
@@ -64,6 +67,9 @@ export class LoginComponent implements OnInit {
       alert("Nom d'utilisateur ou mot de passe incorrect, veuillez réessayer !");
       this.setLoginForm();
     }
+    */
+   let link =  ['home'];
+   this.router.navigate(link);
   }
 
   register() {
