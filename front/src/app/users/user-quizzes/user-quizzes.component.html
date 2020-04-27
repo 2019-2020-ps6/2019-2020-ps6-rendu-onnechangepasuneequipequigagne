@@ -1,7 +1,25 @@
 <div class="main">
-  <input type="text" placeholder="Rechercher..." [(ngModel)]="trim" (input)="search()">
+  <div class="row">
+    <div class="col-md-4">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a routerLink="/home">Home</a></li>
+          <li class="breadcrumb-item"><a routerLink="/home/pass-quiz/users">Liste des accueillis</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Liste des quiz disponibles</li>
+        </ol>
+      </nav>
+      
+    </div>
+    <div class="col-md-4">
+      <span class="text">Liste des quiz disponibles</span>
+    </div>
+    <div class="col-md-4">
+      <input type="text" placeholder="Rechercher..." [(ngModel)]="trim" (input)="search()">
+    </div>
+  </div>  
+  
   <span class="glyphicon glyphicon-search"></span>
-    <span class="text">Liste des quizz disponibles</span>
+    
     <div class="border border-primary rounded">
       <div class="quiz" *ngFor="let quiz of quizList">
         <a class="text-control" routerLink="{{quiz.id}}">
@@ -9,5 +27,4 @@
         </a>
       </div>
     </div>
-  <div class="button-card" (click)="goBack()">< Retourner à la liste des accueillis < </div>
 </div>

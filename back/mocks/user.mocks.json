@@ -82,43 +82,66 @@
             "falseAnswersIds": []
           }
         ]
-<<<<<<< HEAD
       },
       {
-        "quizId": 1583226282450,
-        "quizName": "Les championnats de football",
-        "date": "Tue Apr 21 2020",
-        "score": "1/2",
-        "answersOrder": [
-          {
-            "falseAnswersIds": [
-              1583226859272
-            ]
-          },
-          {
-            "falseAnswersIds": []
-          }
-        ]
-      },
-      {
-        "quizId": 1583226282450,
-        "quizName": "Les championnats de football",
+        "quizId": 1583226215551,
+        "quizName": "Les acteurs",
         "date": "Mon Apr 27 2020",
-        "score": "1/2",
+        "score": "0/3",
         "answersOrder": [
           {
             "falseAnswersIds": [
-              1583226859272
+              1583226943587,
+              1583226943194
             ]
           },
           {
-            "falseAnswersIds": []
+            "falseAnswersIds": [
+              1583226994193
+            ]
+          },
+          {
+            "falseAnswersIds": [
+              1584329212557,
+              1584570212557,
+              1584329212557
+            ]
           }
         ]
-=======
->>>>>>> 4b07a99d16ed038cb4bf6ccf1250cf7ee6a22fd5
       }
     ],
     "id": 1586727479864
+  },
+  {
+    "firstName": "sdfg",
+    "lastName": "sdfg",
+    "profilePicture": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/OOjs_UI_icon_userAvatar.svg/1024px-OOjs_UI_icon_userAvatar.svg.png",
+    "quizzesId": [],
+    "quizzesHistorical": [],
+    "id": 1587995664852
+  },
+  {
+    "firstName": "dfghdf",
+    "lastName": "hfdghdfhg",
+    "profilePicture": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/OOjs_UI_icon_userAvatar.svg/1024px-OOjs_UI_icon_userAvatar.svg.png",
+    "quizzesId": [],
+    "quizzesHistorical": [],
+    "id": 1587995668526
+  },
+  {
+    "firstName": "fghul",
+    "lastName": "uyioml",
+    "profilePicture": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/OOjs_UI_icon_userAvatar.svg/1024px-OOjs_UI_icon_userAvatar.svg.png",
+    "quizzesId": [],
+    "quizzesHistorical": [],
+    "id": 1587995672201
+  },
+  {
+    "firstName": "vcvbn",
+    "lastName": "vcbn",
+    "profilePicture": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/OOjs_UI_icon_userAvatar.svg/1024px-OOjs_UI_icon_userAvatar.svg.png",
+    "quizzesId": [],
+    "quizzesHistorical": [],
+    "id": 1587995725592
   }
 ]

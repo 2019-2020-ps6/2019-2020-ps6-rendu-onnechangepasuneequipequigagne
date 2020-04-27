@@ -3,13 +3,28 @@
     <app-quiz-form></app-quiz-form>
   </div>
   <div id="droite">
-    <span class="text">Edition des quizz</span>
-    <input type="text" placeholder="Rechercher..." [(ngModel)]="trim" (input)="search()">
+    <div class="row">
+      <div class="col-md-5">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a routerLink="/home">Home</a></li>
+            <li class="breadcrumb-item"><a routerLink="/home/edit-menu">Menu d'édition</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Edition des quiz</li>
+          </ol>
+        </nav>
+        
+      </div>
+      <div class="col-md-4 ">
+        <span class="text">Edition des quiz</span>
+      </div>
+      <div class="col-md-3 text-right">
+        <input type="text" placeholder="Rechercher..." [(ngModel)]="trim" (input)="search()">
+      </div>
+    </div>
     <div class="border border-primary rounded">
       <div class="user" *ngFor="let quiz of quizList">
         <app-quiz [editQuizMenu]=true [quiz]="quiz" (quizEdited)="editQuiz($event)" (quizDeleted)="deleteQuiz($event)"></app-quiz>
       </div>
     </div>
-    <div class="button-card" (click)="goBack()">< Retourner au menu d'édition < </div>
   </div>
 </div>
