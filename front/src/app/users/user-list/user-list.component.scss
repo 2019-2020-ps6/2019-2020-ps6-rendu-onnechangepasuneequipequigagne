@@ -12,7 +12,7 @@
 }
 
 .main{
-  padding: 1em 5em 1em 1em;
+  padding: 1em 1em 1em 1em;
   margin: 2em;
 }
 
@@ -20,4 +20,14 @@
   font-size: larger;
   font-weight: bold;
   margin-left: 30%;
+}
+
+.button-card {
+  margin-top: 2%;
+  max-width: 24%;
+  margin-left: 40%;
+}
+
+.button-card:hover {
+  background-color: lightblue;
 }

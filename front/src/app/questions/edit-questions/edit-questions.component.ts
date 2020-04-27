@@ -47,4 +47,9 @@ export class EditQuestionsComponent implements OnInit {
     }
   }
 
+  goBack() {
+    let link = ['home/edit-menu/edit-quizzes'];
+    this.router.navigate(link);
+  }
+
 }

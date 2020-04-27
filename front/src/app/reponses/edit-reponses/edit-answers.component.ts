@@ -45,5 +45,9 @@ export class EditAnswersComponent implements OnInit {
     }
   }
 
+  goBack() {
+    let link = [`home/edit-menu/edit-quizzes/${this.quizId}/questions`];
+    this.router.navigate(link);
+  }
 
 }

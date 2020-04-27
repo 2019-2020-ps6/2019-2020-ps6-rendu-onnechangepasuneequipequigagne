@@ -1,7 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 import {Historical} from '../../../models/historical.model';
 import {UserService} from '../../../services/user.service';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {User} from '../../../models/user.model';
 
 @Component({
@@ -15,7 +15,7 @@ export class QuizzesHistoricalComponent implements OnInit {
   private historicalList: Historical[];
   private trim: string = "";
 
-  constructor(private userService: UserService, private route: ActivatedRoute) {
+  constructor(private userService: UserService, private route: ActivatedRoute, private router: Router) {
   }
 
 
@@ -39,4 +39,8 @@ export class QuizzesHistoricalComponent implements OnInit {
     }
   }
 
+  goBack() {
+    let link = ['home/edit-menu/edit-users'];
+    this.router.navigate(link);
+  }
 }

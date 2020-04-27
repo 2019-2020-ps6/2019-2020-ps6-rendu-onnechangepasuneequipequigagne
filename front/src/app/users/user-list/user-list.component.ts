@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/services/user.service';
 import { User } from 'src/models/user.model';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-user-list',
@@ -12,13 +13,12 @@ export class UserListComponent implements OnInit {
   private userList: User[];
   private trim: string = "";
 
-  constructor(private userService: UserService) {
+  constructor(private userService: UserService, private router: Router) {
   }
 
   ngOnInit() {
     this.userService.users$.subscribe((users) => this.userList = users);
   }
-
 
   search() {
       if(this.trim) {
@@ -28,6 +28,11 @@ export class UserListComponent implements OnInit {
       } else {
         this.ngOnInit();
       }
+  }
+
+  goBack() {
+    let link = ['home'];
+    this.router.navigate(link);
   }
 
 }

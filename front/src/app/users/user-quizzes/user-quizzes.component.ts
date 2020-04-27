@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Quiz } from '../../../models/quiz.model';
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {UserService} from "../../../services/user.service";
 
 @Component({
@@ -14,7 +14,7 @@ export class UserQuizzesComponent implements OnInit {
   private trim: string = "";
 
 
-  constructor(public userService: UserService, private route: ActivatedRoute) {
+  constructor(public userService: UserService, private route: ActivatedRoute, private router: Router) {
   }
 
   ngOnInit() {
@@ -38,5 +38,9 @@ export class UserQuizzesComponent implements OnInit {
     }
   }
 
+  goBack() {
+    let link = ['home/pass-quiz/users'];
+    this.router.navigate(link);
+  }
 
 }
