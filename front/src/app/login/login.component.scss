@@ -47,19 +47,21 @@ h2{margin: 0.3em;}
 }
 
 .button-card{
+  background-color: rgb(55, 72, 228);
   border: solid;
   text-align: center;
   border-radius: 1em;
   border-color: black;
-  background-color: white;
   height: 40%;
   width: 80%;
 }
 
 .card{
   border: solid;
+  border-color: blue;
 }
 
 .card-text{
   font-size: 2em;
+  color: white;
 }
