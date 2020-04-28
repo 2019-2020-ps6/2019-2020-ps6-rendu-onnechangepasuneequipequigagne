@@ -1,20 +1,20 @@
-<div class="main">
-  <div class="row navi">
-    <div class="col-md-5">
-      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a routerLink="/home">Home</a></li>
-          <li class="breadcrumb-item"><a routerLink="/home/edit-menu">Menu d'édition</a></li>
-          <li class="breadcrumb-item"><a routerLink="/home/edit-menu/edit-users">Edition des accueillis</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Historique de {{user.firstName}}</li>
-        </ol>
-      </nav>
-      
-    </div>
-    <div class="col-md-4 ">
-      <span class="text">Historique de {{user.firstName}}</span>
-    </div>
+<div class="row navi">
+  <div class="col-md-5">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a routerLink="/home">Home</a></li>
+        <li class="breadcrumb-item"><a routerLink="/home/edit-menu">Menu d'édition</a></li>
+        <li class="breadcrumb-item"><a routerLink="/home/edit-menu/edit-users">Edition des accueillis</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Historique de {{user.firstName}}</li>
+      </ol>
+    </nav>
+    
   </div>
+  <div class="col-md-4 ">
+    <span class="text">Historique de {{user.firstName}}</span>
+  </div>
+</div>
+<div class="main">
   <div class="border border-primary rounded">
     <div class="user" *ngFor="let historical of historicalList">
       <a class="text-control" routerLink="{{historical.id}}/details">

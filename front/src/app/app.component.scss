@@ -23,6 +23,7 @@ div { position:fixed; width:50%; height:50%; background-color: rgb(122,122,122);
   width: 100%;
   background-color: whitesmoke;
   overflow-y: auto;
+  overflow-x: hidden;
   z-index: 1;
 }
 
