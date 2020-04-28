@@ -1,10 +1,10 @@
 <body>
-  <div class="upleft" [routerLink]="home">
+  <div class="upleft">
     <div class="logo">
       <img class="logo" [src]="logoUrl">
     </div>
     <div class="title" >
-        <p class="mainTitle">Quizzy</p> 
+        <p class="mainTitle">Quizzy</p>
         <p class="secondaryTitle">Créez et partagez vos quiz</p>
     </div>
   </div>
@@ -13,8 +13,8 @@
       <h3>
         Créer un <br> compte
       </h3>
-      <label for="username">
-        <input class="input-custom" placeholder="Nom d'utilisateur" type="text" id="username" [formControlName]="'login'">
+      <label for="login">
+        <input class="input-custom" placeholder="Nom d'utilisateur" type="text" id="login" [formControlName]="'login'">
       </label>
       <label for="mail">
         <input class="input-custom" placeholder="E-mail" type="email" id="mail" [formControlName]="'email'">
@@ -25,9 +25,9 @@
       <label for="password">
         <input class="input-custom" placeholder="Confirmer le mot de passe" type="password" id="password" [formControlName]="'passwordConfirmation'">
       </label>
-      <button type="submit" class="button-log" id="submit" (click)="register()">s'inscrire</button>
+      <button type="submit" class="button-log" id="register" (click)="register()">s'inscrire</button>
     </form>
-  
+
     <form class="in card centered" [formGroup]="loginForm">
       <h3>
         Se connecter <br> <br>
@@ -40,7 +40,7 @@
         <input class="input-custom" placeholder="Mot de passe" type="password" id="password" [formControlName]="'password'">
       </label>
       <br>
-      <button type="submit" class="button-log" id="submit" (click)="login()">Se connecter</button>
+      <button type="submit" class="button-log" id="login" (click)="login()">Se connecter</button>
     </form>
   </div>
 

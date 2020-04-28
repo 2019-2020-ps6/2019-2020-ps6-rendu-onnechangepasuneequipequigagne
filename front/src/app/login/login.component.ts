@@ -17,14 +17,13 @@ export class LoginComponent implements OnInit {
   private loginForm: FormGroup;
   private registerForm: FormGroup;
   private superUser: SuperUser = new class implements SuperUser {
-    email: string;
-    id: string;
     login: string;
+    email: string;
     password: string;
   };
   public superusers: SuperUser[] = [];
   private logoUrl: string = 'https://lh3.googleusercontent.com/g4f3JWzT9_qwHKsz63ntrz8T17vYCLkXzSlFy4EZx0WuGAyXIkDLgihJzH0HunJdYw';
-  
+
 
 
   constructor(private formBuilder: FormBuilder, private superUserService: SuperuserService, private router: Router, private authGuard: AuthGuard) {
@@ -82,14 +81,15 @@ export class LoginComponent implements OnInit {
       );
       if(!!this.superUser) {
         alert("Un compte avec cet e-mail existe déjà!");
+        this.setRegisterForm();
       } else {
-        let link =  ['home'];
         this.superUser.login = this.registerData.login;
         this.superUser.email = this.registerData.email;
         this.superUser.password = this.registerData.password;
         this.superUserService.addSuperUser(this.superUser);
-        this.authGuard.setAuthGuardState(true);
         this.authGuard.setActivatedUser(this.superUser.login);
+        this.authGuard.setAuthGuardState(true);
+        let link =  ['home'];
         this.router.navigate(link);
       }
     }
