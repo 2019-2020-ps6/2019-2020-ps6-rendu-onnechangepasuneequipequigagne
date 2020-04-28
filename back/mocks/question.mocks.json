@@ -1,41 +1,5 @@
 [
   {
-    "label": "Qui a gagné la coupe du monde de foot en 1998 ?",
-    "quizId": 1583226282450,
-    "id": 1583226385509,
-    "imageURL": "https://sites.duke.edu/wcwp/files/2018/05/Coupe-du-Monde.jpeg",
-    "answers": [
-      {
-        "value": "Le Brésil",
-        "isCorrect": false,
-        "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/1280px-Flag_of_Brazil.svg.png",
-        "questionId": 1583226385509,
-        "id": 1583226859272
-      },
-      {
-        "value": "L'Allemagne",
-        "isCorrect": false,
-        "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/langfr-225px-Flag_of_Germany.svg.png",
-        "questionId": 1583226385509,
-        "id": 1583226859314
-      },
-      {
-        "value": "La France",
-        "isCorrect": true,
-        "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/langfr-225px-Flag_of_France.svg.png",
-        "questionId": 1583226385509,
-        "id": 1583226817734
-      },
-      {
-        "value": "L'Italie",
-        "isCorrect": false,
-        "imageURL": "https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/1200px-Flag_of_Italy.svg.png",
-        "questionId": 1583226385509,
-        "id": 1583226859576
-      }
-    ]
-  },
-  {
     "label": "Qui a perdu la coupe du monde de foot en 1998 ?",
     "quizId": 1583226282450,
     "id": 1583226402611,

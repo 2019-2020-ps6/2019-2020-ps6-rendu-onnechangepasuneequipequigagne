@@ -80,7 +80,11 @@ export class PassQuizComponent implements OnInit {
   finalScore(score: number) {
     this.historical.quizId = this.quiz.id;
     this.historical.quizName = this.quiz.name;
-    this.historical.date = this.date.toDateString();
+    if (this.date.getMonth()<9){
+      this.historical.date = this.date.getDate()+"/0"+(this.date.getMonth()+1)+"/"+this.date.getFullYear();
+    } else {
+      this.historical.date = this.date.getDate()+"/"+(this.date.getMonth()+1)+"/"+this.date.getFullYear();
+    }
     this.historical.score = `${score}/${this.quiz.questions.length}`;
   }
 
