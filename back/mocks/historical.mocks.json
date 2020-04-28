@@ -1,1 +1,80 @@
-[]
+[
+  {
+    "quizId": 1588042448002,
+    "quizName": "Athlétisme",
+    "date": "28/04/2020",
+    "score": "1/3",
+    "answersOrder": [
+      {
+        "falseAnswersIds": []
+      },
+      {
+        "falseAnswersIds": [
+          1588043229100,
+          1588043413679
+        ]
+      },
+      {
+        "falseAnswersIds": [
+          1588043852139,
+          1588043882846,
+          1588043948778
+        ]
+      }
+    ],
+    "userId": 1588042083544,
+    "id": 1588043996652
+  },
+  {
+    "quizId": 1588042448002,
+    "quizName": "Athlétisme",
+    "date": "28/04/2020",
+    "score": "0/3",
+    "answersOrder": [
+      {
+        "falseAnswersIds": [
+          1588043013340
+        ]
+      },
+      {
+        "falseAnswersIds": [
+          1588043413679,
+          1588043229100
+        ]
+      },
+      {
+        "falseAnswersIds": [
+          1588043948778,
+          1588043882846,
+          1588043852139
+        ]
+      }
+    ],
+    "userId": 1588042083544,
+    "id": 1588044041198
+  },
+  {
+    "quizId": 1588042448002,
+    "quizName": "Athlétisme",
+    "date": "28/04/2020",
+    "score": "1/3",
+    "answersOrder": [
+      {
+        "falseAnswersIds": []
+      },
+      {
+        "falseAnswersIds": [
+          1588043229100,
+          1588043438235
+        ]
+      },
+      {
+        "falseAnswersIds": [
+          1588043852139
+        ]
+      }
+    ],
+    "userId": 1588042083544,
+    "id": 1588045575402
+  }
+]

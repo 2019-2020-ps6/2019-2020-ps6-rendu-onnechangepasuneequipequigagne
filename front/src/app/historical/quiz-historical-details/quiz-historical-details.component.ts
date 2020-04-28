@@ -51,11 +51,7 @@ export class QuizHistoricalDetailsComponent implements OnInit {
 
   nextAnswer(): boolean {
     this.answerIndex++;
-    if(this.answerIndex == 1) {
-        this.rank = this.answerIndex+" er clic"
-    } else {
-      this.rank = this.answerIndex+" ème clic"
-    }
+    this.rank = ""+this.answerIndex;
     return true;
   }
 

@@ -1,31 +1,34 @@
-<div *ngFor="let question of quiz.questions">
-  <div class="q">{{question.label}}</div>
-  <div class="pad">
-    <div class="answers" *ngIf="nextQuestion()">
-      <div *ngFor="let answer of question.answers">
-          <div class="btnFalse" *ngIf="isTrueOrFalse(answer.id) && nextAnswer()">
-            <div  class="img-wrap">
-              <img [src]="answer.imageURL">
+<div class="all">
+  <div *ngFor="let question of quiz.questions">
+    <div class="q">{{question.label}}</div>
+    <div class="pad">
+      <div class="answers" *ngIf="nextQuestion()">
+        <div *ngFor="let answer of question.answers">
+            <div class="btnFalse" *ngIf="isTrueOrFalse(answer.id) && nextAnswer()">
+              <div  class="img-wrap">
+                <img [src]="answer.imageURL">
+              </div>
+              <p class="card-text text-control">{{answer.value}} </p>
+              <p class="card-text text-control" *ngIf="rank=='1'"><img src="../../../assets/1.png"></p>
+              <p class="card-text text-control" *ngIf="rank=='2'"><img src="../../../assets/2.png"></p>
+              <p class="card-text text-control" *ngIf="rank=='3'"><img src="../../../assets/3.png"></p>
             </div>
-            <p class="card-text text-control">{{answer.value}} </p>
-            <p class="card-text text-control">{{rank}}</p>
-          </div>
-          <div class="btnTrue" *ngIf="answer.isCorrect">
-            <div  class="img-wrap">
-              <img [src]="answer.imageURL">
+            <div class="btnTrue" *ngIf="answer.isCorrect">
+              <div  class="img-wrap">
+                <img [src]="answer.imageURL">
+              </div>
+              <p class="card-text text-control">{{answer.value}} </p>
             </div>
-            <p class="card-text text-control">{{answer.value}} </p>
-          </div>
-          <div class="btnAnswer" *ngIf="!answer.isCorrect && !isTrueOrFalse(answer.id)">
-            <div  class="img-wrap">
-              <img [src]="answer.imageURL">
+            <div class="btnAnswer" *ngIf="!answer.isCorrect && !isTrueOrFalse(answer.id)">
+              <div  class="img-wrap">
+                <img [src]="answer.imageURL">
+              </div>
+              <p class="card-text text-control">{{answer.value}} </p>
             </div>
-            <p class="card-text text-control">{{answer.value}} </p>
-          </div>
+        </div>
       </div>
     </div>
   </div>
+  <button type="submit" class="button-quit" (click)="goBack()">Retourner à la liste des historiques</button>
 </div>
-<button type="submit" class="button-card" (click)="goBack()">< Retourner à la liste des historiques <</button>
-
 
