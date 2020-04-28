@@ -16,6 +16,21 @@
   float: left;
 }
 
+.navi{
+  margin: 2%;
+  width: 65%;
+}
+
+.rech{
+  position: fixed;
+  right: 5%;
+  top: 20%
+}
+
+.centered{
+  text-align: center;
+}
+
 .border{
   display: inline-flex;
   width: 100%;
@@ -29,10 +44,9 @@
 }
 
 .text {
+  margin-left: 20%;
   font-size: larger;
   font-weight: bold;
-  margin-left: 25%;
-  margin-right: 30%;
 }
 
 .button-card {
