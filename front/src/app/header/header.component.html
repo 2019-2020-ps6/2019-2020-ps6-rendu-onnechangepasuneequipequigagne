@@ -15,4 +15,10 @@
   <a class="navbar-brand">
     <img [src]="logoUrl" (click)="goToHomePage()" style="width:45px;">
   </a>
+
+  <button class="navbar-toggler" type="button" title="déconnexion" data-toggle="collapse"
+          data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation" style="width:60px;" (click)="logout()">
+    <i class="fas fa-sign-out-alt"></i>
+  </button>
 </nav>
