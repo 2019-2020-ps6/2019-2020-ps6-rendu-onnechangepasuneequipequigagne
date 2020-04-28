@@ -1,25 +1,26 @@
 <div class="user-list">
+  <div class ="row navi">
+    <div class="col-md-5">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a routerLink="/home">Home</a></li>
+          <li class="breadcrumb-item"><a routerLink="/home/edit-menu">Menu d'édition</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Edition des accueillis</li>
+        </ol>
+      </nav>
+    </div>
+    <div class="col-md-5 centered">
+      <span class="text">Edition des accueillis</span>
+    </div>
+  </div>
   <div id="gauche">
     <app-user-form></app-user-form>
   </div>
   <div id="droite">
     <div class="row">
-      <div class="col-md-5">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a routerLink="/home">Home</a></li>
-            <li class="breadcrumb-item"><a routerLink="/home/edit-menu">Menu d'édition</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Edition des accueillis</li>
-          </ol>
-        </nav>
-        
-      </div>
-      <div class="col-md-4 ">
-        <span class="text">Edition des accueillis</span>
-      </div>
-      <div class="col-md-3 text-right">
-        <input type="text" placeholder="Rechercher..." [(ngModel)]="trim" (input)="search()">
-      </div>
+        <div class="col-md-4 ">
+          <input type="text" placeholder="Rechercher..." [(ngModel)]="trim" (input)="search()">
+        </div>
     </div>
     <div class="border border-primary rounded">
       <div class="user" *ngFor="let user of userList">

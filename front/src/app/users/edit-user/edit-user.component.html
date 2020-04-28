@@ -1,3 +1,18 @@
+<div class="row navi">
+  <div class="col-md-4">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a routerLink="/home">Home</a></li>
+        <li class="breadcrumb-item"><a routerLink="/home/edit-menu">Menu d'édition</a></li>
+        <li class="breadcrumb-item"><a routerLink="/home/edit-menu/edit-users">Menu d'édition des utilisateurs</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Edition des quizz de {{user.firstName}}</li>
+      </ol>
+    </nav>
+  </div>
+  <div class="col-md-4 ">
+    <span class="text">Edition des quizz de {{user.firstName}}</span>
+  </div>
+</div>
 <div id="gauche">
   <div class="card">
     <h4>Informations du profil</h4>
@@ -25,20 +40,6 @@
 <div id="droite">
   
     <div class="row">
-      <div class="col-md-4">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a routerLink="/home">Home</a></li>
-            <li class="breadcrumb-item"><a routerLink="/home/edit-menu">Menu d'édition</a></li>
-            <li class="breadcrumb-item"><a routerLink="/home/edit-menu/edit-users">Menu d'édition des utilisateurs</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Edition des quizz de {{user.firstName}}</li>
-          </ol>
-        </nav>
-        
-      </div>
-      <div class="col-md-4 ">
-        <span class="text">Edition des quizz de {{user.firstName}}</span>
-      </div>
       <div class="col-md-4 ">
         <input type="text" placeholder="Rechercher..." [(ngModel)]="trim" (input)="search()">
       </div>
