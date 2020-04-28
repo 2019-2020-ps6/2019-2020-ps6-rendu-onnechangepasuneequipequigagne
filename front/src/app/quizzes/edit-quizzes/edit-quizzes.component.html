@@ -1,23 +1,22 @@
 <div class="user-list">
+  <div class="row navi">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a routerLink="/home">Home</a></li>
+        <li class="breadcrumb-item"><a routerLink="/home/edit-menu">Menu d'édition</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Edition des quiz</li>
+      </ol>
+    </nav>
+    <div class="col-md-4 title">
+      <span class="text">Edition des quiz</span>
+    </div>
+  </div>
   <div id="gauche">
     <app-quiz-form></app-quiz-form>
   </div>
   <div id="droite">
     <div class="row">
-      <div class="col-md-5">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a routerLink="/home">Home</a></li>
-            <li class="breadcrumb-item"><a routerLink="/home/edit-menu">Menu d'édition</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Edition des quiz</li>
-          </ol>
-        </nav>
-        
-      </div>
       <div class="col-md-4 ">
-        <span class="text">Edition des quiz</span>
-      </div>
-      <div class="col-md-3 text-right">
         <input type="text" placeholder="Rechercher..." [(ngModel)]="trim" (input)="search()">
       </div>
     </div>
@@ -26,5 +25,4 @@
         <app-quiz [editQuizMenu]=true [quiz]="quiz" (quizEdited)="editQuiz($event)" (quizDeleted)="deleteQuiz($event)"></app-quiz>
       </div>
     </div>
-  </div>
 </div>

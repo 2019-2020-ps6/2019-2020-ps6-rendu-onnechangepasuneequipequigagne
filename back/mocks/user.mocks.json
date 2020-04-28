@@ -165,6 +165,22 @@
             "falseAnswersIds": []
           }
         ]
+      },
+      {
+        "quizId": 1583226282450,
+        "quizName": "Les championnats de football",
+        "date": "Tue Apr 28 2020",
+        "score": "1/2",
+        "answersOrder": [
+          {
+            "falseAnswersIds": [
+              1583226859272
+            ]
+          },
+          {
+            "falseAnswersIds": []
+          }
+        ]
       }
     ],
     "id": 1586727479864

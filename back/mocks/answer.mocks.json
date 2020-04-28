@@ -56,62 +56,6 @@
     "id": 1583226903428
   },
   {
-    "value": "Pas shrek",
-    "isCorrect": false,
-    "imageURL": "https://i.pinimg.com/236x/b1/b3/c2/b1b3c2b98255270431f4fee871c35251--shrek.jpg?nii=t",
-    "questionId": 1583226445021,
-    "id": 1583226943587
-  },
-  {
-    "value": "Pas du tout shrek",
-    "isCorrect": false,
-    "imageURL": "https://i.pinimg.com/236x/b1/b3/c2/b1b3c2b98255270431f4fee871c35251--shrek.jpg?nii=t",
-    "questionId": 1583226445021,
-    "id": 1583226943194
-  },
-  {
-    "value": "Pas du tout du tout shrek",
-    "isCorrect": false,
-    "imageURL": "https://i.pinimg.com/236x/b1/b3/c2/b1b3c2b98255270431f4fee871c35251--shrek.jpg?nii=t",
-    "questionId": 1583226445021,
-    "id": 15894723843194
-  },
-  {
-    "value": "Shrek",
-    "isCorrect": true,
-    "imageURL": "http://theweekender.com/wp-content/uploads/2015/07/web1_shrek2.jpg",
-    "questionId": 1583226445021,
-    "id": 1583226956818
-  },
-  {
-    "value": "Oui, vraiment trop !",
-    "isCorrect": false,
-    "imageURL": "https://i.ytimg.com/vi/LrQHgABDdlI/hqdefault.jpg",
-    "questionId": 1583226478744,
-    "id": 1583226994193
-  },
-  {
-    "value": "Un petit peu",
-    "isCorrect": false,
-    "imageURL": "https://i.ytimg.com/vi/ADjTcV8JIss/maxresdefault.jpg",
-    "questionId": 1583226478744,
-    "id": 1583273594975
-  },
-  {
-    "value": "La réponse D",
-    "isCorrect": true,
-    "imageURL": "https://i.ytimg.com/vi/eV9lni0y6po/hqdefault.jpg",
-    "questionId": 1583226478744,
-    "id": 1583226979569
-  },
-  {
-    "value": "Kamoulox",
-    "isCorrect": false,
-    "imageURL": "http://s2.dmcdn.net/yY5a/526x297-cd2.jpg",
-    "questionId": 1583226478744,
-    "id": 1583226994975
-  },
-  {
     "value": "Tom Cruise",
     "isCorrect": false,
     "imageURL": "http://i2.kym-cdn.com/photos/images/facebook/000/855/203/b60.png",
