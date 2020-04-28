@@ -1,5 +1,5 @@
 html, body { height:100%; margin:0; padding:0 }
-div { position:fixed; width:50%; height:50%; background-color: rgb(122,122,122); }
+div { position:fixed; width:50%; height:50%; background-color:#4CAF50; }
 .header{
   width: 100%;
   z-index: 1;
@@ -9,6 +9,45 @@ div { position:fixed; width:50%; height:50%; background-color: rgb(122,122,122);
   cursor: pointer;
 }
 
-.navbar-toggler:hover {
-  background-color: rgb(122,122,122);
+
+/* Style The Dropdown Button */
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  padding-right: 10%;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  z-index: 6;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
 }
