@@ -5,6 +5,8 @@ import {User} from '../../../models/user.model';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Quiz} from '../../../models/quiz.model';
 import {QuizService} from '../../../services/quiz.service';
+import {AuthGuard} from "../../../services/auth-guard.service";
+import {EditUsersComponent} from "../edit-users/edit-users.component";
 
 @Component({
   selector: 'app-edit-user',
@@ -61,7 +63,7 @@ export class EditUserComponent implements OnInit {
     if (infoUpdate.profilePicture) this.user.profilePicture = infoUpdate.profilePicture;
     this.userService.updateUser(this.user).subscribe((user) => this.user = user);
     alert("Changement du profil enregistré");
-    window.location.reload();
+    this.userService.setUsersFromUrl();
   }
 
   search() {
