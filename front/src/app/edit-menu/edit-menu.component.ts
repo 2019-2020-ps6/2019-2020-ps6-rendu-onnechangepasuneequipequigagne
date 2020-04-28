@@ -13,15 +13,6 @@ export class EditMenuComponent implements OnInit {
   ngOnInit() {
   }
 
-  goToEditQuizzes() {
-    const link = ['home/edit-menu/edit-quizzes'];
-    this.router.navigate(link);
-  }
-
-  goToEditUsers() {
-    const link = ['home/edit-menu/edit-users'];
-    this.router.navigate(link);
-  }
 
   goBack() {
     let link = ['home'];

@@ -14,9 +14,8 @@ div { position:fixed; width:50%; height:50%; background-color: whitesmoke; }
 .button-card{
   text-align: center;
   background-color: rgba(34, 34, 41, 0.445);
-  border: solid;
   border-radius: 1em;
-  border-color: black;
+  border: solid black;
   height: 45%;
   width: 35%;
 }
@@ -29,6 +28,8 @@ div { position:fixed; width:50%; height:50%; background-color: whitesmoke; }
 .title{
   top: 15%;
   width: 100%;
+  font-size: xx-large;
+  font-weight: bold;
   text-align: center;
 }
 
@@ -58,9 +59,9 @@ div { position:fixed; width:50%; height:50%; background-color: whitesmoke; }
   color: white;
   text-align: center;
   border-radius: 1em;
-  margin: 5%;
   height: 7%;
-  width: 90%;
+  margin: 5% 5% 5% 35%;
+  width: 30%;
   top: 75%;
   background-color: grey;
 }
