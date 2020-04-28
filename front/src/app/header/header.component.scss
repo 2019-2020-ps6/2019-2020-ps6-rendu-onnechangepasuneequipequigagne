@@ -9,6 +9,14 @@ div { position:fixed; width:50%; height:50%; background-color: rgb(122,122,122);
   cursor: pointer;
 }
 
+.fas{
+  color: whitesmoke;
+}
+
+
 .navbar-toggler:hover {
-  background-color: skyblue;
+  background-color: cornflowerblue;
+  .fas{
+    color: black;
+  }
 }
